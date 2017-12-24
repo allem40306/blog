@@ -1,4 +1,4 @@
----
+layout: layout
 title: uva00706 LCD-Display  (ZeroJudgec135)
 date: 2017-12-22
 category: Uva 

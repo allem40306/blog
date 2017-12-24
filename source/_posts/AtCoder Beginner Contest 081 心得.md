@@ -1,11 +1,12 @@
-layout: atcoder
+layout: layout
 title: AtCoder Beginner Contest 081 心得
 date: 2017-12-11 21:43:28
 category: Atcoder
 tags: 
+- Atcoder
 - 基礎
 - 枚舉
-- STL
+- stl
 - map
 - vector
 - 模擬

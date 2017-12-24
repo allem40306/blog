@@ -1,11 +1,12 @@
-<!-- layout: layout -->
+layout: layout
 title: AtCoder Beginner Contest 082 心得
 date: 2017-12-17 19:52:03
 category: Atcoder
 tags:
+- Atcoder
 - 基礎
 - algorithm
-- DP
+- dp
 ---
 這次的難度老實說比上次簡單，但最後一題一直有bug所以解不出來，賽後詢問才發現。
 A 基礎 AC

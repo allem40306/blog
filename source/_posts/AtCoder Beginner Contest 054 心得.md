@@ -5,8 +5,8 @@ category: Atcoder
 tags:
 - 基礎
 - 陣列
-- DFS
-- DP
+- dfs
+- dp
 ---
 這是我的第一場atcoder比賽，打的不錯，除了D，其他都AC了!
 結果:

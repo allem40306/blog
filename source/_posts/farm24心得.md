@@ -1,8 +1,10 @@
 layout: layout
 title: Codeforce Farm 競賽日記 24 心得
 date: 2017-02-18 15:48:12
-category: codeforce
+category: Codeforce
 tags: 
+- Codeforce
+- Twicpc
 - 陣列
 - 數學
 ---

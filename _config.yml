@@ -74,6 +74,6 @@ deploy:
   type: git
   repo: https://github.com/allem40306/blog.git
   branch: gh-pages
-  message: fixed bug
+  message: reset
   name: allem40306
   email: allem40306@gmail.com

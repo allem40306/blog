@@ -1,8 +1,9 @@
----
+layout: layout
 title: AtCoder Beginner Contest 083 心得
 date: 2017-12-24 08:41:35
 category: Atcoder
 tags:
+- Atcoder
 - 基礎
 ---
 這次的題目算簡單，第四題賽中我想到的解法已經很靠近答案了，但後來沒解出來。
