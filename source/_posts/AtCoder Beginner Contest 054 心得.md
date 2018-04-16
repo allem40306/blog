@@ -1,4 +1,4 @@
-layout: layout
+<!-- layout: layout -->
 title: AtCoder Beginner Contest 054 心得
 date: 2017-02-22 16:01:05
 category: Atcoder
