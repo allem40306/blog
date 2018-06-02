@@ -66,7 +66,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: aloha
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -74,6 +74,6 @@ deploy:
   type: git
   repo: https://github.com/allem40306/blog.git
   branch: gh-pages
-  message: reset
+  message: change theme
   name: allem40306
   email: allem40306@gmail.com

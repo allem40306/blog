@@ -9,11 +9,11 @@ theme: simple
 
 # main menu navigation
 # icon name see http://semantic-ui.com/elements/icon.html
-menu:
-  Home:
-    name: homePage
-    value: blog/index.html
-    icon: home
+# menu:
+  # Home:
+  #   name: homePage
+  #   value: blog/index.html
+  #   icon: home
 #  Rss:
 #    name: rss
 #    value: /atom.xml
