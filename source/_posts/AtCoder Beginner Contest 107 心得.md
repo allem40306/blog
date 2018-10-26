@@ -1,8 +1,9 @@
----
-layout: layout
+<!-- layout: layout -->
 title: AtCoder Beginner Contest 107 心得
 date: 2018-10-24 22:12:00
+category: Atcoder
 tags:
+- Atcoder
 ---
 這場很久以前打的，只是都沒時間整理，PD是賽後AC的，這題值得好好思考。
 
