@@ -74,6 +74,6 @@ deploy:
   type: git
   repo: https://github.com/allem40306/blog.git
   branch: gh-pages
-  message: fix problem
+  message: add post 寒訓心得文系列-1 講義
   name: allem40306
   email: allem40306@gmail.com
