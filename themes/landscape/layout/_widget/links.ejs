@@ -1,0 +1,12 @@
+<% if (site.data.links){ %>
+  <div class="widget-wrap">
+    <h3 class="widget-title">相關連結</h3>
+    <div class="widget">
+      <% for (var i in site.data.links){ %>
+        <li class='link'><a href='<%- site.data.links[i] %>'><%= i %></a></li>
+      <% } %>
+    </div>
+  </div>
+<% } %>
+
+<!-- 取自：https://www.jianshu.com/p/43eb0819f51a -->
