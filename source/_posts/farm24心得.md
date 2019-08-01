@@ -6,7 +6,7 @@ tags:
 - Codeforce
 - Twicpc
 - 陣列
-- 數學
+- math
 ---
 2/17參加cf競賽日記的比賽，以下是我的感想
 結果:
