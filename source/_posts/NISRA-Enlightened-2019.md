@@ -1,7 +1,7 @@
 ---
 title: NISRA Enlightened 2019
 date: 2019-08-30 17:11:27
-catagory: NISRA
+category: NISRA
 tags:
 - NISRA
 - Web
