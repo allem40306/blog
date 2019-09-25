@@ -1,9 +1,10 @@
 ---
 title: Travis CI 初次OK
-date: 2019-09-02 21:02:02
 category: Travis CI
 tags:
-- Travis CI
+  - Travis CI
+abbrlink: ce5f
+date: 2019-09-02 21:02:02
 ---
 之前有提過我在codebook上用Travis CI，後來發現是在token上沒設定好，然後部署的結果是在github的release上面。
 

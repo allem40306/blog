@@ -1,10 +1,11 @@
 ---
 title: POJ1419 Graph Coloring
-date: 2019-02-13 20:25:40
 category: POJ
 tags:
-- POJ
-- graph
+  - POJ
+  - graph
+abbrlink: ef6a
+date: 2019-02-13 20:25:40
 ---
 http://poj.org/problem?id=1419
 題意：求最大點集合使得集合內的點兩兩皆不相鄰。

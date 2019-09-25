@@ -1,9 +1,10 @@
 ---
 title: IONCamp 系列3 Day 5
-date: 2019-07-28 21:08:22
 category: IONCamp
 tags:
-- IONCamp
+  - IONCamp
+abbrlink: 832a
+date: 2019-07-28 21:08:22
 ---
 最後一天早上是Greedy課程，這段時間我在寫POJ 1741，但傳上去是TLE，我爬文發現這題時間卡很緊，也不知道是不是我哪裡寫壞了，就先放在一旁。
 下午的上機情況只能用慘字形容，A(counting sorting)過了而已，B(Add All)只過用priority queue版本，然後E(MST)不知道為什麼WA了，還有G(BIT)也沒全拿，這次營隊有4,5題都是明明想法是對的，可是沒有過，要先把這幾題解出來。

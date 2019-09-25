@@ -1,12 +1,13 @@
 ---
 title: Codeforce 747F
-date: 2019-08-01 18:43:02
 category: Codeforce
-tags: 
-- Codeforce
-- segmentTree
-- math
-- IONCamp 2019
+tags:
+  - Codeforce
+  - segmentTree
+  - math
+  - IONCamp 2019
+abbrlink: 4cc6
+date: 2019-08-01 18:43:02
 ---
 https://codeforces.com/contest/474/problem/F
 給定一個長度為`N`的數列`a`，給定`Q`筆詢問`[L,R]`之間有幾個數不能整除該區間至少一個數。

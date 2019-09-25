@@ -1,10 +1,12 @@
+---
 <!-- layout: layout -->
 title: AtCoder Beginner Contest 083 心得
-date: 2017-12-24 08:41:35
 category: Atcoder
 tags:
-- Atcoder
-- 基礎
+  - Atcoder
+  - 基礎
+abbrlink: 3d5d
+date: 2017-12-24 08:41:35
 ---
 這次的題目算簡單，第四題賽中我想到的解法已經很靠近答案了，但後來沒解出來。
 A 基礎 AC

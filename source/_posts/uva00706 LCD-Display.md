@@ -1,11 +1,13 @@
+---
 <!-- layout: layout -->
 title: uva00706 LCD-Display  (ZeroJudgec135)
-date: 2017-12-22
-category: Uva 
+category: Uva
 tags:
-- Uva
-- Zerojudge
-- 建表
+  - Uva
+  - Zerojudge
+  - 建表
+abbrlink: 186d
+date: 2017-12-22 00:00:00
 ---
 連結1: https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=647
 連結2: https://zerojudge.tw/ShowProblem?problemid=c135

@@ -1,10 +1,11 @@
 ---
 title: '[2019 Week 32] 再被Treap 卡住的一周'
-date: 2019-08-12 20:36:17
 category: 週記
 tags:
-- treap
-- javascript
+  - treap
+  - javascript
+abbrlink: 58f0
+date: 2019-08-12 20:36:17
 ---
 * Treap 好難
 

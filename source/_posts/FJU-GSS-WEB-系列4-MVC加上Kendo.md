@@ -1,12 +1,13 @@
 ---
 title: FJU GSS WEB 系列4 MVC加上Kendo
-date: 2019-07-22 14:45:33
 category: FJU GSS Web
 tags:
-- FJU GSS Web
-- Frontend
-- Kendo
-- MVC
+  - FJU GSS Web
+  - Frontend
+  - Kendo
+  - MVC
+abbrlink: 58bf
+date: 2019-07-22 14:45:33
 ---
 經過第三堂課的摧殘(X)磨練(O)之後，最後我們將MVC原本的`@`(例如htmlhelper或viewbag)改成Kendo，並加上一些功能，就等同於將前面的課做個整合，一開始不知道怎麼改，後來知道是知道關鍵是"JSON"，後端算出的資料用JSON回傳到前端，前端再去就分析JSON檔，了解了之後，在AJAX又吃到幾個bug：
 * 第一個是發現ajax沒有進到應該進入的函式，經過一番研究之後，發現是傳入SQL的參數有`<br>`的字串，這個問題不是AJAX所引起的，但是有用到AJAX，debug會比較困難

@@ -1,12 +1,14 @@
+---
 <!-- layout: layout -->
 title: Codeforce Farm 競賽日記 24 心得
-date: 2017-02-18 15:48:12
 category: Codeforce
-tags: 
-- Codeforce
-- Twicpc
-- 陣列
-- math
+tags:
+  - Codeforce
+  - Twicpc
+  - 陣列
+  - math
+abbrlink: '8897'
+date: 2017-02-18 15:48:12
 ---
 2/17參加cf競賽日記的比賽，以下是我的感想
 結果:

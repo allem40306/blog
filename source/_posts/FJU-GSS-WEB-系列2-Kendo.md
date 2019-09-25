@@ -1,11 +1,12 @@
 ---
 title: FJU GSS WEB 系列2 Kendo
-date: 2019-07-21 16:22:01
 category: FJU GSS Web
 tags:
-- FJU GSS Web
-- Frontend
-- Kendo
+  - FJU GSS Web
+  - Frontend
+  - Kendo
+abbrlink: f3ee
+date: 2019-07-21 16:22:01
 ---
 第二堂課的主題是前端，主要的是學習一套UI名為Kendo，學了之後覺得不錯，原本還想要把他拿去用在OJ上，但聽到這個是要付費的即作罷。
 Code Review的考題是要將一個網站的各種功能用Kendo實現出來，能看API做出來是很重要的一環，不過更重要的是使用者體驗和用資料傳輸這兩部分：

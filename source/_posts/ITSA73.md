@@ -1,11 +1,12 @@
 ---
 title: ITSA73
-date: 2019-08-20 10:56:11
 category: ITSA
 tags:
-- bfs
-- dfs
-- ITSA
+  - bfs
+  - dfs
+  - ITSA
+abbrlink: e028
+date: 2019-08-20 10:56:11
 ---
 總共這次ITSA有9題，不知道下次會變幾題?
 答對題目：123 567

@@ -1,11 +1,12 @@
 ---
 title: Codeforce 459D
-date: 2019-07-31 14:46:28
 category: Codeforce
-tags: 
-- Codeforce
-- bitIndexTree
-- IONCamp 2019
+tags:
+  - Codeforce
+  - bitIndexTree
+  - IONCamp 2019
+abbrlink: '6912'
+date: 2019-07-31 14:46:28
 ---
 https://codeforces.com/contest/459/problem/D
 這題給定一個長度為`n`的數列`a`，要找所有數對`(i, j)`滿足`f(1, i, a_i) > f(j, n, a_j)`，` f(l, r, x)`定義為在`[i,j]`之間`=x`的個數。

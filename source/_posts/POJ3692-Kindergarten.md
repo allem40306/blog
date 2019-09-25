@@ -1,10 +1,11 @@
 ---
 title: POJ3692 Kindergarten
-date: 2019-02-12 15:41:28
 category: POJ
 tags:
-- POJ
-- bipartite graph
+  - POJ
+  - bipartite graph
+abbrlink: a062
+date: 2019-02-12 15:41:28
 ---
 http://poj.org/problem?id=3692
 題意：所有的男生認識彼此，所有的女生也認識彼此，有些男女互相認識，求最大群體使得當中所有人都認識彼此。

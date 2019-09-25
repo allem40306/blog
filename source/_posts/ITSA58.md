@@ -1,15 +1,17 @@
+---
 <!-- layout: layout -->
 title: ITSA58心得
-date: 2017-10-29 11:08:32
 category: ITSA
 tags:
-- ITSA
-- 基礎
-- greedy
-- 字串處理
-- 樹
-- 最短路徑
-- 暴力法
+  - ITSA
+  - 基礎
+  - greedy
+  - 字串處理
+  - 樹
+  - 最短路徑
+  - 暴力法
+abbrlink: 74b7
+date: 2017-10-29 11:08:32
 ---
 ITSA58雖然是已經比了好久，但是因為要做新北市模擬賽，所以一直都沒有發文。
 結果:

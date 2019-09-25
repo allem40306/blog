@@ -1,11 +1,12 @@
 ---
 title: Codeforce 1000F
-date: 2019-07-29 22:41:47
 category: Codeforce
-tags: 
-- Codeforce
-- segmentTree
-- IONCamp 2019
+tags:
+  - Codeforce
+  - segmentTree
+  - IONCamp 2019
+abbrlink: '3153'
+date: 2019-07-29 22:41:47
 ---
 https://codeforces.com/contest/1000/problem/F
 這題給定一個數列A，給定Q筆詢問區間`[L, R]`，有沒有重複的數字，如果有請輸出任意一個，否則輸出0。

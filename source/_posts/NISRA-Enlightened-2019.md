@@ -1,10 +1,11 @@
 ---
 title: NISRA Enlightened 2019
-date: 2019-08-30 17:11:27
 category: NISRA
 tags:
-- NISRA
-- Web
+  - NISRA
+  - Web
+abbrlink: a4f8
+date: 2019-08-30 17:11:27
 ---
 今年是我第3次參加NISRA Enlightened，第一次當學員，第二次當助教，這次我會擔任網頁的助教，網頁是我和另一人分開，我們分的方式是，他講基本的網頁三兄弟，我講進階一點的東西，於是我把重點放在JavaScript，我是在8月才開工的，一開始只有DOM+JQuery，後來怕時間不夠，多了Bootstrap，斷斷續續做了兩三個禮拜，在營隊前一禮拜大致弄好了。加上了一題CTF/Wargame題目竟大致準備好了。
 

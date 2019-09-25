@@ -1,10 +1,11 @@
 ---
 title: POJ3580 SuperMemo
-date: 2019-08-09 20:07:35
 category: POJ
 tags:
-- POJ
-- treap
+  - POJ
+  - treap
+abbrlink: fa7
+date: 2019-08-09 20:07:35
 ---
 http://poj.org/problem?id=3580
 這題是序列操作題，總共有6種操作：

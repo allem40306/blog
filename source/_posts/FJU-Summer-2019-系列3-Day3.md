@@ -1,9 +1,10 @@
 ---
 title: FJU Summer 2019 系列3 Day3
-date: 2019-09-15 12:29:08
 category: 輔大
 tags:
-- FJU
+  - FJU Summer 2019
+abbrlink: f9e8
+date: 2019-09-15 12:29:08
 ---
 這天打的是NPSC 2012國中組決賽。
 

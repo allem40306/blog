@@ -1,12 +1,14 @@
+---
 <!-- layout: layout -->
 title: AtCoder Beginner Contest 054 心得
-date: 2017-02-22 16:01:05
 category: Atcoder
 tags:
-- 基礎
-- 陣列
-- dfs
-- dp
+  - 基礎
+  - 陣列
+  - dfs
+  - dp
+abbrlink: 4b44
+date: 2017-02-22 16:01:05
 ---
 這是我的第一場atcoder比賽，打的不錯，除了D，其他都AC了!
 結果:

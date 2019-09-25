@@ -1,12 +1,14 @@
+---
 <!-- layout: layout -->
 title: uva00562 Dividing coins (Zerojudge d390)
-date: 2017-12-31 22:30:47
 category: Uva
 tags:
-- Uva
-- Zerojudge
-- dp
-- 背包dp
+  - Uva
+  - Zerojudge
+  - dp
+  - 背包dp
+abbrlink: 3ef0
+date: 2017-12-31 22:30:47
 ---
 連結1:http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=503
 連結2:https://zerojudge.tw/ShowProblem?problemid=d390

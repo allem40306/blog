@@ -1,10 +1,11 @@
 ---
 title: '[2019 Week 31] Segment Tree 爬更高 Treap 爬不上'
-date: 2019-08-05 19:40:11
 category: 週記
 tags:
-- segmentTree
-- treap
+  - segmentTree
+  - treap
+abbrlink: b7b9
+date: 2019-08-05 19:40:11
 ---
 這是我blog新型態的文章，是參考運動視界的中職專欄，以後每個禮拜都會有一篇記錄上禮拜做了什麼。
 

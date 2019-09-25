@@ -1,13 +1,15 @@
+---
 <!-- layout: layout -->
 title: AtCoder Beginner Contest 080 心得
-date: 2017-12-11 16:09:24
 category: Atcoder
-tags: 
-- Atcoder
-- 基礎
-- 枚舉
-- 狀態壓縮
-- 離散化
+tags:
+  - Atcoder
+  - 基礎
+  - 枚舉
+  - 狀態壓縮
+  - 離散化
+abbrlink: 281d
+date: 2017-12-11 16:09:24
 ---
 這場比賽打得平平，卡在pC太久了，直到賽後才發現是ans變數要設小一點才AC。
 結果:

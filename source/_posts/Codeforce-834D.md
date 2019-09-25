@@ -1,12 +1,13 @@
 ---
 title: Codeforce 834D
-date: 2019-08-01 16:35:01
 category: Codeforce
-tags: 
-- Codeforce
-- dp
-- segmentTree
-- IONCamp 2019
+tags:
+  - Codeforce
+  - dp
+  - segmentTree
+  - IONCamp 2019
+abbrlink: a8f5
+date: 2019-08-01 16:35:01
 ---
 https://codeforces.com/contest/833/problem/B
 這題是要把長度為`n`數列`a`分成`k`段，要最大化每一段數字總類的和。

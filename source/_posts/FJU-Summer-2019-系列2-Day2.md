@@ -1,9 +1,10 @@
 ---
 title: FJU Summer 2019 系列2 Day2
-date: 2019-09-15 11:45:12
 category: 輔大
 tags:
-- FJU
+  - FJU Summer 2019
+abbrlink: e828
+date: 2019-09-15 11:45:12
 ---
 第二天打的比賽是NPSC2010國中組決賽([連結](http://contest.cc.ntu.edu.tw/npsc2010/schedule.asp))，看到不是高中組決賽就放心了。
 

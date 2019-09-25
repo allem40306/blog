@@ -1,15 +1,17 @@
+---
 <!-- layout: layout -->
 title: AtCoder Beginner Contest 081 心得
-date: 2017-12-11 21:43:28
 category: Atcoder
-tags: 
-- Atcoder
-- 基礎
-- 枚舉
-- stl
-- map
-- vector
-- 模擬
+tags:
+  - Atcoder
+  - 基礎
+  - 枚舉
+  - stl
+  - map
+  - vector
+  - 模擬
+abbrlink: e4dc
+date: 2017-12-11 21:43:28
 ---
 這次我第一次在AtCoder破台，開心!!!前三題很快就解出來了，第四題想了很久才解出來(快結束時)。
 結果:

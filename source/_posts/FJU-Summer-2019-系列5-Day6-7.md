@@ -1,9 +1,10 @@
 ---
 title: FJU Summer 2019 系列5 Day6 7
-date: 2019-09-19 22:13:05
 category: 輔大
 tags:
-- FJU
+  - FJU Summer 2019
+abbrlink: 7f46
+date: 2019-09-19 22:13:05
 ---
 第六天繼續講數論，因為我之前聽過好幾次了，於是猜中接下來要說的，burnside 和 FFT，這次我有更聽懂FFT一些了，晚上講師讓我們回家AtCoder，隔天在講解。
 

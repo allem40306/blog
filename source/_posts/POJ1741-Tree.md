@@ -1,10 +1,11 @@
 ---
 title: POJ1741 Tree
-date: 2019-08-05 16:41:41
 category: POJ
 tags:
-- POJ
-- 重心分治
+  - POJ
+  - 重心分治
+abbrlink: f737
+date: 2019-08-05 16:41:41
 ---
 http://poj.org/problem?id=1741
 http://sunmoon-coding.blogspot.com/2017/03/poj-1741-tree.html

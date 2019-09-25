@@ -1,9 +1,10 @@
 ---
 title: FJU Summer 2019 系列4 Day4 5
-date: 2019-09-18 10:00:20
 category: 輔大
 tags:
-- FJU
+  - FJU Summer 2019
+abbrlink: b2a7
+date: 2019-09-18 10:00:20
 ---
 第四天打的是2015 Phuket，題目有太多題，我就講我AC的4題好了。
 
