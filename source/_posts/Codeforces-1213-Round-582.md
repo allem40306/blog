@@ -4,6 +4,8 @@ category: Codeforces
 abbrlink: baa2
 date: 2019-10-11 14:42:02
 tags:
+- Codeforces
+- graph
 ---
 這是一場Div 3 的比賽，Virtual + 檢討下來我覺得不會很難，但經驗太少，在比的時候想不出來，只有PE我覺得出點有的不好之外其他題目都不錯。
 比賽網址：https://codeforces.com/contest/1213
@@ -311,7 +313,7 @@ int main()
 
 * PG Path Queries
 題意：給定一棵樹和$m$筆詢問，對於每筆詢問求出有多少點對其路徑上的邊權$\leq m_i$
-解法：幫邊和詢問都由小到大排序，對於每筆詢問，將$\leq m_i$的邊加進來，一邊維護有多少點對符合所求。
+解法：幫邊和詢問都由小到大排序，對於每筆詢問，將$\leq m_i$的邊加進來，一邊維護有多少點對符合所求。作法類似再求最小生成樹。
 {% codeblock lang:cpp %}
 #include <bits/stdc++.h>
 using namespace std;
