@@ -1,9 +1,9 @@
 ---
 <!-- layout: layout -->
-title: Codeforce Farm 競賽日記 24 心得
-category: Codeforce
+title: Codeforces Farm 競賽日記 24 心得
+category: Codeforces
 tags:
-  - Codeforce
+  - Codeforces
   - Twicpc
   - 陣列
   - math

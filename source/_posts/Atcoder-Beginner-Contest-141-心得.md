@@ -3,6 +3,8 @@ title: Atcoder Beginner Contest 141 心得
 category: Atcoder
 tags:
   - Atcoder
+  - greedy
+  - string
 abbrlink: ec59
 date: 2019-10-08 10:01:18
 ---

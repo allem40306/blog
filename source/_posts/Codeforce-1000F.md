@@ -1,8 +1,8 @@
 ---
-title: Codeforce 1000F
-category: Codeforce
+title: Codeforces 1000F
+category: Codeforces
 tags:
-  - Codeforce
+  - Codeforces
   - segmentTree
   - IONCamp 2019
 abbrlink: '3153'

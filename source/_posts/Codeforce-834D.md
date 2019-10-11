@@ -1,8 +1,8 @@
 ---
-title: Codeforce 834D
-category: Codeforce
+title: Codeforces 834D
+category: Codeforces
 tags:
-  - Codeforce
+  - Codeforces
   - dp
   - segmentTree
   - IONCamp 2019

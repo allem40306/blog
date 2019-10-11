@@ -1,8 +1,8 @@
 ---
-title: Codeforce 747F
-category: Codeforce
+title: Codeforces 747F
+category: Codeforces
 tags:
-  - Codeforce
+  - Codeforces
   - segmentTree
   - math
   - IONCamp 2019

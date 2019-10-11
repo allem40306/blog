@@ -1,8 +1,8 @@
 ---
-title: Codeforce 459D
-category: Codeforce
+title: Codeforces 459D
+category: Codeforces
 tags:
-  - Codeforce
+  - Codeforces
   - bitIndexTree
   - IONCamp 2019
 abbrlink: '6912'

@@ -15,7 +15,7 @@ Segment Tree有寫出來，從中我也了解Segment Tree模板真的只是基�
 Week32目標：把Treap搞熟。
 
 Week31 AC題目列表：
-[Codeforce 1000F](https://allem40306.github.io/blog/2019/07/29/Codeforce-1000F/)
-[Codeforce 459D](https://allem40306.github.io/blog/2019/07/31/Codeforce-459D/)
-[Codeforce 834D](https://allem40306.github.io/blog/2019/08/01/Codeforce-834D/)
-[Codeforce 747F](https://allem40306.github.io/blog/2019/08/01/Codeforce-747F/)
+[Codeforces 1000F](https://allem40306.github.io/blog/2019/07/29/Codeforce-1000F/)
+[Codeforces 459D](https://allem40306.github.io/blog/2019/07/31/Codeforce-459D/)
+[Codeforces 834D](https://allem40306.github.io/blog/2019/08/01/Codeforce-834D/)
+[Codeforces 747F](https://allem40306.github.io/blog/2019/08/01/Codeforce-747F/)
