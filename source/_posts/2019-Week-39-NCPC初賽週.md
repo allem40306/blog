@@ -1,5 +1,5 @@
 ---
-title: '[2019 Week 38] NCPC初賽周'
+title: '[2019 Week 39] NCPC初賽週'
 category: 週記
 tags:
   - NCPC

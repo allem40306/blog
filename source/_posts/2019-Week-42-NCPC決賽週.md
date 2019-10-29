@@ -1,5 +1,5 @@
 ---
-title: '[2019 Week 41] NCPC決賽週'
+title: '[2019 Week 42] NCPC決賽週'
 category: 週記
 tags:
   - 資安
