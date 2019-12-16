@@ -1,6 +1,6 @@
 ---
 title: NCPU 2019 系列2 Day2
-category: NCPU
+category: 比賽心得
 tags:
   - NCPU
 abbrlink: 4bb9

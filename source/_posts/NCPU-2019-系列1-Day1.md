@@ -1,6 +1,6 @@
 ---
 title: NCPU 2019 系列1 Day1
-category: NCPU
+category: 比賽心得
 tags:
   - NCPU
 abbrlink: 79f9

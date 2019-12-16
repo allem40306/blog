@@ -1,6 +1,6 @@
 ---
 title: NCPU 2019 系列3 Day3
-category: NCPU
+category: 比賽心得
 tags:
   - NCPU
 abbrlink: 5a79
