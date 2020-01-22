@@ -1,5 +1,4 @@
 ---
-<!-- layout: layout -->
 title: AtCoder Beginner Contest 081 心得
 category: Atcoder
 tags:
