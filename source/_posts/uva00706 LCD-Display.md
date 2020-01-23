@@ -12,6 +12,7 @@ date: 2017-12-22 00:00:00
 連結1: https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=647
 連結2: https://zerojudge.tw/ShowProblem?problemid=c135
 題目大意: 這題是給你長度及一串數字，要你印出指定長度的數字(像小綠人倒數的數字)。
+<!-- more -->
 作法:我先建表(style)，把每個數字分五層，紀錄要不要顯示，一三五層是橫的如果是0就不輸出空白，1輸出橫線；二四層為直線(左右兩邊)，0(兩邊空白)，1(右邊直線)、2(左邊直線)、3(兩邊直線)，直線判斷的時候是用位元運算來實作。
 {% codeblock lang:cpp %}
 #include <bits/stdc++.h>

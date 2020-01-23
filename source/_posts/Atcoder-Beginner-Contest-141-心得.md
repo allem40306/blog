@@ -9,7 +9,7 @@ abbrlink: ec59
 date: 2019-10-08 10:01:18
 ---
 這場比賽自評覺得不錯，除了最後一題之外都有寫出來。
-
+<!-- more -->
 * PA Weather Prediction([ABC 141A](https://atcoder.jp/contests/abc140/tasks/abc141_a))
 題目：狀態會由`Sunny, Cloudy, Rainy, Sunny...`三個輪由替換，給你目前狀態，請輸出下個狀態。
 解法：if條件判斷

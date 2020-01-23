@@ -4,6 +4,7 @@ category: Atcoder
 abbrlink: a495
 date: 2020-01-21 23:38:06
 tags:
+  - Atcoder
   - graph
   - lcm
   - math
@@ -11,7 +12,7 @@ tags:
   - 模逆元
 ---
 這場我用 virtual 打，第一次體驗，覺得不錯。前 4 題在時限內解完，後兩題後來也解出來了。
-
+<!-- more -->
 * [A](https://atcoder.jp/contests/abc152/tasks/abc152_a) AC or WA
 題意：給你總題數和解出題數，問你是否全解出來了
 解法：判斷是否相等

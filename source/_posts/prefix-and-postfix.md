@@ -7,6 +7,7 @@ abbrlink: 3d73
 date: 2019-04-05 14:14:33
 ---
 在很多程式語言都有prefix and postfix ++/--，常用在迴圈上。通常我們會看到的差異是先改值或先傳值，在使用設面沒有特別注意其他事情。最近我了解到實作上的差異，prefix是直接改值，postfix則是先複製一份物件，然後再改值，這樣的結果會使postfix多生成一個物件，因此如果可以的話，要使用prefix++/--。
+<!-- more -->
 example from https://docs.microsoft.com/zh-tw/cpp/cpp/increment-and-decrement-operator-overloading-cpp?view=vs-2019
 {% codeblock lang:cpp %}
 // increment_and_decrement1.cpp

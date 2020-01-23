@@ -8,6 +8,7 @@ tags:
 - graph
 ---
 這是一場Div 3 的比賽，Virtual + 檢討下來我覺得不會很難，但經驗太少，在比的時候想不出來，只有PE我覺得出點有的不好之外其他題目都不錯。
+<!-- more -->
 比賽網址：https://codeforces.com/contest/1213
 
 * PA Chips Moving

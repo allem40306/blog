@@ -7,7 +7,7 @@ abbrlink: '3847'
 date: 2019-10-03 15:12:49
 ---
 這是我第一次打6題的AtCoder，太久沒打了，都不知道改賽制。
-
+<!-- more -->
 * PA Password([ABC 140A](https://atcoder.jp/contests/abc140/tasks/abc140_a))
 題目：密碼有三位數，由`n`種數字組成，求組合數。
 解法：輸出`n*n*n`。

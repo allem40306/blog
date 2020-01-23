@@ -9,7 +9,7 @@ date: 2019-02-14 20:34:54
 ---
 https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=550&problem=2473&mosmsg=Submission+received+with+ID+14137690
 題意：給一張圖，邊有權重，有個操作X(s,v)，點s為起點的邊+v，點s為終點的邊-v，可以有無限次操作，在最後所有邊權重大於0的情況，最小的權重最大可以為多少。
-
+<!-- more -->
 解答：對於一條s到t的邊，他的權重增加Xsum(s)，減少了Xsum(t)(Xsum(s)為s操作的總值)，那麼我們可以二分搜答案x，Xsum(s)-Xsum(t)+w(s,t)>=x，Xsum(s)-Xsum(t)<=w(s,t)-x，這樣就可以轉化為差分約束了。
 {% codeblock lang:cpp %}
 #include <bits/stdc++.h>

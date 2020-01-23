@@ -8,6 +8,7 @@ date: 2019-09-12 22:42:32
 ---
 每年暑假最後一個禮拜，系上都會辦為期一個禮拜的訓練營，會請外面的講師來授課，這次的講師是去年的講師，加上他找來的兩個人，都是程式競賽中的佼佼者。今年的模式是下午上機，晚上上課。
 第一天下午是在VJudge上打AtCoder的題目。
+<!-- more -->
 * PA Foods Loved by Everyone([ABC 118B](https://abc118.contest.atcoder.jp/tasks/abc118_b?lang=en))
 題目：問有幾個食物是被大家都喜歡。
 解法：用array做一做就出來了。

@@ -7,7 +7,7 @@ abbrlink: ce5f
 date: 2019-09-02 21:02:02
 ---
 之前有提過我在codebook上用Travis CI，後來發現是在token上沒設定好，然後部署的結果是在github的release上面。
-
+<!-- more -->
 現在就來介紹一下Travis CI，CI(Continuous Intergration)是在軟體開發上一個機制，會根據程式碼的更動，自動建置(build)、測試(test)、驗證，如果驗證成功才會發佈/部署，這樣可以保證上線的產品的品質。而Travis CI是在github上面的CI整合工具。以下為使用Travis步驟：
 
 * 先到[Travis CI網站](https://travis-ci.org)，用github註冊

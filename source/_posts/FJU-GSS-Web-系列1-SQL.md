@@ -9,6 +9,7 @@ date: 2019-07-20 12:24:02
 ---
 首先課程是SQL，相關語法我之前已經學過一些基礎的語法，進階一點的語法，例如join和Subquerie，我多花了一點時間在這些地方。
 課程有：
+<!-- more -->
 * SQL Server Management Studio(SSMS)的用法
 * SELCET, ORDER, GROUP
 * JOIN

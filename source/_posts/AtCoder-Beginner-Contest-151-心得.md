@@ -13,7 +13,7 @@ date: 2020-01-18 20:15:31
 
 這場作出前 4 題，賽後做了第 5 題，最後一題難度高所以沒做
 參考：https://codeforces.com/blog/entry/73065
-
+<!-- more -->
 * [A](https://atcoder.jp/contests/abc151/tasks/abc151_a) Next Alphabet
 題意：給定一個字母，輸出下一個字母
 解法：不用多說了，就和題意一樣

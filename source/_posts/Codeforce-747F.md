@@ -12,7 +12,7 @@ date: 2019-08-01 18:43:02
 https://codeforces.com/contest/474/problem/F
 給定一個長度為`N`的數列`a`，給定`Q`筆詢問`[L,R]`之間有幾個數不能整除該區間至少一個數。
 在區間裡，只有該區間最大公因數可以整除所有的數而已，所以就用線段數維護區間GCD，在查詢時算數該區間=GCD的數字個數(設為`x`)，答案即為`所有個數-x`。
-
+<!-- more -->
 {% codeblock lang:cpp %}
 #include <bits/stdc++.h>
 using namespace std;

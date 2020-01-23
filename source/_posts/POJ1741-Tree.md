@@ -10,6 +10,7 @@ date: 2019-08-05 16:41:41
 http://poj.org/problem?id=1741
 http://sunmoon-coding.blogspot.com/2017/03/poj-1741-tree.html
 這題給一個樹，邊上有權重，求有多少條路徑權重和`<=k`。
+<!-- more -->
 這題解法是在樹上做重心分治，先求出整棵樹的答案，扣除每個子樹各自的答案，在遞迴到各子樹去求各自的答案，因為是把重心拿來當根，所以最多只有`log V`層，算出路徑數(`calc`)需要`O(VlogV)`，整體複雜度為`O(V(log V)^2)`。
 
 {% codeblock lang:cpp %}

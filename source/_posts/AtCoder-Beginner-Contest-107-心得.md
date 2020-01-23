@@ -8,7 +8,7 @@ abbrlink: cb6a
 date: 2018-10-24 22:12:00
 ---
 這場很久以前打的，只是都沒時間整理，PD是賽後AC的，這題值得好好思考。
-
+<!-- more -->
 PA水題，有N節車廂，從前看是M節，從後看是第X節，X+M=N+1，故X=N-M+1。
 {% codeblock lang:cpp %}
 #include <iostream>

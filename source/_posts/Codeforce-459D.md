@@ -10,6 +10,7 @@ date: 2019-07-31 14:46:28
 ---
 https://codeforces.com/contest/459/problem/D
 這題給定一個長度為`n`的數列`a`，要找所有數對`(i, j)`滿足`f(1, i, a_i) > f(j, n, a_j)`，` f(l, r, x)`定義為在`[i,j]`之間`=x`的個數。
+<!-- more -->
 這題的作法和逆序數對相同，只不過update和query的東西不同而已，我會先求出所有的`f(1, i, a_i)`，在由後往前計算答案。我因為沒算到會超過int吃了一次WA(<-母湯。
 
 {% codeblock lang:cpp %}
