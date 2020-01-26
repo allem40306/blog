@@ -1,4 +1,5 @@
 .deploy_git/
-db.json
-public/
 node_modules/
+public/
+db.json
+package-lock.json
