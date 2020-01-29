@@ -1,8 +1,8 @@
 ---
 title: uva11478 Halum (差分約束)
-category: Uva
+category: UVa
 tags:
-  - Uva
+  - UVa
   - graph
 abbrlink: 57c1
 date: 2019-02-14 20:34:54

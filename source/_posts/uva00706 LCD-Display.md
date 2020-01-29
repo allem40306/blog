@@ -1,9 +1,9 @@
 ---
 <!-- layout: layout -->
 title: uva00706 LCD-Display  (ZeroJudgec135)
-category: Uva
+category: UVa
 tags:
-  - Uva
+  - UVa
   - Zerojudge
   - 建表
 abbrlink: 186d

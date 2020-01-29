@@ -1,9 +1,9 @@
 ---
 <!-- layout: layout -->
 title: uva00562 Dividing coins (Zerojudge d390)
-category: Uva
+category: UVa
 tags:
-  - Uva
+  - UVa
   - Zerojudge
   - dp
   - 背包dp
