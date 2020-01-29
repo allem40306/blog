@@ -11,8 +11,13 @@ install:
   - npm install
 
 script:
-  - sh updateBlog.sh
+  - hexo g
 
-branches:
-  only:
-    - hexo
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: public
+  keep-history: false
+  on:
+    branch: hexo
