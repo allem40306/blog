@@ -47,6 +47,7 @@ deploy:
 * `deploy`
     * `provider: pages`：設定這一行 `Travis CI` 會幫我們自動 push 到 `gh-pages` 上
     * `github-token`：照樣要先在 github 產生一組 token 來驗證 push
-    * `local-dir`：要 push 的只有 `hxo g` 所產生的 `public` 資料夾
+    * `local-dir`：要 push 的只有 `hexo g` 所產生的 `public` 資料夾
 
 這就是我的設定及說明，更多的可以參考我之前的文章[Travis CI 初次OK](../ce5f)。
+更多參考：https://www.slmt.tw/blog/2019/04/26/hexo-auto-deploy/
