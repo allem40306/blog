@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - lts/*
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install hexo-cli -g
+  - npm install
+
+script:
+  - sh updateBlog.sh
+
+branches:
+  only:
+    - hexo
