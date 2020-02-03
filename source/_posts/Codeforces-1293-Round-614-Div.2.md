@@ -4,6 +4,11 @@ abbrlink: e5a7
 date: 2020-02-03 10:14:33
 category: Codeforces
 tags:
+- dp
+- math
+- map
+- stl
+- greedy
 ---
 這場比賽有 Div.1 和 Div.2 我選擇了 Div.2 來打(自己實力還沒那麼強)，用 virtual 過了前三題，卡在第四題，賽後把六題全解出來了。
 <!-- more -->
