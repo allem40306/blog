@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - "10"
 
+os:
+  - linux
+
 cache:
   directories:
     - node_modules
@@ -15,9 +18,9 @@ script:
 
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  local-dir: public
-  keep-history: false
+  cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: public
+  keep_history: false
   on:
     branch: hexo
