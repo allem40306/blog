@@ -5,8 +5,8 @@ date: 2020-02-04 12:42:18
 category: UVa
 tags:
 - UVa
-- Math
-- Mobius function
+- math
+- mobius function
 ---
 連結：http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1679
 翻譯：https://m80126colin.github.io/blog/articles/%E7%BF%BB%E8%AD%AF/uva/uva10738/

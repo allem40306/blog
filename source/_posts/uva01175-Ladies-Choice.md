@@ -1,5 +1,5 @@
 ---
-title: UVa 1175 Ladies' Choice
+title: uva01175 Ladies' Choice
 category: UVa
 tags:
   - UVa
