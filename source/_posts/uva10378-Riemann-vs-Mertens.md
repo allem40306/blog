@@ -11,9 +11,9 @@ tags:
 連結：http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1679
 翻譯：https://m80126colin.github.io/blog/articles/%E7%BF%BB%E8%AD%AF/uva/uva10738/
 題意：要你算出 Möbius function 第 $n$ 項和前 $n$ 項總和，Möbius function 定義為 
-* $\mu(n)=1 if n is a square-free positive integer with an even number of prime factors.$
-* $\mu(n)=-1 if n is a square-free positive integer with an odd number of prime factors.$
-* $\mu(n)=0 if n has a squared prime factor.$
+* $\mu(n)=1$ if $n$ is a square-free positive integer with an even number of prime factors.
+* $\mu(n)=-1$ if $n$ is a square-free positive integer with an odd number of prime factors.
+* $\mu(n)=0$ if $n$ has a squared prime factor.
 
 square-free 代表說沒有平方質因數存在，也就是說該數的質因數分解，每個質因數最多都只出現一次
 <!-- more -->
