@@ -15,9 +15,9 @@ script:
 
 deploy:
   provider: pages
-  cleanup: true
-  token: $GITHUB_TOKEN
-  local_dir: public
-  keep_history: false
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: public
+  keep-history: false
   on:
     branch: hexo
