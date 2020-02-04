@@ -10,7 +10,7 @@ tags:
 ---
 連結：http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1679
 翻譯：https://m80126colin.github.io/blog/articles/%E7%BF%BB%E8%AD%AF/uva/uva10738/
-題意：要你算出 Möbius function 第 $n$ 項和前 $n$ 項總和，Möbius function 定義為 $\mu(n)=\left\{\begin{array}{}1 && 無平方質因數存在，且質因數個數為偶數\\-1 && 無平方質因數存在，且質因數個數為奇數\\0 && 有平方質因數存在\end{array}\right.$
+題意：要你算出 Möbius function 第 $n$ 項和前 $n$ 項總和，Möbius function 定義為 $\mu(n)=\left\{\begin{array}{}1 && if n is a square-free positive integer with an even number of prime factors. \\-1 && if n is a square-free positive integer with an odd number of prime factors. \\0 && if n has a squared prime factor.\end{array}\right.$， square-free 代表說沒有平方質因數存在，也就是說該數的質因數分解，每個質因數最多都只出現一次
 <!-- more -->
 解法：直接做質因數分解就可以過了，這題主要考的是如何對質因數分解，並理解什麼是 Möbius function，我覺得可以作為教 Möbius function 的基礎題。
 ```cpp
