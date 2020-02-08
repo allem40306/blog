@@ -4,7 +4,6 @@ title: AtCoder Beginner Contest 082 心得
 category: Atcoder
 tags:
   - Atcoder
-  - 基礎
   - algorithm
   - dp
 abbrlink: f19c

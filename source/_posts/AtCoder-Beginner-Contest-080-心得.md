@@ -3,8 +3,6 @@
 title: AtCoder Beginner Contest 080 心得
 category: Atcoder
 tags:
-  - Atcoder
-  - 基礎
   - 枚舉
   - 狀態壓縮
   - 離散化

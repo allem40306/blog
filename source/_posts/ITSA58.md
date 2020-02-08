@@ -1,10 +1,9 @@
 ---
 <!-- layout: layout -->
-title: ITSA58心得
+title: ITSA58 心得
 category: ITSA
 tags:
   - ITSA
-  - 基礎
   - greedy
   - 字串處理
   - 樹
