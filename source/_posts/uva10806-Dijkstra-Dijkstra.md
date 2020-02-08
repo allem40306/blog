@@ -8,8 +8,9 @@ tags:
 - flow
 - mcmf
 ---
-
+題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1747
 題意：給你一張無向圖，邊上有花費權重，問有沒有辦法從點 $1$ 出發到點 $n$，然後再從點 $n$ 回到點 $1$ 的兩條不重複邊的路徑，如果有，請輸出最小成本
+<!-- more -->
 解法：最小花費最大流，走過去再走回來，相當於把每條邊流量設 $1$，問有沒有最大流是否 $\geq 2$。
 
 ```cpp
