@@ -1,8 +1,8 @@
 ---
-title: ioicamp系列-10 總結
-category: Ioicamp
+title: IOICamp系列-10 總結
+category: 程式營隊和大賽
 tags:
-  - Ioicamp
+  - IOICamp
 abbrlink: 3f61
 date: 2019-02-03 09:47:59
 ---

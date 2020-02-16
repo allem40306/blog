@@ -1,8 +1,8 @@
 ---
-title: ioicamp系列-7 Day3
-category: Ioicamp
+title: IOICamp系列-7 Day3
+category: 程式營隊和大賽
 tags:
-  - Ioicamp
+  - IOICamp
 abbrlink: 7ff8
 date: 2019-02-01 09:18:41
 ---

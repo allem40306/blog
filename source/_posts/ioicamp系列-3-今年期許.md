@@ -1,8 +1,8 @@
 ---
-title: ioicamp系列-3 今年期許
-category: Ioicamp
+title: IOICamp系列-3 今年期許
+category: 程式營隊和大賽
 tags:
-  - Ioicamp
+  - IOICamp
 abbrlink: '924'
 date: 2019-01-27 20:45:52
 ---

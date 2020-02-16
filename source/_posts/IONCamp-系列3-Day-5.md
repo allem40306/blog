@@ -1,6 +1,6 @@
 ---
 title: IONCamp 系列3 Day 5
-category: IONCamp
+category: 程式營隊和大賽
 tags:
   - IONCamp
 abbrlink: 832a

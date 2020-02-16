@@ -1,8 +1,8 @@
 ---
-title: ioicamp系列-8 Day4
-category: Ioicamp
+title: IOICamp系列-8 Day4
+category: 程式營隊和大賽
 tags:
-  - Ioicamp
+  - IOICamp
 abbrlink: 42b9
 date: 2019-02-01 09:44:19
 ---

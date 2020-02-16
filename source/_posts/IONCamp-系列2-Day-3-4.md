@@ -1,6 +1,6 @@
 ---
 title: IONCamp 系列2 Day 3 4
-category: IONCamp
+category: 程式營隊和大賽
 tags:
   - IONCamp
 abbrlink: 47ab

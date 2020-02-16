@@ -1,8 +1,8 @@
 ---
-title: ioicamp系列-5 Day1
-category: Ioicamp
+title: IOICamp系列-5 Day1
+category: 程式營隊和大賽
 tags:
-  - Ioicamp
+  - IOICamp
 abbrlink: 5c78
 date: 2019-01-29 13:52:30
 ---

@@ -1,8 +1,8 @@
 ---
-title: ioicamp系列-9 Day5
-category: Ioicamp
+title: IOICamp系列-9 Day5
+category: 程式營隊和大賽
 tags:
-  - Ioicamp
+  - IOICamp
 abbrlink: '5379'
 date: 2019-02-02 21:08:49
 ---

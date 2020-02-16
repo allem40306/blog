@@ -1,8 +1,8 @@
 ---
-title: ioicamp系列-6 Day2
-category: Ioicamp
+title: IOICamp系列-6 Day2
+category: 程式營隊和大賽
 tags:
-  - Ioicamp
+  - IOICamp
 abbrlink: '6e38'
 date: 2019-01-30 20:48:12
 ---

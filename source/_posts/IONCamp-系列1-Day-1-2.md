@@ -1,6 +1,6 @@
 ---
 title: IONCamp 系列1 Day 1 2
-category: IONCamp
+category: 程式營隊和大賽
 tags:
   - IONCamp
 abbrlink: 759e
