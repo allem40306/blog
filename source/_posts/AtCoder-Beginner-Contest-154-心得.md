@@ -4,7 +4,7 @@ abbrlink: '8e15'
 date: 2020-02-12 17:07:05
 category: AtCoder
 tags:
-- Atcoder
+- AtCoder
 - set
 - dp
 - 數位dp

@@ -1,8 +1,9 @@
 ---
 <!-- layout: layout -->
 title: AtCoder Beginner Contest 080 心得
-category: Atcoder
+category: AtCoder
 tags:
+  - AtCoder
   - 枚舉
   - 狀態壓縮
   - 離散化

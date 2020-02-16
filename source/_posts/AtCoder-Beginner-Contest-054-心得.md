@@ -1,7 +1,7 @@
 ---
 <!-- layout: layout -->
 title: AtCoder Beginner Contest 054 心得
-category: Atcoder
+category: AtCoder
 tags:
   - dfs
   - dp

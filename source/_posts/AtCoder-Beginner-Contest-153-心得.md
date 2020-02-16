@@ -2,9 +2,9 @@
 title: AtCoder Beginner Contest 153 心得
 abbrlink: '6854'
 date: 2020-02-08 20:17:40
-category: Atcoder
+category: AtCoder
 tags:
-- Atcoder
+- AtCoder
 - dp
 - 背包dp
 - 差分

@@ -1,8 +1,8 @@
 ---
 title: Atcoder Beginner Contest 141 心得
-category: Atcoder
+category: AtCoder
 tags:
-  - Atcoder
+  - AtCoder
   - greedy
   - string
 abbrlink: ec59

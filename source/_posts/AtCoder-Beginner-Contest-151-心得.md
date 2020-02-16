@@ -1,8 +1,8 @@
 ---
 title: AtCoder Beginner Contest 151 心得
-category: Atcoder
+category: AtCoder
 tags:
-  - Atcoder
+  - AtCoder
   - bfs
   - math
   - map

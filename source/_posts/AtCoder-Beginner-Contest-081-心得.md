@@ -1,8 +1,8 @@
 ---
 title: AtCoder Beginner Contest 081 心得
-category: Atcoder
+category: AtCoder
 tags:
-  - Atcoder
+  - AtCoder
   - 枚舉
   - stl
   - map

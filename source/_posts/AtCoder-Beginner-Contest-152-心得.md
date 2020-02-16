@@ -1,10 +1,10 @@
 ---
 title: AtCoder Beginner Contest 152 心得
-category: Atcoder
+category: AtCoder
 abbrlink: a495
 date: 2020-01-21 23:38:06
 tags:
-  - Atcoder
+  - AtCoder
   - graph
   - lcm
   - math

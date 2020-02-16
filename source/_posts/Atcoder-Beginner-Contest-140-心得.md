@@ -1,8 +1,8 @@
 ---
 title: Atcoder Beginner Contest 140 心得
-category: Atcoder
+category: AtCoder
 tags:
-  - Atcoder
+  - AtCoder
   - mutliset
   - set
 abbrlink: '3847'

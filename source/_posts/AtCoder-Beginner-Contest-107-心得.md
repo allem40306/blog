@@ -1,9 +1,9 @@
 ---
 <!-- layout: layout -->
 title: AtCoder Beginner Contest 107 心得
-category: Atcoder
+category: AtCoder
 tags:
-  - Atcoder
+  - AtCoder
 abbrlink: cb6a
 date: 2018-10-24 22:12:00
 ---
