@@ -1,6 +1,6 @@
 ---
 title: FJU GSS WEB 系列3 MVC
-category: FJU GSS Web
+category: Web
 tags:
   - FJU GSS Web
   - MVC

@@ -1,6 +1,6 @@
 ---
 title: FJU GSS WEB 系列5 總結
-category: FJU GSS Web
+category: Web
 tags:
   - FJU GSS Web
 abbrlink: b554

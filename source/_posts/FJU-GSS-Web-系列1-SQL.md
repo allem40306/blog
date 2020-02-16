@@ -1,6 +1,6 @@
 ---
 title: FJU GSS Web 系列1 SQL
-category: FJU GSS Web
+category: Web
 tags:
   - FJU GSS Web
   - SQL

@@ -1,6 +1,6 @@
 ---
 title: FJU GSS Web 系列
-category: FJU GSS Web
+category: Web
 tags:
   - FJU GSS Web
 abbrlink: c653
