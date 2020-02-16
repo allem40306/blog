@@ -2,7 +2,7 @@
 title: FJU Winter 2020 系列1 延期前
 abbrlink: bbd3
 date: 2020-02-06 23:08:25
-category: 營隊
+category: 程式營隊和大賽
 tags:
 - FJU Winter 2020
 - google site

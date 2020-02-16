@@ -1,6 +1,6 @@
 ---
 title: FJU Summer 2019 系列1 Day1
-category: 輔大
+category: 程式營隊和大賽
 tags:
   - FJU Summer 2019
 abbrlink: da68

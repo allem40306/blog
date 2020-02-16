@@ -1,6 +1,6 @@
 ---
 title: FJU Summer 2019 系列3 Day3
-category: 輔大
+category: 程式營隊和大賽
 tags:
   - FJU Summer 2019
 abbrlink: f9e8
