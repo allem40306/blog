@@ -164,3 +164,5 @@ int main()
     }
 }
 ```
+
+參考連結：http://naivered.github.io/2018/03/15/Problem_Solving/UVa/UVa-10480-Sabotage/
