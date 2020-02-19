@@ -11,8 +11,7 @@ tags:
 題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=4535&mosmsg=Submission+received+with+ID+24585550
 題意：給一張圖，求點連通度，即為需要拔掉幾個點，才能讓圖不連通。
 <!-- more -->
-解法：如果求邊連通度，直接枚舉點對用最大流去算，點連通度的話，要把點成兩個，之間流量為 $1$，原圖上的邊流量設無限大，之後一樣枚舉點對用最大流去算出。
-坑：為什麼可以一個匯點，枚舉其他點為匯點，就能算出答案?
+解法：如果求邊連通度，直接枚舉點對用最大流去算，點連通度的話，要把點成兩個，之間流量為 $1$，原圖上的邊流量設無限大，之後一樣枚舉點對用最大流去算出(可以一個匯點，枚舉其他點為匯點，就能算出答案)。
 
 ```cpp=
 #pragma GCC optimize(2)
