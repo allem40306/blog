@@ -5,8 +5,8 @@ date: 2020-02-19 22:51:29
 category: UVa
 tags:
 - UVa
-- Flow
-- Min Cut Max Flow
+- flow
+- min cut max flow
 ---
 題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=4535&mosmsg=Submission+received+with+ID+24585550
 題意：給一張圖，求點連通度，即為需要拔掉幾個點，才能讓圖不連通。

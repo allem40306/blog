@@ -1,17 +1,17 @@
 ---
-title: uva10480 Sabotage
-abbrlink: a5f4
-date: 2020-02-16 15:04:53
+title: uva11506 Angry Programmer
+abbrlink: af18
+date: 2020-02-20 10:00:06
 category: UVa
 tags:
 - UVa
 - flow
 - min cut max flow
 ---
-連結：https://onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=0&problem=1421&mosmsg=Submission+received+with+ID+24569393
-題意：一個國家有 $N$ 個都市和 $M$ 條道路，現在要讓 $1$ 號城市(首都)到 $2$ 號城市(最大的城市)無法連通，炸掉每條路有不同的成本，問要炸到哪幾條路有最低的成本。
+[題目連結](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=0&problem=2501&mosmsg=Submission+received+with+ID+24587536)
+題意：要把前老闆的電腦和公司主機的連結切斷，除了上述兩台電腦之外，你可以將任意一台電腦或線路破壞，問最小成本為多少
 <!-- more -->
-解法：這題是 Min Cut(最小割)的題目，可以轉成最大流來做。這題問的是哪幾條是最小割，需要根據最後一次 BFS 的結果找出來，一條邊在最小割裡的條件是，只有一端點連到起點，並且該條邊流量已達上限。所以枚舉每條邊看合不合規定就可以得出答案。
+解法：這是一題最小割的裸題，要加上拆點法，把每台電腦拆成兩個點($x_in$ 和 $x_out$)，中間流量為破壞電腦的成本(前老闆的電腦和公司主機的量都設為無限大)，對於每條線路，讓兩個點的 $in$ 和對方 $out$ 相連(我當初只連一邊就 WA 了)，流量為破壞線路的成本，這樣就可用 Dinic 演算法解出最大流了。
 
 ```cpp
 #pragma GCC optimize(2)
@@ -20,9 +20,9 @@ using namespace std;
 using LL = long long;
 using PII = pair<int,int>;
 using PLL = pair<LL, LL>;
-const int INF = 1e9;
+const LL INF = 1e18;
 const int MXN = 0;
-const int MXV = 505;
+const int MXV = 150;
 #define MP make_pair
 #define PB push_back
 #define F first
@@ -31,8 +31,7 @@ const int MXV = 505;
 #define FORD(i, L, R) for(int i = L; i != (int)R; --i)
 #define IOS cin.tie(nullptr); cout.tie(nullptr); ios_base::sync_with_stdio(false);
 
-template <typename T>
-struct Dinic
+template <typename T> struct Dinic
 {
     int n, s, t, level[MXV], now[MXV];
     struct Edge
@@ -54,8 +53,9 @@ struct Dinic
     }
     void add_edge(int u, int v, T f)
     {
+        // cout << u << ' ' << v << ' ' << f << '\n';
         e[u].push_back({v, f, (int)e[v].size()});
-        e[v].push_back({u, f, (int)e[u].size() - 1});
+        e[v].push_back({u, 0, (int)e[u].size() - 1});
     }
     bool bfs()
     {
@@ -80,9 +80,12 @@ struct Dinic
     }
     T dfs(int u, T limit)
     {
+        // cout << u << ' ' << limit << '\n';
         if (u == t)
+        {
             return limit;
-        int res = 0;
+        }
+        T res = 0;
         while (now[u] < (int)e[u].size())
         {
             Edge &it = e[u][now[u]];
@@ -115,26 +118,13 @@ struct Dinic
         {
             T tmp;
             memset(now, 0, sizeof(now));
-            do{
+            do
+            {
                 tmp = dfs(s, INF);
                 res += tmp;
-            }while(tmp);
+            } while (tmp);
         }
-        // cout << res << '\n';
         return res;
-    }
-    void find_minimum_cut()
-    {
-        FOR(i, 1, n + 1)if(level[i] != -1)
-        {
-            for(auto edge: e[i])
-            {
-                if(level[edge.v] == -1 && edge.rf == 0)
-                {
-                    cout << i << ' ' << edge.v << '\n';
-                }
-            }
-        }
     }
 };
 
@@ -143,26 +133,26 @@ int main()
     IOS;
     int m, n;
     Dinic<LL> dinic;
-    bool delimiter = false;
     while(cin >> m >> n, m || n)
     {
-        if(delimiter)
-        {
-            cout << '\n';
-        }
-        delimiter = true;
-        dinic.init(m, 1, 2);
+        int s = 1, t = m + m;
+        dinic.init(t, s, t);
+        dinic.add_edge(s, s + m, INF);
+        dinic.add_edge(t - m, t, INF);
         int x, y;
         LL c;
+        FOR(i, 0, m - 2)
+        {
+            cin >> x >> c;
+            dinic.add_edge(x, x + m, c);
+        }
         FOR(i, 0, n)
         {
             cin >> x >> y >> c;
-            dinic.add_edge(x, y, c);
+            dinic.add_edge(x + m, y, c);
+            dinic.add_edge(y + m, x, c);
         }
-        dinic.flow();
-        dinic.find_minimum_cut();
+        cout << dinic.flow() << '\n';
     }
 }
 ```
-
-參考連結：http://naivered.github.io/2018/03/15/Problem_Solving/UVa/UVa-10480-Sabotage/
