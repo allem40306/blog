@@ -9,6 +9,7 @@ tags:
 ---
 題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=3719&mosmsg=Submission+received+with+ID+24597305
 題意：有四種花色的牌，數字為合數(2,4,6,8,9,10,12,14,15,16...)，現在少了 $c$ 張牌，求四種花色拿一張，數字總和介於 $a$ 到 $b$ 的各有幾種。
+<!-- more -->
 解法：把四種顏色現有的牌寫成多項式($x^2+x^4+x^6...$)，把多項式相乘就能的出答案，用 FFT 做多項式乘法，四個多項式乘法可以得出點值式一起相乘後，再轉回係數式。我這題因為在做 FFT 時都讓整個陣列下去做，一直吃 TLE，後來發現才變成 AC。
 
 ```cpp
