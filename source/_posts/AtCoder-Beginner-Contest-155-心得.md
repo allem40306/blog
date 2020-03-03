@@ -13,7 +13,7 @@ tags:
 ---
 這場有點挑戰性，賽中只對了前三題。
 <!-- more -->
-* [A .Poor](https://atcoder.jp/contests/abc152/tasks/abc155_a)
+* [A. Poor](https://atcoder.jp/contests/abc152/tasks/abc155_a)
 題意：給三個數，問是否剛好其中兩數相同。
 解法：直接跑迴圈判斷。
 
