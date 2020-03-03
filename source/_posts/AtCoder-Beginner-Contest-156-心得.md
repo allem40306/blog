@@ -284,8 +284,8 @@ int main()
 ```
 
 * [F. Modularness](https://atcoder.jp/contests/abc152/tasks/abc156_f)
-題意：給定長度為 $K$ 的序列 $D$ 和 $Q$ 筆詢問，對於每筆詢問有三個整數 $n_i,x_i,m_i$，即為一個長度為 $n_i$ 的序列，$a_0=x_i,a_j=a_{j-1}+d_{j\ mod\ k}(j>0)$，問有幾個 $j$ 使得 $(a_j\ mod\ m_i)<((a_{j+1}\ mod\ m_i))$
-解法：我們可以求不符合有有幾個，再用全部減去不符合的即為答案。我們先將所有 $d_i$ 都 $mod\ m$，不符合的有兩種，一種是 $(a_j\ mod\ m_i)=((a_{j+1}\ mod\ m_i))$，這種狀況在 $d_i\ mod\ m=0$ 的時候出現，第二種為 $(a_j\ mod\ m_i)>((a_{j+1}\ mod\ m_i))$，出現在 $\left \lfloor \frac{a_{i}}{m} \right \rfloor=\left \lfloor \frac{a_{i+1}}{m} \right \rfloor-1$ 的狀況，這種狀況要一次算，式子為 $\left \lfloor \frac{a_{n-1}}{m} \right \rfloor - \left \lfloor \frac{a_{0}}{m} \right \rfloor$
+題意：給定長度為 $K$ 的序列 $D$ 和 $Q$ 筆詢問，對於每筆詢問有三個整數 $n_i,x_i,m_i$，即為一個長度為 $n_i$ 的序列，$a_0=x_i,a_j=a_{j-1}+d_{j\ mod\ k}(j>0)$，問有幾個 $j$ 使得 $(a_j\ mod\ m_i)<(a_{j+1}\ mod\ m_i)$
+解法：我們可以求不符合有有幾個，再用全部減去不符合的即為答案。我們先將所有 $d_i$ 都 $mod\ m$，不符合的有兩種，一種是 $(a_j\ mod\ m_i)=(a_{j+1}\ mod\ m_i)$，這種狀況在 $d_i\ mod\ m=0$ 的時候出現，第二種為 $(a_j\ mod\ m_i)>(a_{j+1}\ mod\ m_i)$，出現在 $\left \lfloor \frac{a_{i}}{m} \right \rfloor=\left \lfloor \frac{a_{i+1}}{m} \right \rfloor-1$ 的狀況，這種狀況要一次算，式子為 $\left \lfloor \frac{a_{n-1}}{m} \right \rfloor - \left \lfloor \frac{a_{0}}{m} \right \rfloor$
 
 ```cpp
 #pragma GCC optimize(2)
