@@ -1,5 +1,5 @@
 ---
-title: '[2020 Week 09 CPC 寒訓]'
+title: '[2020 Week 09] CPC 寒訓'
 abbrlink: 254e
 date: 2020-03-01 23:04:06
 category: 週記
