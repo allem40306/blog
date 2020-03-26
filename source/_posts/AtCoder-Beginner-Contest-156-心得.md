@@ -11,7 +11,7 @@ tags:
 ---
 virtual judge，賽中 4 題，這場後面都數論
 <!-- more -->
-* [A. Beginner](https://atcoder.jp/contests/abc152/tasks/abc156_a)
+* [A. Beginner](https://atcoder.jp/contests/abc156/tasks/abc156_a)
 題意：給定比賽場次 $K$ 和 inner rating $R$，如果 $K<10$ 則 Displayed Rating 要減 $100\times(10-K)$，問 Displayed Rating 為多少
 解法：if 判斷
 
@@ -49,7 +49,7 @@ int main()
 }
 ```
 
-* [B. Digits](https://atcoder.jp/contests/abc152/tasks/abc156_b)
+* [B. Digits](https://atcoder.jp/contests/abc156/tasks/abc156_b)
 題意：問 $N$ 在 $K$ 進位要用多少位數表示
 解法：直接計算 $N$ 要除以多少次 $K$ 才會等於 $0$
 
@@ -85,7 +85,7 @@ int main()
 }
 ```
 
-* [C. Rally](https://atcoder.jp/contests/abc152/tasks/abc156_c)
+* [C. Rally](https://atcoder.jp/contests/abc156/tasks/abc156_c)
 題意：給一整數數列，求一整數使得和數列每個數字平方和最小
 解法：一般來說要找平均數，但是因為指定整數，所以需要找最靠近平均數的整數
 
@@ -121,7 +121,7 @@ int main()
 }
 ```
 
-* [D. Bouquet](https://atcoder.jp/contests/abc152/tasks/abc156_d)
+* [D. Bouquet](https://atcoder.jp/contests/abc156/tasks/abc156_d)
 題意：給定 $N$ 朵花，可以選其中 $1$ 到 $N$ 朵花來做裝飾，$A$ 和 $B$ 朵除外
 解法：選其中 $1$ 到 $N$ 朵花的方法數有 $2^N-1$ 種，扣到 $C(N, A)$ 和 $C(N, B)$ 種，這題數字要用快速冪和模逆元求出答案。
 
@@ -199,7 +199,7 @@ int main()
 }
 ```
 
-* [E. Roaming](https://atcoder.jp/contests/abc152/tasks/abc156_e)
+* [E. Roaming](https://atcoder.jp/contests/abc156/tasks/abc156_e)
 題意：有 $N$ 個人，每個人一開始都在各自的房間，每一天將一人移動到其他房間，問 $K$ 天後房間分布的可能性。
 解法：換句話說每天都可以讓一間房間為空，所以可以選 $C(N,i)$ 間空房間，至於 $N$ 個人要分到剩下的 $N-i$ 間房間，可以例用放隔板的方式想，在 $N$ 之間的 $N-1$ 個間隔，選 $N-i-1$ 個地方放隔板，也就是 $C(n-1,n-i-1)$，所以要算出這題的答案，就枚舉所有可能的 $i$，算出 $C(N,i)\times C(n-1,n-i-1)$ 的答案就可以。
 
@@ -283,7 +283,7 @@ int main()
 }
 ```
 
-* [F. Modularness](https://atcoder.jp/contests/abc152/tasks/abc156_f)
+* [F. Modularness](https://atcoder.jp/contests/abc156/tasks/abc156_f)
 題意：給定長度為 $K$ 的序列 $D$ 和 $Q$ 筆詢問，對於每筆詢問有三個整數 $n_i,x_i,m_i$，即為一個長度為 $n_i$ 的序列，$a_0=x_i,a_j=a_{j-1}+d_{j\ mod\ k}(j>0)$，問有幾個 $j$ 使得 $(a_j\ mod\ m_i)<(a_{j+1}\ mod\ m_i)$
 解法：我們可以求不符合有有幾個，再用全部減去不符合的即為答案。我們先將所有 $d_i$ 都 $mod\ m$，不符合的有兩種，一種是 $(a_j\ mod\ m_i)=(a_{j+1}\ mod\ m_i)$，這種狀況在 $d_i\ mod\ m=0$ 的時候出現，第二種為 $(a_j\ mod\ m_i)>(a_{j+1}\ mod\ m_i)$，出現在 $\left \lfloor \frac{a_{i}}{m} \right \rfloor=\left \lfloor \frac{a_{i+1}}{m} \right \rfloor-1$ 的狀況，這種狀況要一次算，式子為 $\left \lfloor \frac{a_{n-1}}{m} \right \rfloor - \left \lfloor \frac{a_{0}}{m} \right \rfloor$
 

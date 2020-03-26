@@ -14,7 +14,7 @@ tags:
 ---
 這次比賽沒有在很好的狀態比賽，virtual 賽內對 4 題，賽後解出後 2 題。
 <!-- more -->
-* [A. Remaining Balls](https://atcoder.jp/contests/abc152/tasks/abc154_a)
+* [A. Remaining Balls](https://atcoder.jp/contests/abc154/tasks/abc154_a)
 題意：有 $S$ 和 $T$ 兩堆球，$U$ ($U=S$ or $U=T$)要從其中一堆拿球，問拿完球個數
 解法：比較 $U$ 是 $S$ 還是 $T$ 在做出相對應的輸出
 
@@ -53,7 +53,7 @@ int main()
 }
 ```
 
-* [B. I miss you...](https://atcoder.jp/contests/abc152/tasks/abc154_b)
+* [B. I miss you...](https://atcoder.jp/contests/abc154/tasks/abc154_b)
 題意：將字串中每個字都取代為 `x`
 解法：算出字串長度，輸出相對應的 `x` 個數
 
@@ -85,7 +85,7 @@ int main()
 }
 ```
 
-* [C. Distinct or Not](https://atcoder.jp/contests/abc152/tasks/abc154_c)
+* [C. Distinct or Not](https://atcoder.jp/contests/abc154/tasks/abc154_c)
 題意：給定 $N$ 個數，問是否都不相同
 解法：把數字都丟進 `set`，最後判斷 `set` 的 size 是否等於 $N$，如果不同代表有重複的
 
@@ -133,7 +133,7 @@ int main()
 }
 ```
 
-* [D. Dice in Line](https://atcoder.jp/contests/abc152/tasks/abc154_d)
+* [D. Dice in Line](https://atcoder.jp/contests/abc154/tasks/abc154_d)
 題意：有 $N$ 顆骰子排成一列，第 $i$ 顆骰子有 1 到 $p_i$，每面骰到的機率是一樣的，要你選連續 $K$ 顆獨立骰的骰子，使得期望值總和最大
 解法：每顆骰子期望值為 $\frac{(1+p_i)}{2}$，把期望值做前綴和，再枚舉每個區間做計算取最大值就可得到答案。這題我沒輸出到後 8 位時會 WA，算是大發現(?
 
@@ -179,7 +179,7 @@ int main()
 }
 ```
 
-* [E. Almost Everywhere Zero](https://atcoder.jp/contests/abc152/tasks/abc154_e)
+* [E. Almost Everywhere Zero](https://atcoder.jp/contests/abc154/tasks/abc154_e)
 題意：問 $1$ 到 $N$ 中，有幾個數恰好有 $K$ 個非 $0$ 的位數
 解法：數位dp，另 `dp[i][j][k]` 為 $N$ 的前 $i$ 位數中，有 $j$ 位非 $0$ 的位數，$k=0$ 代表前 $i$ 位剛好是 $N$ 的前 $i$ 位的狀況，$k=1$ 則為至少一位數小於 $N$ 的相對位數的狀況，轉移從前 $i$ 位轉移到前 $i+1$ 位。
 
@@ -249,7 +249,7 @@ int main()
 }
 ```
 
-* [F. Many Many Paths](https://atcoder.jp/contests/abc152/tasks/abc154_f)
+* [F. Many Many Paths](https://atcoder.jp/contests/abc154/tasks/abc154_f)
 題意：設 $F(i,j)$ 為方格中從 $(0,0)$ 藉由增加 $1$ 單位的 $x$ 或 $y$ 走到 $(i,j)$ 的辦法，求 $\Sigma_{i=r1}^{r2}\Sigma_{j=c1}^{c2}f(i,j)$
 解法：要解題需要知道兩件事情。第一，二維區間 $a[][]$ 和可先求前綴和，使得 $\Sigma_{i=0}^{x}\Sigma_{j=0}^{y} a_{ij}=sum(x,y)$，任何一塊二維區間都能在 $O(1)$ 時間內求出。
 第二點是 $f(0, c)+f(1, c)+f(2, c)+...+f(r, c)=C(c,0)+C(c+1,1)+C(c+2,2)+...+C(c+r,c)$$=C(c+1,0)+C(c+1,1)+C(c+2,2)+...+C(c+r,c)=C(c+r+1,c)=f(r+1,c)$，同樣道理可得出 $f(r,0)+f(r,1)+f(r,2)+...+f(r,c)=f(r,c+1)$，那麼 $\Sigma_{i=0}^{r}\Sigma_{j=0}^{c}f(i,j)=\Sigma_{i=0}^{r}f(i+1,c)=f(r+1,c+1)=C(r+c+2,c+1)$。

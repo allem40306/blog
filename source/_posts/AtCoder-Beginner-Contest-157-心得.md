@@ -13,7 +13,7 @@ tags:
 這場我直接寫，有點難度，最後一題解不出來。
 <!-- more -->
 
-* [A. Duplex Printing](https://atcoder.jp/contests/abc152/tasks/abc157_a)
+* [A. Duplex Printing](https://atcoder.jp/contests/abc157/tasks/abc157_a)
 題意：一張紙印兩頁，$N$ 頁需用幾張紙。
 解法：直接加一除以二，避免奇數少算一頁。
 
@@ -44,7 +44,7 @@ int main()
 }
 ```
 
-* [B. Bingo](https://atcoder.jp/contests/abc152/tasks/abc157_b)
+* [B. Bingo](https://atcoder.jp/contests/abc157/tasks/abc157_b)
 題意：給定一個賓果盤 $N$ 個喊出的數字，問是否賓果。
 解法：用 `map` 將賓果盤上數字對應位置，如果喊出來的數字在盤上就標記下來，最後檢查有沒有連線。
 
@@ -118,7 +118,7 @@ int main()
 }
 ```
 
-* [C. Guess The Number](https://atcoder.jp/contests/abc152/tasks/abc157_c)
+* [C. Guess The Number](https://atcoder.jp/contests/abc157/tasks/abc157_c)
 題意：給定 $M$ 個條件，為一個 $N$ 位數的第 $s_i$ 位須為 $c_i$，請找出一個符合這些條件之最小的數字，找不到請輸出 $-1$。
 解法：這題要考的是細心度，有很多種狀況要考慮，我參考其他人的辦法，將情況分為只有 $1$ 位數和多位數討論，才拿到 AC。
 
@@ -195,7 +195,7 @@ int main()
 }
 ```
 
-* [D. Friend Suggestions](https://atcoder.jp/contests/abc152/tasks/abc157_d)
+* [D. Friend Suggestions](https://atcoder.jp/contests/abc157/tasks/abc157_d)
 題意：有 $N$ 個人，有 $M$ 個好友關係，有 $K$ 個敵人關係，可以經由朋友認識其他好友，問每人可多認識幾個好友。
 解法：人轉成點，關係轉成邊，只考慮好友關係的邊，可以認識的人一定在同個連通塊，所以先算出每個連通塊個數，減去朋友數，再減去同一個連通塊敵人個數，就可得到答案。
 
@@ -291,7 +291,7 @@ int main()
 }
 ```
 
-* [E. Simple String Queries](https://atcoder.jp/contests/abc152/tasks/abc157_e)
+* [E. Simple String Queries](https://atcoder.jp/contests/abc157/tasks/abc157_e)
 題意：給定長度為 $N$ 的字串 $S$，和 $Q$ 筆操作，操作有兩種，一是更換其中字元，一是詢問某區間字元種數，根據每筆詢問輸出答案。
 解法：一開始我想是不是要用線段樹之類的資料結構，後來看解答，才知道開 $26$ 顆 `set` 紀錄每種字元出現的位置就可以了，詢問就利用 `lower_bound` 查詢每種字元是否有該詢問的區間內就行了。
 

@@ -13,7 +13,7 @@ tags:
 ---
 這場有點挑戰性，賽中只對了前三題。
 <!-- more -->
-* [A. Poor](https://atcoder.jp/contests/abc152/tasks/abc155_a)
+* [A. Poor](https://atcoder.jp/contests/abc155/tasks/abc155_a)
 題意：給三個數，問是否剛好其中兩數相同。
 解法：直接跑迴圈判斷。
 
@@ -62,7 +62,7 @@ int main()
 }
 ```
 
-* [B. Papers, Please](https://atcoder.jp/contests/abc152/tasks/abc155_b)
+* [B. Papers, Please](https://atcoder.jp/contests/abc155/tasks/abc155_b)
 題意：問有沒有不能被 $3$ 和 $5$ 整除的偶數。
 解法：直接判斷。
 
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-* [C. Poll](https://atcoder.jp/contests/abc152/tasks/abc155_c)
+* [C. Poll](https://atcoder.jp/contests/abc155/tasks/abc155_c)
 題意：問出現次數最高的單字，如果超過一個，請依照字典序輸出。
 解法：用 `map` 就好了。
 
@@ -167,7 +167,7 @@ int main()
 }
 ```
 
-* [D. Pairs](https://atcoder.jp/contests/abc152/tasks/abc155_d)
+* [D. Pairs](https://atcoder.jp/contests/abc155/tasks/abc155_d)
 題意：有 $N$ 個數字，任意兩數相乘的一乘積，為第 $K$ 小的數為和? 
 解法：二分搜包二分搜，外層二分搜答案，內層搜尋 $a_i$ 和幾個數相乘會小於某數。
 
@@ -243,7 +243,7 @@ int main()
 }
 ```
 
-* [E. Payment](https://atcoder.jp/contests/abc152/tasks/abc155_e)
+* [E. Payment](https://atcoder.jp/contests/abc155/tasks/abc155_e)
 題意：現在有硬幣有 $1,10,100,...,10^i$ 的面額，如果今天買了 $S$ 元，付款和找錢(加起來)最少要多少硬幣。
 這裡提供 2 種解法，官解釋另外一種，可是我覺得沒有很漂亮就沒寫了。
 解法 1：由低位數開始算，如果第 $i$ 位 $<5$ 是買方付，$>5$ 是賣方找，至於 $=5$ 就要看第 $i+1$ 位是否 $>5$，如果 $>5$ 就賣方找，否則就買方付。
@@ -346,7 +346,7 @@ int main()
 }
 ```
 
-* [F. Perils in Parallel](https://atcoder.jp/contests/abc152/tasks/abc155_f)
+* [F. Perils in Parallel](https://atcoder.jp/contests/abc155/tasks/abc155_f)
 題意：有 $N$ 顆炸彈有各自的座標(相異)和狀態(開或關)，現有 $M$ 台機器，每台機器都可以使一區段的炸彈狀態轉換，問可不可以讓所有炸彈都變成關的狀況。
 解法：炸彈依座標排序，先把兩兩相鄰炸彈求 $xor$ 值(兩邊界也要)，形成 $N + 1$ 個帶有值點，接著對於每台機器的區間找出對應的炸彈(點)，將兩點相連，這樣我們就建構一顆點上有值(0 or 1)的圖了。
 回頭看 $xor$ 值，如果兩顆炸彈狀態不一樣，也就是有一顆炸彈是開著，那麼 $xor$ 值就是 $1$，想要全部炸彈都關閉，每個 $xor$ 值都要為 $0$。
