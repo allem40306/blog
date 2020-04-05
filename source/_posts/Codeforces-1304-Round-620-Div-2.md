@@ -1,5 +1,5 @@
 ---
-title: Codeforces-1304-Round-620-Div.2
+title: Codeforces 1304 Round 620 Div.2
 abbrlink: '7412'
 date: 2020-03-20 17:08:13
 category: Codeforces
