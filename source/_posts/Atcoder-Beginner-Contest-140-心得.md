@@ -1,5 +1,5 @@
 ---
-title: Atcoder Beginner Contest 140 心得
+title: AtCoder Beginner Contest 140 心得
 category: AtCoder
 tags:
   - AtCoder
