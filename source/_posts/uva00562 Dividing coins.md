@@ -6,7 +6,7 @@ tags:
   - UVa
   - Zerojudge
   - dp
-  - 背包dp
+  - 背包 dp
 abbrlink: 3ef0
 date: 2017-12-31 22:30:47
 ---

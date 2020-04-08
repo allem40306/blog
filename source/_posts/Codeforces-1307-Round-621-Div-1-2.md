@@ -6,6 +6,7 @@ category: Codeforces
 tags:
 - greedy
 - dp
+- graph
 - 最短路徑
 - bfs
 - 差值排序

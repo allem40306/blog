@@ -5,6 +5,12 @@ date: 2020-03-20 17:08:13
 category: Codeforces
 tags:
 - Codeforces
+- string
+- greedy
+- lca
+- dp
+- monotonic queue
+- 單調優化 dp
 ---
 這場比賽我是自己一題一題寫的，比起一般的 AtCoder 還要難。
 <!-- more -->

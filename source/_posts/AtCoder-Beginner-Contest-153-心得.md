@@ -6,7 +6,7 @@ category: AtCoder
 tags:
 - AtCoder
 - dp
-- 背包dp
+- 背包 dp
 - 差分
 - binary search
 ---
