@@ -7,7 +7,7 @@ tags:
 - AtCoder
 - set
 - dp
-- 數位dp
+- 數位 dp
 - math
 - 模逆元
 - 排列組合
