@@ -2,7 +2,7 @@
 title: '[2020 Week 20] NCPU 呢'
 abbrlink: e58e
 date: 2020-05-20 22:42:41
-category:
+category: 週記
 tags:
 ---
 這週一件很開心的事情是花比較多的時間打程式競賽，有 9 小時，週末還打了一場模擬賽，可是呢，NCPU 還是沒有消息，只找到 NCTU 的消息，真是快了。
