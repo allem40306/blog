@@ -7,6 +7,7 @@ tags:
   - UVa
   - flow
   - mcmf
+  - graph
 ---
 
 連結：https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1535
