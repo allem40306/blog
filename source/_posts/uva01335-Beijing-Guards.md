@@ -6,8 +6,8 @@ category: UVa
 tags:
 - UVa
 - binary search
-- 程式競賽選修
-- 108 下學期
+- 程式競賽選修課
+- 108 下
 ---
 [題目連結](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4081)
 題意：有 $N$ 個士兵排成一環，每個士兵需要 $r_i$ 種禮物，相鄰兩士兵不能有重複的禮物，問最少需要幾種禮物。

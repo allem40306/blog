@@ -7,6 +7,8 @@ tags:
 - UVa
 - math
 - floyd cycle detection
+- 程式競賽選修課
+- 108 下
 ---
 [題目連結](https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2544)
 題意：問 $k, k^2, k^3, k^4,..$ 中取最大 $n$ 位，可以得出的最大數字為多少。

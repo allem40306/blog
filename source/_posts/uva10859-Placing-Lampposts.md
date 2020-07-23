@@ -8,6 +8,8 @@ tags:
   - graph
   - dp
   - 樹形 dp
+  - 程式競賽選修課
+  - 108 下
 ---
 [題目連結](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1800)
 * 題意：給定一個由多個樹狀道路形成的國家，要在放最少盞燈，使得每條路至少被一盞燈照到，如果有多組符合，讓被兩盞燈照到的路越多越好。

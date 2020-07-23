@@ -8,6 +8,8 @@ tags:
   - graph
   - shortest path
   - dijkstra
+  - 程式競賽選修課
+  - 108 下
 ---
 [題目連結](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2352)
 * 題意：給定 $N$ 個城市和 $M$ 條道路，每個點給定加油的費用，每條邊給定經郭需花費得油量，問從城市 $s$ 到城市 $e$，用一台容量只有 $c$ 單位油量的車，最少需要花多少成本
