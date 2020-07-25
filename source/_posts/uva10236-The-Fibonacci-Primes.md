@@ -13,8 +13,9 @@ tags:
 [題目連結](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1177)
 * 題意：求費式數列中第 $N$ 個質數的前 $9$ 位。
 <!-- more -->
-* 題解：把前幾項給求出來，我們設 $f(i)$ 為費式數列第 $i$ 項，當 $i>=5$ 時，$i$ 是質數，$f(i)$ 也會是質數($i=19$ 時例外)。那麼這題就先求出質數表和費式數列(只保留最高 9 位)，就可以得出答案，比較要注意有兩點，第一個是要微調 $N=1, 2$ 時的答案，第二個是要用 `double` 來算出費式數列，用 `long long` 會有誤差。
-* ![](https://i.imgur.com/99cI1wa.png)
+* 題解：把前幾項給求出來，我們設 $f(i)$ 為費式數列第 $i$ 項，當 $i>=5$ 時，$i$ 是質數，$f(i)$ 也會是質數($i=19$ 時例外，題目好像沒注意到這個，這裡就無視這個問題)。那麼這題就先求出質數表和費式數列(只保留最高 9 位)，就可以得出答案，比較要注意有兩點，第一個是要微調 $N=1, 2$ 時的答案，第二個是要用 `double` 來算出費式數列，用 `long long` 會有誤差。
+* ![](https://i.imgur.com/tuurccR.png)
+
 ```cpp=
 #pragma GCC optimize(2)
 #include <bits/stdc++.h>
