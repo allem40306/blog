@@ -2,7 +2,7 @@
 title: '[2020 Week 29] ICPC 訓練聯盟'
 abbrlink: fb37
 date: 2020-07-20 22:47:45
-category:
+category: 週記
 tags:
 - 畢業專題
 ---
