@@ -1,6 +1,6 @@
 ---
 title: NISRA Enlightened 2019
-category: NISRA
+category: 程式營隊和大賽
 tags:
   - NISRA
   - Web
