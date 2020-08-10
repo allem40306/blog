@@ -14,6 +14,7 @@ tags:
 <!-- more -->
 * 題解：這題要轉為幾何，變成求 $x=t1,x=t2,y=s1,y=s2$ 所圍成的矩形面積，跟在 $y=x+w,y=x-w$ 兩條線之內的面積比例。`sol(b)` 函式用來算出 $y=x+b$ 右下方和矩形所交會的面積，有 6 種情況，如下圖，根據 $y=x+w$ 和$x=t1,x=t2$ 來判斷，`sol(w)-sol(-w)` 就是兩條線交會出的面積，最後除以矩形整體面積就是答案。
 * ![](https://i.imgur.com/ylEznKz.jpg)
+
 ```cpp=
 #pragma GCC optimize("O2")
 #include <bits/stdc++.h>
