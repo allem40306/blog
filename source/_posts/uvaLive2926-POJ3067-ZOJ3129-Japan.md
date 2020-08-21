@@ -8,6 +8,7 @@ tags:
 - POJ
 - ZOJ
 - bitIndexTree
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=927)
 [題目連結 POJ](http://poj.org/problem?id=3067)

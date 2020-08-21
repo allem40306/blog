@@ -8,6 +8,7 @@ tags:
 - OpenJ_Bailian
 - disjoint set
 - 帶權並查集
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 POJ](http://poj.org/problem?id=1182)
 [題目連結 OpenJ_Bailian](http://bailian.openjudge.cn/practice/1182?lang=en_US)

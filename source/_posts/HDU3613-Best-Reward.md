@@ -6,6 +6,7 @@ category: HDU
 tags:
 - HDU
 - manaCher
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://acm.hdu.edu.cn/showproblem.php?pid=3613)
 * 題意：給定 26 個英文字母的價值和一個字串，現在要把自傳切成兩個子字串，如果子字串是回文字串，就可以獲得字串上所有字母價值和，求最大獲益。

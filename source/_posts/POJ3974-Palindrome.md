@@ -6,6 +6,7 @@ category: POJ
 tags:
 - POJ
 - manaCher
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://poj.org/problem?id=3974)
 * 題意：給定字串，求最長回文字串。

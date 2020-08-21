@@ -8,6 +8,7 @@ tags:
 - SCU
 - Codeforces
 - 遞迴
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 POJ](http://poj.org/problem?id=3889)
 [題目連結 SCU](http://acm.scu.edu.cn/soj/problem.action?id=3788)

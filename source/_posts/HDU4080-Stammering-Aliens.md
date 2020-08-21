@@ -7,6 +7,7 @@ tags:
 - HDU
 - hash
 - binary search
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://acm.hdu.edu.cn/showproblem.php?pid=4080)
 * 題意：給定整數 $m$ 和一字串 $S$，求至少出現 $m$ 次的最長子字串，如果有多組，輸出且最右邊那組。

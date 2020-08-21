@@ -8,6 +8,7 @@ tags:
 - POJ
 - ZOJ
 - dfs
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 uva](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=480)
 [題目連結 POJ](http://poj.org/problem?id=2258)

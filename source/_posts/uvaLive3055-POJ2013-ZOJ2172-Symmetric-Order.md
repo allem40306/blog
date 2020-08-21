@@ -9,6 +9,7 @@ tags:
 - ZOJ
 - stl
 - stack
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 UVaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1056)
 [題目連結 POJ](http://poj.org/problem?id=2013)

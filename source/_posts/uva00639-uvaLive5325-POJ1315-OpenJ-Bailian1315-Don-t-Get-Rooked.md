@@ -9,6 +9,7 @@ tags:
 - OpenJ_Bailian
 - 遞迴
 - 剪枝
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=580)
 [題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3326)
