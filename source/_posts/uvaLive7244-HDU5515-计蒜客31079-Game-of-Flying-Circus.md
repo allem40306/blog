@@ -8,6 +8,7 @@ tags:
 - HDU
 - 计蒜客
 - binary search
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=5256)
 [題目連結 HDU](http://acm.hdu.edu.cn/showproblem.php?pid=5515)
