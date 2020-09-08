@@ -1,7 +1,8 @@
 ---
 title: uva00639 uvaLive5325 POJ1315 OpenJ_Bailian1315 Don't Get Rooked
 abbrlink: 483a
-date: 2020-08-15 16:33:09 UVa
+date: 2020-08-15 16:33:09
+category: UVa
 tags:
 - UVa
 - UVaLive

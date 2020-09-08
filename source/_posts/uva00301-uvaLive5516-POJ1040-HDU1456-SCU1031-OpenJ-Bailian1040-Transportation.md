@@ -1,7 +1,8 @@
 ---
 title: uva00301 uvaLive5516 POJ1040 HDU1456 SCU1031 OpenJ_Bailian1040 Transportation
 abbrlink: 9e4e
-date: 2020-08-15 16:31:41 UVa
+date: 2020-08-15 16:31:41
+category: UVa
 tags:
 - UVa
 - UVaLive
