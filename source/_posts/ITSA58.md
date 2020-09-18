@@ -6,7 +6,7 @@ tags:
   - ITSA
   - greedy
   - 字串處理
-  - 樹
+  - Tree
   - 最短路徑
   - 暴力法
 abbrlink: 74b7
