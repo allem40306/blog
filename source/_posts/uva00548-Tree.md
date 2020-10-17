@@ -6,6 +6,7 @@ category: uva
 tags:
 - uva
 - Tree
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=489)
 * 題意：給一顆二元樹的中序和後序，求從根到葉節點的所有路徑中累加的最小值，輸出該葉節點的值，如果有多條路徑符合，輸出葉節點最小的一個。

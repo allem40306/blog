@@ -6,6 +6,7 @@ category: uva
 tags:
 - uva
 - Tree
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=620)
 * 題意：給定一顆層數 $D$ 為完美二元樹，每次會從樹根放一顆球，每個節點都有一個標記，一開始標記為左，有一顆球經過，標記會為右，再一顆經過，標記會為左，以此類推，每顆球都會依標記決定要往哪顆子樹走，問第 $I$ 顆球最後會在哪顆葉節點。

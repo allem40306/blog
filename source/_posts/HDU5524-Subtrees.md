@@ -6,6 +6,7 @@ category: HDU
 tags:
 - HDU
 - Tree
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://acm.hdu.edu.cn/showproblem.php?pid=5524)
 * 題意：給定一顆 $N$ 個點的完全二元樹，問有幾個不同 `size` 的子樹。

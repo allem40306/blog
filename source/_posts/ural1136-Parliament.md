@@ -6,6 +6,7 @@ category: ural
 tags:
 - ural
 - Tree
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](https://acm.timus.ru/problem.aspx?space=1&num=1136)
 * 題意：給定一顆二元搜尋樹的後序，依照右子樹、左子樹、根，輸出這棵樹。

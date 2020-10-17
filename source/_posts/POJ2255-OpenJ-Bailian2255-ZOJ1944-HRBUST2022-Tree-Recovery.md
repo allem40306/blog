@@ -9,6 +9,7 @@ tags:
 - ZOJ
 - HRBUST
 - Tree
+- ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 POJ](http://poj.org/problem?id=2255)
 [題目連結 OpenJ_Bailian](http://bailian.openjudge.cn/practice/2255?lang=en_US)
