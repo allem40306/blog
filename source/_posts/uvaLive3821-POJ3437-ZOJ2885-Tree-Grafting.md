@@ -7,7 +7,7 @@ tags:
 - uvaLive
 - POJ
 - ZOJ
-- Tree
+- tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1822)
