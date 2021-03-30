@@ -73,6 +73,15 @@ abbrlink:
   alg: crc16  #support crc16(default) and crc32
   rep: hex    #support dec(default) and hex
 
+#RSS
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
