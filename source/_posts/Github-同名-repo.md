@@ -2,7 +2,7 @@
 title: Github 同名 repo
 abbrlink: 9db6
 date: 2021-04-08 17:30:45
-category:
+category: 隨筆
 tags:
 - Github profile
 ---
