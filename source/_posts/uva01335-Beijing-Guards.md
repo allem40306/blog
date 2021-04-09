@@ -5,7 +5,7 @@ date: 2020-07-21 19:52:50
 category: UVa
 tags:
 - UVa
-- binary search
+- Binary Search
 - 程式競賽選修課
 - 108 下
 ---

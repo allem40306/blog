@@ -3,7 +3,8 @@ title: POJ3692 Kindergarten
 category: POJ
 tags:
   - POJ
-  - bipartite graph
+  - Graph
+  - Bipartite Graph
 abbrlink: a062
 date: 2019-02-12 15:41:28
 ---

@@ -5,7 +5,7 @@ date: 2020-08-17 16:47:57
 category: HDU
 tags:
 - HDU
-- manaCher
+- ManaCher
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://acm.hdu.edu.cn/showproblem.php?pid=3613)

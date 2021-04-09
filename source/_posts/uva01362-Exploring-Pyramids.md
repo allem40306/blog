@@ -5,8 +5,8 @@ date: 2020-07-28 23:22:01
 category: UVa
 tags:
 - UVa
-- dp
-- 區間 dp
+- DP
+- 區間 DP
 - 程式競賽選修課
 - 108 下
 ---

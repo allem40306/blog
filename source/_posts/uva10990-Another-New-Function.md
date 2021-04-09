@@ -5,8 +5,8 @@ date: 2020-02-04 16:24:24
 category: UVa
 tags:
 - UVa
-- math
-- phi
+- Math
+- Phi
 ---
 連結：http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1931
 題意：$depthphi(x)$ 函數為 $x$ 要套多少次 $phi$ 函數才會變成 $1$，求 $\Sigma_{i=m}^{n}depthphi(i)$

@@ -5,7 +5,7 @@ date: 2020-08-21 17:03:40
 category: POJ
 tags:
 - POJ
-- bitIndexTree
+- Bit Index Tree
 - 樹壓平
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---

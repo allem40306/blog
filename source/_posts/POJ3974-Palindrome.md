@@ -5,7 +5,7 @@ date: 2020-08-17 16:44:58
 category: POJ
 tags:
 - POJ
-- manaCher
+- ManaCher
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://poj.org/problem?id=3974)

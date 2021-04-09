@@ -6,7 +6,7 @@ category: UVa
 tags:
 - UVa
 - flow
-- min cut max flow
+- Min Cut Max Flow
 ---
 [題目連結](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=0&problem=2501&mosmsg=Submission+received+with+ID+24587536)
 題意：要把前老闆的電腦和公司主機的連結切斷，除了上述兩台電腦之外，你可以將任意一台電腦或線路破壞，問最小成本為多少

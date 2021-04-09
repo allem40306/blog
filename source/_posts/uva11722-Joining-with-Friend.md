@@ -5,7 +5,7 @@ date: 2020-08-10 12:11:13
 category: UVa
 tags:
 - UVa
-- geometry
+- Geometry
 - 程式競賽選修課
 - 108 下
 ---

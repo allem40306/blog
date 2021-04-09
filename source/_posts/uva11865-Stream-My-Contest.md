@@ -6,7 +6,7 @@ category: UVa
 tags:
 - UVa
 - 朱劉算法
-- binary search
+- Binary Search
 - 程式競賽選修課
 - 108 下
 ---

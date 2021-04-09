@@ -5,9 +5,9 @@ abbrlink: a495
 date: 2020-01-21 23:38:06
 tags:
   - AtCoder
-  - graph
-  - lcm
-  - math
+  - Graph
+  - LCM
+  - Math
   - 排容原理
   - 模逆元
 ---

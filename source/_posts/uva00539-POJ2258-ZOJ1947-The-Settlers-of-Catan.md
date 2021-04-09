@@ -7,7 +7,7 @@ tags:
 - UVa
 - POJ
 - ZOJ
-- dfs
+- DFS
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 uva](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=480)

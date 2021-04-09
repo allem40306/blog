@@ -3,8 +3,8 @@
 title: AtCoder Beginner Contest 054 心得
 category: AtCoder
 tags:
-  - dfs
-  - dp
+  - DFS
+  - DP
 abbrlink: 4b44
 date: 2017-02-22 16:01:05
 ---

@@ -5,10 +5,10 @@ date: 2020-02-10 23:12:29
 category: 隨筆
 tags:
 - FJU Winter 2020
-- gmail
-- google
+- Gmail
+- Google
 - Yet Another Mail Merge
-- useful tool
+- Useful Tool
 ---
 在辦寒訓的時候，我將 google 表單連接一個外掛 "Yet Another Mail Merge"，運用的情境是如果要發通知給所有報名人的時候，一個一個寄 email 太累了，這個外掛可以一次寄給多人，節省人力和時間。
 <!-- more -->

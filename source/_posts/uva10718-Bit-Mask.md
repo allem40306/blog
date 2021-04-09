@@ -5,7 +5,7 @@ date: 2020-08-09 20:41:38
 category: UVa
 tags:
 - UVa
-- greedy
+- Greedy
 - 程式競賽選修課
 - 108 下
 ---

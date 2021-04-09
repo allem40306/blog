@@ -5,7 +5,7 @@ date: 2020-07-31 12:15:29
 category: UVaLive
 tags:
 - UVaLive
-- greedy
+- Greedy
 - 區間選點問題
 - 程式競賽選修課
 - 108 下

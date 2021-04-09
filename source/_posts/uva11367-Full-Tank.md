@@ -5,9 +5,9 @@ date: 2020-07-23 23:17:55
 category: UVa
 tags:
   - UVa
-  - graph
-  - shortest path
-  - dijkstra
+  - Graph
+  - Shortest Path
+  - Dijkstra
   - 程式競賽選修課
   - 108 下
 ---

@@ -3,7 +3,7 @@ title: Codeforces 1000F
 category: Codeforces
 tags:
   - Codeforces
-  - segmentTree
+  - Segment Tree
   - IONCamp 2019
 abbrlink: '3153'
 date: 2019-07-29 22:41:47

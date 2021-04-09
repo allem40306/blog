@@ -9,7 +9,7 @@ tags:
 - OpenJ_Bailian
 - SCU
 - ZOJ
-- disjoint set
+- Disjoint Set
 - 帶權並查集
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---

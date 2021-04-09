@@ -7,7 +7,7 @@ tags:
 - uva
 - POJ
 - HDU
-- tree
+- Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2175)

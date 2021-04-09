@@ -2,10 +2,10 @@
 title: 大三資料庫專題3 django
 category: 隨筆
 tags:
-  - database
-  - python
-  - django
-  - postman
+  - Database
+  - Python
+  - Django
+  - Postman
 abbrlink: b582
 date: 2020-01-25 19:40:22
 ---

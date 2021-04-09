@@ -5,8 +5,8 @@ date: 2020-02-16 15:04:53
 category: UVa
 tags:
 - UVa
-- flow
-- min cut max flow
+- Flow
+- Min Cut Max Flow
 ---
 連結：https://onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=0&problem=1421&mosmsg=Submission+received+with+ID+24569393
 題意：一個國家有 $N$ 個都市和 $M$ 條道路，現在要讓 $1$ 號城市(首都)到 $2$ 號城市(最大的城市)無法連通，炸掉每條路有不同的成本，問要炸到哪幾條路有最低的成本。

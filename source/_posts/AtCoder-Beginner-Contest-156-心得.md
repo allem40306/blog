@@ -5,9 +5,9 @@ date: 2020-03-02 22:57:34
 category: AtCoder
 tags:
 - AtCoder
-- math
+- Math
 - 模逆元
-- 排列組合
+- Combinatorics 排列組合
 ---
 virtual judge，賽中 4 題，這場後面都數論
 <!-- more -->

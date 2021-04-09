@@ -5,12 +5,12 @@ date: 2020-02-12 17:07:05
 category: AtCoder
 tags:
 - AtCoder
-- set
-- dp
-- 數位 dp
-- math
+- Set
+- DP
+- 數位 DP
+- Math
 - 模逆元
-- 排列組合
+- Combinatorics 排列組合
 ---
 這次比賽沒有在很好的狀態比賽，virtual 賽內對 4 題，賽後解出後 2 題。
 <!-- more -->

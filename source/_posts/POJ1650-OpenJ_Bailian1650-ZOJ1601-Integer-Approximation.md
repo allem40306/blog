@@ -7,7 +7,7 @@ tags:
 - POJ
 - OpenJ_Bailian
 - ZOJ
-- math
+- Math
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 POJ](http://poj.org/problem?id=1650)

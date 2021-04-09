@@ -4,7 +4,7 @@ abbrlink: 9db6
 date: 2021-04-08 17:30:45
 category: 隨筆
 tags:
-- Github profile
+- Github Profile
 ---
 最近我發現一個很有趣的東西，如果在 github 上面建立一個相同的 repo，點選 "Initialize this repository with a README"，會自動產生一個 `README.md`，在自己的 Profile 上也會顯示相同內容，也就說，現在開始可以自定義 Profile。
 <!-- more -->

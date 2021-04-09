@@ -5,9 +5,9 @@ date: 2020-07-25 11:50:17
 category: UVa
 tags:
 - UVa
-- math
-- prime
-- gauss elimination
+- Math
+- Prime
+- Gauss Elimination
 - 程式競賽選修課
 - 108 下
 ---

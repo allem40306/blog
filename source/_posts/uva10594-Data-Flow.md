@@ -5,9 +5,9 @@ date: 2020-01-29 14:00:40
 category: UVa
 tags:
   - UVa
-  - flow
-  - mcmf
-  - graph
+  - Flow
+  - MCMF
+  - Graph
 ---
 
 連結：https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1535

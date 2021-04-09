@@ -5,7 +5,7 @@ date: 2020-08-21 17:04:55
 category: POJ
 tags:
 - POJ
-- trie
+- Trie
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 POJ](http://poj.org/problem?id=2001)

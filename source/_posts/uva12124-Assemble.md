@@ -5,9 +5,9 @@ date: 2020-07-24 15:00:40
 category: UVa
 tags:
 - UVa
-- binary search
-- stl
-- map
+- Binary Search
+- STL
+- Map
 - 程式競賽選修課
 - 108 下
 ---

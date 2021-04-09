@@ -6,8 +6,8 @@ category: AtCoder
 tags:
 - 枚舉
 - 二進位枚舉
-- dp
-- 背包 dp
+- DP
+- 背包 DP
 ---
 這場大概花了 4 個小時來寫這 6 題，難度算中間偏易。
 <!-- more -->

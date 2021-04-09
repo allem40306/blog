@@ -2,8 +2,8 @@
 title: '[2019 Week 31] Segment Tree 爬更高 Treap 爬不上'
 category: 週記
 tags:
-  - segmentTree
-  - treap
+  - Segment Tree
+  - Treap
 abbrlink: b7b9
 date: 2019-08-05 19:40:11
 ---

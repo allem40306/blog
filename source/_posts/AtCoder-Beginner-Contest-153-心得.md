@@ -5,10 +5,10 @@ date: 2020-02-08 20:17:40
 category: AtCoder
 tags:
 - AtCoder
-- dp
-- 背包 dp
+- DP
+- 背包 DP
 - 差分
-- binary search
+- Binary Search
 ---
 這次都是怪物系列XD。我用 virtual 比賽，前五題賽中過，最後一題賽後過
 <!-- more -->

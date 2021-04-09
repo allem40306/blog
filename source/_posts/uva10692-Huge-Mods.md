@@ -4,6 +4,9 @@ category: UVa
 abbrlink: 2aef
 date: 2019-10-12 11:29:55
 tags:
+- UVa
+- Euler
+- Math
 ---
 https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1633
 題意：求$a_1^{a_2^{...^{a_n}} \mod n}$

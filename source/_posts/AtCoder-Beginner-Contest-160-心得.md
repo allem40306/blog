@@ -4,10 +4,10 @@ abbrlink: 8d00
 date: 2020-05-09 11:00:59
 category: AtCoder
 tags:
-- dp
-- 換根 dp
-- math
-- combinatorics
+- DP
+- 換根 DP
+- Math
+- Combinatorics 排列組合
 ---
 這場比賽是一個月前打的，之後為了趕報告和期中考，都沒有時間打程式競賽了。
 <!-- more -->

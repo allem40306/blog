@@ -5,9 +5,9 @@ date: 2020-07-28 22:29:02
 category: UVa
 tags:
 - UVa
-- graph
-- minimum spanning tree
-- krusal
+- Graph
+- Minimum Spanning Tree
+- Krusal
 - 程式競賽選修課
 - 108 下
 ---

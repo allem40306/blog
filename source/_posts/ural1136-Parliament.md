@@ -4,8 +4,8 @@ abbrlink: b407
 date: 2020-09-18 16:16:11
 category: ural
 tags:
-- ural
-- tree
+- Ural
+- Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](https://acm.timus.ru/problem.aspx?space=1&num=1136)

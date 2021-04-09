@@ -3,7 +3,7 @@ title: POJ1419 Graph Coloring
 category: POJ
 tags:
   - POJ
-  - graph
+  - Graph
 abbrlink: ef6a
 date: 2019-02-13 20:25:40
 ---

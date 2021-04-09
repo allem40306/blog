@@ -5,8 +5,8 @@ date: 2020-07-25 11:49:00
 category: UVa
 tags:
 - UVa
-- math
-- prime
+- Math
+- Prime
 - 程式競賽選修課
 - 108 下
 ---

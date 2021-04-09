@@ -3,8 +3,8 @@ title: Codeforces 747F
 category: Codeforces
 tags:
   - Codeforces
-  - segmentTree
-  - math
+  - Segment Tree
+  - Math
   - IONCamp 2019
 abbrlink: 4cc6
 date: 2019-08-01 18:43:02

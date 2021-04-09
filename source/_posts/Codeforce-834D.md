@@ -3,8 +3,8 @@ title: Codeforces 834D
 category: Codeforces
 tags:
   - Codeforces
-  - dp
-  - segmentTree
+  - DP
+  - Segment Tree
   - IONCamp 2019
 abbrlink: a8f5
 date: 2019-08-01 16:35:01

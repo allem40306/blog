@@ -4,7 +4,7 @@ abbrlink: 97d8
 date: 2020-07-25 20:02:53
 category: 隨筆
 tags:
-- 棒球
+- Baseball
 ---
 一年一度的選秀會又來了。
 <!-- more -->

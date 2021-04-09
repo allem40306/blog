@@ -5,8 +5,8 @@ date: 2020-08-17 16:53:46
 category: HDU
 tags:
 - HDU
-- hash
-- binary search
+- Hash
+- Binary Search
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://acm.hdu.edu.cn/showproblem.php?pid=4080)

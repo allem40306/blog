@@ -3,7 +3,7 @@ title: Codeforces 459D
 category: Codeforces
 tags:
   - Codeforces
-  - bitIndexTree
+  - Bit Index Tree
   - IONCamp 2019
 abbrlink: '6912'
 date: 2019-07-31 14:46:28

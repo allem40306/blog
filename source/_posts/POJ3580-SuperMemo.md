@@ -3,7 +3,7 @@ title: POJ3580 SuperMemo
 category: POJ
 tags:
   - POJ
-  - treap
+  - Treap
 abbrlink: fa7
 date: 2019-08-09 20:07:35
 ---

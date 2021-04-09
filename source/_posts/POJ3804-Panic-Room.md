@@ -5,8 +5,8 @@ date: 2020-02-18 23:13:22
 category: POJ
 tags:
 - POJ
-- flow
-- min cut max flow
+- Flow
+- Min Cut Max Flow
 ---
 題目連結：http://poj.org/problem?id=3084
 題意：有許多房間，有壞人在其中幾個房間，他們想要入侵機密房間，房間之間有門，只能有一側上鎖，問最少必須關幾道門才能防止機密房間被入侵。

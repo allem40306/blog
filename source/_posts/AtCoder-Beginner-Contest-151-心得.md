@@ -3,10 +3,10 @@ title: AtCoder Beginner Contest 151 心得
 category: AtCoder
 tags:
   - AtCoder
-  - bfs
-  - math
-  - map
-  - stl
+  - BFS
+  - Math
+  - Map
+  - STL
 abbrlink: b1d5
 date: 2020-01-18 20:15:31
 ---

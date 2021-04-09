@@ -2,8 +2,8 @@
 title: ITSA73
 category: ITSA
 tags:
-  - bfs
-  - dfs
+  - BFS
+  - DFS
   - ITSA
 abbrlink: e028
 date: 2019-08-20 10:56:11

@@ -5,7 +5,7 @@ date: 2020-10-22 20:59:29
 category: POJ
 tags:
 - POJ
-- tree
+- Tree
 - 笛卡爾樹
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---

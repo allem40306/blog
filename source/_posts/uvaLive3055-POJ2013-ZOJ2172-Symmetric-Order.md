@@ -7,8 +7,8 @@ tags:
 - UVaLive
 - POJ
 - ZOJ
-- stl
-- stack
+- STL
+- Stack
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 UVaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1056)

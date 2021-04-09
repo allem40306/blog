@@ -4,11 +4,11 @@ title: ITSA58 心得
 category: ITSA
 tags:
   - ITSA
-  - greedy
+  - Greedy
   - 字串處理
-  - tree
-  - 最短路徑
-  - 暴力法
+  - Tree
+  - Shortest Path
+  - Enumerate 枚舉
 abbrlink: 74b7
 date: 2017-10-29 11:08:32
 ---

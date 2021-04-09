@@ -5,8 +5,8 @@ date: 2020-09-18 16:18:21
 category: POJ
 tags:
 - POJ
-- tree
-- math
+- Tree
+- Math
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://poj.org/problem?id=2499)

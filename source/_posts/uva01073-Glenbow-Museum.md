@@ -6,8 +6,8 @@ category: UVa
 tags:
 - UVa
 - dp
-- math
-- combinatorics
+- Math
+- Combinatorics 排列組合
 - 程式競賽選修課
 - 108 下
 ---

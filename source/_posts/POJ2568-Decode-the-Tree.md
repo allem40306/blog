@@ -5,8 +5,8 @@ date: 2020-10-22 21:00:37
 category: POJ
 tags:
 - POJ
-- stl
-- priority_queue
+- STL
+- Priority_queue
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://poj.org/problem?id=2568)

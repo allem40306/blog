@@ -6,7 +6,7 @@ category: POJ
 tags:
 - POJ
 - OpenJ_Bailian
-- disjoint set
+- Disjoint Set
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 POJ](http://poj.org/problem?id=1703)

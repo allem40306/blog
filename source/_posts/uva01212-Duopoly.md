@@ -5,8 +5,8 @@ date: 2020-02-17 13:05:03
 category: UVa
 tags:
 - UVa
-- flow
-- min cut max flow
+- Flow
+- Min Cut Max Flow
 ---
 連結：https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=3653&mosmsg=Submission+received+with+ID+24572964
 題意：政府有若干頻道，有兩家公司有多個申請計畫，每個計畫包含支付政府的金額及數個會占用的頻道，一個頻道政府只能給一家公司使用，問最佳狀況下，政府最大利益為何?

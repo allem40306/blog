@@ -2,7 +2,6 @@
 title: prefix and postfix
 category: 隨筆
 tags:
-  - 隨筆
 abbrlink: 3d73
 date: 2019-04-05 14:14:33
 ---

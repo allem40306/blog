@@ -5,8 +5,8 @@ date: 2020-07-21 20:12:58
 category: UVa
 tags:
 - UVa
-- math
-- floyd cycle detection
+- Math
+- Floyd Cycle Detection
 - 程式競賽選修課
 - 108 下
 ---

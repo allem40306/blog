@@ -5,8 +5,8 @@ abbrlink: baa2
 date: 2019-10-11 14:42:02
 tags:
 - Codeforces
-- graph
-- disjoint set
+- Graph
+- Disjoint Set
 ---
 這是一場Div 3 的比賽，Virtual + 檢討下來我覺得不會很難，但經驗太少，在比的時候想不出來，只有PE我覺得出點有的不好之外其他題目都不錯。
 <!-- more -->

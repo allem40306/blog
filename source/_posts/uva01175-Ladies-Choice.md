@@ -3,7 +3,7 @@ title: uva01175 Ladies' Choice
 category: UVa
 tags:
   - UVa
-  - stable matching Problem
+  - Stable Matching Problem
 abbrlink: f13
 date: 2019-10-14 23:02:25
 ---

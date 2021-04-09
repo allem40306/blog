@@ -4,8 +4,8 @@ abbrlink: 369a
 date: 2020-09-18 16:11:59
 category: uva
 tags:
-- uva
-- tree
+- Uva
+- Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=620)

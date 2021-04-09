@@ -4,14 +4,14 @@ abbrlink: 5a0c
 date: 2020-04-05 17:01:36
 category: Codeforces
 tags:
-- greedy
-- dp
-- graph
-- 最短路徑
-- bfs
+- Greedy
+- DP
+- Graph
+- Shortest Path
+- BFS
 - 差值排序
-- math
-- combinatorics
+- Math
+- Combinatorics 排列組合
 ---
 這場我打了前五題，第六題看了很久，都不了解，發現自己功力不夠就止住了。
 <!-- more -->

@@ -5,8 +5,8 @@ date: 2020-02-08 22:22:45
 category: UVa
 tags:
 - Uva
-- flow
-- mcmf
+- Flow
+- MCMF
 ---
 題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1747
 題意：給你一張無向圖，邊上有花費權重，問有沒有辦法從點 $1$ 出發到點 $n$，然後再從點 $n$ 回到點 $1$ 的兩條不重複邊的路徑，如果有，請輸出最小成本

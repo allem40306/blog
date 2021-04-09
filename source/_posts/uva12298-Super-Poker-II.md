@@ -5,7 +5,7 @@ date: 2020-02-22 09:57:26
 category: UVa
 tags:
 - UVa
-- fft
+- FFT
 ---
 題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=3719&mosmsg=Submission+received+with+ID+24597305
 題意：有四種花色的牌，數字為合數(2,4,6,8,9,10,12,14,15,16...)，現在少了 $c$ 張牌，求四種花色拿一張，數字總和介於 $a$ 到 $b$ 的各有幾種。

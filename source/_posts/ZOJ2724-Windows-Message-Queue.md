@@ -5,7 +5,7 @@ date: 2020-10-22 20:58:12
 category: ZOJ
 tags:
 - ZOJ
-- tree
+- Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](https://zoj.pintia.cn/problem-sets/91827364500/problems/91827366223)

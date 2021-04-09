@@ -5,7 +5,7 @@ date: 2020-10-22 20:55:31
 category: HDU
 tags:
 - HDU
-- tree
+- Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結](http://acm.hdu.edu.cn/showproblem.php?pid=3999)
