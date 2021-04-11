@@ -5,7 +5,7 @@ category: ITSA
 tags:
   - ITSA
   - Greedy
-  - 字串處理
+  - String
   - Tree
   - Shortest Path
   - Enumerate 枚舉

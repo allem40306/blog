@@ -8,7 +8,7 @@ tags:
 - ZOJ
 - OpenJ_Bailian
 - FZU
-- 遞迴
+- Recursive 遞迴
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 POJ](http://poj.org/problem?id=2083)

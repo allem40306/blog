@@ -9,7 +9,8 @@ tags:
 - DP
 - 數位 DP
 - Math
-- 模逆元
+- 
+
 - Combinatorics 排列組合
 ---
 這次比賽沒有在很好的狀態比賽，virtual 賽內對 4 題，賽後解出後 2 題。

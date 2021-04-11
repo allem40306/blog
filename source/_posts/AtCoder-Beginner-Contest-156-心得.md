@@ -6,7 +6,8 @@ category: AtCoder
 tags:
 - AtCoder
 - Math
-- 模逆元
+- 
+
 - Combinatorics 排列組合
 ---
 virtual judge，賽中 4 題，這場後面都數論

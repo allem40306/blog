@@ -5,7 +5,6 @@ category: Codeforces
 tags:
   - Codeforces
   - Twicpc
-  - 陣列
   - Math
 abbrlink: '8897'
 date: 2017-02-18 15:48:12

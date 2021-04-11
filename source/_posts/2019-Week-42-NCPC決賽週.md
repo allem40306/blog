@@ -3,7 +3,7 @@ title: '[2019 Week 42] NCPC決賽週'
 category: 週記
 tags:
   - 資安
-  - 棒球
+  - Baseball
   - NCPC
 abbrlink: bfb7
 date: 2019-10-22 19:57:02

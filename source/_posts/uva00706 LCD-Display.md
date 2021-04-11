@@ -5,7 +5,7 @@ category: UVa
 tags:
   - UVa
   - Zerojudge
-  - 建表
+  - Simulation 模擬
 abbrlink: 186d
 date: 2017-12-22 00:00:00
 ---

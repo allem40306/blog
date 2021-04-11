@@ -8,8 +8,8 @@ tags:
 - UVaLive
 - POJ
 - OpenJ_Bailian
-- 遞迴
-- 剪枝
+- Recursive 遞迴
+- Pruning 剪枝
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
 [題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=580)

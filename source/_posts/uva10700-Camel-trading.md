@@ -6,7 +6,7 @@ category: UVa
 tags:
 - UVa
 - Stringstream
-- 遞迴
+- Recursive 遞迴
 - 程式競賽選修課
 - 108 下
 ---
