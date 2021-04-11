@@ -3,7 +3,7 @@ title: AtCoder Beginner Contest 081 心得
 category: AtCoder
 tags:
   - AtCoder
-  - 枚舉
+  - Enumerate 枚舉
   - STL
   - Map
   - Vector

@@ -4,7 +4,7 @@ abbrlink: 17d4
 date: 2020-04-04 14:08:54
 category: AtCoder
 tags:
-- 枚舉
+- Enumerate 枚舉
 - 二進位枚舉
 - DP
 - 背包 DP
