@@ -1,11 +1,11 @@
 ---
-title: uva00410 Station Balance
+title: UVa00410 Station Balance
 abbrlink: '797'
 date: 2020-08-05 23:18:59
 category: UVa
 tags:
 - UVa
-- greedy
+- Greedy
 - 程式競賽選修課
 - 108 下
 ---

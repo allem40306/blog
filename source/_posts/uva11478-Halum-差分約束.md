@@ -1,5 +1,5 @@
 ---
-title: uva11478 Halum (差分約束)
+title: UVa11478 Halum (差分約束)
 category: UVa
 tags:
   - UVa

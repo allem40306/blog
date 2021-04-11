@@ -1,5 +1,5 @@
 ---
-title: uva10700 Camel trading
+title: UVa10700 Camel trading
 abbrlink: ff1b
 date: 2020-08-07 20:10:49
 category: UVa

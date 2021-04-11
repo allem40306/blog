@@ -1,5 +1,5 @@
 ---
-title: uva10859 Placing Lampposts
+title: UVa10859 Placing Lampposts
 abbrlink: 9b4d
 date: 2020-07-23 22:45:18
 category: UVa

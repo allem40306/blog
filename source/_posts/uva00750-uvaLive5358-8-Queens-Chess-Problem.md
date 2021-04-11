@@ -1,5 +1,5 @@
 ---
-title: uva00750 uvaLive5358 8 Queens Chess Problem
+title: UVa00750 UvaLive5358 8 Queens Chess Problem
 abbrlink: 614c
 date: 2020-08-15 16:36:27
 category: UVa
@@ -10,8 +10,8 @@ tags:
 - 剪枝
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=691)
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3359)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=691)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3359)
 * 題意：給定八皇后問題其中一顆棋子，求所有可能的八皇后問題解。
 <!-- more -->
 * 題解：經典八皇后問題，遞迴到已經放過棋子的那一層就直接跳過。

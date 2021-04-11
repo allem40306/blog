@@ -1,5 +1,5 @@
 ---
-title: uva10982 Troublemakers
+title: UVa10982 Troublemakers
 abbrlink: e980
 date: 2020-08-10 10:57:54
 category: UVa

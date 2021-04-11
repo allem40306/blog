@@ -1,5 +1,5 @@
 ---
-title: uva11997 K Smallest Sums
+title: UVa11997 K Smallest Sums
 abbrlink: efbd
 date: 2020-07-24 16:05:42
 category: UVa

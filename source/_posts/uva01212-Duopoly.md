@@ -1,5 +1,5 @@
 ---
-title: uva01212 Duopoly
+title: UVa01212 Duopoly
 abbrlink: ef7b
 date: 2020-02-17 13:05:03
 category: UVa

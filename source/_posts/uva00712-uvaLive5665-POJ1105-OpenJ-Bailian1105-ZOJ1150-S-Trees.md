@@ -1,19 +1,19 @@
 ---
-title: uva00712 uvaLive5665 POJ1105 OpenJ_Bailian1105 ZOJ1150 S-Trees
+title: UVa00712 UvaLive5665 POJ1105 OpenJ_Bailian1105 ZOJ1150 S-Trees
 abbrlink: ea4d
 date: 2020-09-18 16:12:51
-category: uva
+category: UVa
 tags:
-- uva
-- uvaLive
+- UVa
+- UvaLive
 - POJ
 - OpenJ_Bailian
 - ZOJ
-- tree
+- Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=653)
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3566)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=653)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3566)
 [題目連結 POJ](http://poj.org/problem?id=1105)
 [題目連結 OpenJ_Bailian](http://bailian.openjudge.cn/practice/1105?lang=en_US)
 [題目連結 ZOJ](https://zoj.pintia.cn/problem-sets/91827364500/problems/91827364649)

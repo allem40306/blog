@@ -16,7 +16,7 @@ ITSA58 雖然是已經比了好久，但是因為要做新北市模擬賽，所�
 <!-- more -->
 結果:
 A 基礎 AC
-B greedy AC
+B Greedy AC
 C 字串處理 樹 AC
 D 最短路徑 AC
 E 暴力法 AC
@@ -40,7 +40,7 @@ int main(){
 
 {% endcodeblock %}
 pB
-這題是用greedy的概念，先照每條路的起點排序，在按照終點排序，如果一條路的起點小於另一條路的終點，那就合併這兩條路，依此類推。
+這題是用Greedy的概念，先照每條路的起點排序，在按照終點排序，如果一條路的起點小於另一條路的終點，那就合併這兩條路，依此類推。
 {% codeblock lang:cpp %}
 #include <iostream>
 #include <algorithm>

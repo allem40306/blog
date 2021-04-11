@@ -1,6 +1,6 @@
 ---
 title: >-
-  uva10298 POJ2406 FZU1011 ZOJ1905 SCU1838 OpenJ_Bailian2406 Kattis-powerstrings
+  UVa10298 POJ2406 FZU1011 ZOJ1905 SCU1838 OpenJ_Bailian2406 Kattis-powerstrings
   1078 LibreOJ10035 Power String
 abbrlink: 300f
 date: 2020-08-17 16:50:00
@@ -19,7 +19,7 @@ tags:
 - Hash
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1239)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1239)
 [題目連結 POJ](http://poj.org/problem?id=2406)
 [題目連結 FZU](http://acm.fzu.edu.cn/problem.php?pid=1011)
 [題目連結 ZOJ](https://zoj.pintia.cn/problem-sets/91827364500/problems/91827365404)

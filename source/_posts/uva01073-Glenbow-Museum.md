@@ -1,11 +1,11 @@
 ---
-title: uva01073 Glenbow Museum
+title: UVa01073 Glenbow Museum
 abbrlink: cf4c
 date: 2020-07-30 10:59:00
 category: UVa
 tags:
 - UVa
-- dp
+- DP
 - Math
 - Combinatorics 排列組合
 - 程式競賽選修課

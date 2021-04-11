@@ -1,16 +1,16 @@
 ---
-title: uva11234 POJ3367 HDU1805 Expressions
+title: UVa11234 POJ3367 HDU1805 Expressions
 abbrlink: a32c
 date: 2020-09-18 16:03:27
-category: uva
+category: UVa
 tags:
-- uva
+- UVa
 - POJ
 - HDU
 - Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2175)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2175)
 [題目連結 POJ](http://poj.org/problem?id=3367)
 [題目連結 HDU](http://acm.hdu.edu.cn/showproblem.php?pid=1805)
 * 題意：給定一個用後綴表達式 $S$，請轉換成一個用隊列做出來會是一樣的表達式 $R$。

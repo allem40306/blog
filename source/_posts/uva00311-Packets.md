@@ -1,5 +1,5 @@
 ---
-title: uva00311 Packets
+title: UVa00311 Packets
 abbrlink: d57d
 date: 2020-08-05 22:58:57
 category: UVa

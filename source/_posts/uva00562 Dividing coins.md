@@ -1,6 +1,6 @@
 ---
 <!-- layout: layout -->
-title: uva00562 Dividing coins (Zerojudge d390)
+title: UVa00562 Dividing coins (Zerojudge d390)
 category: UVa
 tags:
   - UVa

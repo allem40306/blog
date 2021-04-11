@@ -1,5 +1,5 @@
 ---
-title: uva10236 The Fibonacci Primes
+title: UVa10236 The Fibonacci Primes
 abbrlink: '1409'
 date: 2020-07-25 11:49:00
 category: UVa

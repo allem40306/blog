@@ -1,5 +1,5 @@
 ---
-title: uva00167 uvaLive5277 SCU1033 The Sultan's Successors
+title: UVa00167 UvaLive5277 SCU1033 The Sultan's Successors
 abbrlink: '7020'
 date: 2020-08-15 16:27:41
 category: UVa
@@ -11,8 +11,8 @@ tags:
 - 剪枝
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=103)
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3228)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=103)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3228)
 [題目連結 SCU](http://acm.scu.edu.cn/soj/problem.action?id=1033)
 * 題意：給定 $8\times 8$ 棋盤，每一格上面都有數字，要放 8 隻皇后，在彼此不衝突的情況下，每隻皇后所在位置的數字和最大為多少。
 <!-- more -->

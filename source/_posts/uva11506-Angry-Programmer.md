@@ -1,11 +1,11 @@
 ---
-title: uva11506 Angry Programmer
+title: UVa11506 Angry Programmer
 abbrlink: af18
 date: 2020-02-20 10:00:06
 category: UVa
 tags:
 - UVa
-- flow
+- Flow
 - Min Cut Max Flow
 ---
 [題目連結](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=0&problem=2501&mosmsg=Submission+received+with+ID+24587536)

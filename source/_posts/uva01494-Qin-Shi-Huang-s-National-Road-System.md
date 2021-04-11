@@ -1,5 +1,5 @@
 ---
-title: uva01494 Qin Shi Huang's National Road System
+title: UVa01494 Qin Shi Huang's National Road System
 abbrlink: a5dc
 date: 2020-07-28 22:29:02
 category: UVa

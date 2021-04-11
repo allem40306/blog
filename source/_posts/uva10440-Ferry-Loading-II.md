@@ -1,5 +1,5 @@
 ---
-title: uva10440 Ferry Loading II
+title: UVa10440 Ferry Loading II
 abbrlink: b646
 date: 2020-08-07 20:08:18
 category: UVa

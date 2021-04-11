@@ -1,5 +1,5 @@
 ---
-title: uva11459 Calculator Conundrum
+title: UVa11459 Calculator Conundrum
 abbrlink: '4305'
 date: 2020-07-21 20:12:58
 category: UVa

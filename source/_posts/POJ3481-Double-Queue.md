@@ -1,5 +1,5 @@
 ---
-title: POJ3481
+title: POJ3481 Double Queue
 abbrlink: 6a5b
 date: 2020-10-22 21:01:59
 category: POJ

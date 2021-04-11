@@ -1,5 +1,5 @@
 ---
-title: uva01660 Cable TV Network
+title: UVa01660 Cable TV Network
 abbrlink: a0a6
 date: 2020-02-19 22:51:29
 category: UVa

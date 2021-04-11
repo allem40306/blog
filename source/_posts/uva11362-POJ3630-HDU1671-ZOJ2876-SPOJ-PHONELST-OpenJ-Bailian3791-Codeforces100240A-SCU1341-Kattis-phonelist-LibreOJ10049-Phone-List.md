@@ -1,6 +1,6 @@
 ---
 title: >-
-  uva11362 POJ3630 HDU1671 ZOJ2876 SPOJ-PHONELST OpenJ_Bailian3791
+  UVa11362 POJ3630 HDU1671 ZOJ2876 SPOJ-PHONELST OpenJ_Bailian3791
   Codeforces100240A SCU1341 Kattis-phonelist LibreOJ10049 Phone List
 abbrlink: fac0
 date: 2020-08-21 17:06:00
@@ -19,7 +19,7 @@ tags:
 - Trie
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2347)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2347)
 [題目連結 POJ](http://poj.org/problem?id=3630)
 [題目連結 HDU](http://acm.hdu.edu.cn/showproblem.php?pid=1671)
 [題目連結 ZOJ](https://zoj.pintia.cn/problem-sets/91827364500/problems/91827366374)

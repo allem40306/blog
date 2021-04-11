@@ -1,5 +1,5 @@
 ---
-title: uvaLive7244 HDU5515 计蒜客31079 Game of Flying Circus
+title: UvaLive7244 HDU5515 计蒜客31079 Game of Flying Circus
 abbrlink: a60d
 date: 2020-08-25 22:13:48
 category: UVaLive
@@ -10,7 +10,7 @@ tags:
 - Binary Search
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=5256)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=5256)
 [題目連結 HDU](http://acm.hdu.edu.cn/showproblem.php?pid=5515)
 [題目連結 计蒜客](https://nanti.jisuanke.com/t/A1973)
 * 題意：有一款遊戲 "Flying Circus"，在一個正方形的場地舉行，四個角分別為點 $1,2,3,4$，兩名玩家一開始在 $1$ 號點，要依序觸摸 $2,3,4,1$ 對於任意一個點，誰先摸到就先得分。如果同時到同一個點，可以互相 fight，贏家得分，為求公平在到達點 $2$ 前不能 fight。有兩名玩家，已知 Shion 速度快，會規矩地走一圈，Asuka 速度慢，但打得贏 Shion。給定兩人的速度，以及 Asuka 跟 Shion fight 後，Shion 昏迷秒數，問 Asuka 是否能贏。

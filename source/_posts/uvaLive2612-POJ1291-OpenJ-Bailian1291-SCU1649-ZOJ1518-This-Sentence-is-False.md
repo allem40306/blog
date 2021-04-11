@@ -1,10 +1,10 @@
 ---
-title: uvaLive2612 POJ1291 OpenJ_Bailian1291 SCU1649 ZOJ1518 This Sentence is False
+title: UvaLive2612 POJ1291 OpenJ_Bailian1291 SCU1649 ZOJ1518 This Sentence is False
 abbrlink: 8ebd
 date: 2020-08-18 21:55:15
-category: uvaLive
+category: UvaLive
 tags:
-- uvaLive
+- UvaLive
 - POJ
 - OpenJ_Bailian
 - SCU
@@ -13,7 +13,7 @@ tags:
 - 帶權並查集
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=613)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=613)
 [題目連結 POJ](http://poj.org/problem?id=1291)
 [題目連結 OpenJ_Bailian](http://bailian.openjudge.cn/practice/1291?lang=en_US)
 [題目連結 SCU](http://acm.scu.edu.cn/soj/problem.action?id=1649)

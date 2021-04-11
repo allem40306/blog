@@ -1,5 +1,5 @@
 ---
-title: uva00639 uvaLive5325 POJ1315 OpenJ_Bailian1315 Don't Get Rooked
+title: UVa00639 UvaLive5325 POJ1315 OpenJ_Bailian1315 Don't Get Rooked
 abbrlink: 483a
 date: 2020-08-15 16:33:09
 category: UVa
@@ -12,8 +12,8 @@ tags:
 - 剪枝
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=580)
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3326)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=580)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3326)
 [題目連結 POJ](http://poj.org/problem?id=1315)
 * 題意：給定 $4\times 4$ 的棋盤，上面有一些格子有障礙物，求最多可以放多少顆西洋棋裡的城堡彼此不衝突，衝突定義為兩顆城堡在同一直行或橫列，且中間沒有阻隔。
 [題目連結]()

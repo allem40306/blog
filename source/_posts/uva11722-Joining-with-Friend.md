@@ -1,5 +1,5 @@
 ---
-title: uva11722 Joining with Friend
+title: UVa11722 Joining with Friend
 abbrlink: a114
 date: 2020-08-10 12:11:13
 category: UVa

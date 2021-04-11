@@ -1,5 +1,5 @@
 ---
-title: uva10378 Riemann vs Mertens
+title: UVa10378 Riemann vs Mertens
 abbrlink: 59be
 date: 2020-02-04 12:42:18
 category: UVa

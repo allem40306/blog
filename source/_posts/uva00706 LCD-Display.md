@@ -1,6 +1,6 @@
 ---
 <!-- layout: layout -->
-title: uva00706 LCD-Display  (ZeroJudgec135)
+title: UVa00706 LCD-Display  (ZeroJudgec135)
 category: UVa
 tags:
   - UVa

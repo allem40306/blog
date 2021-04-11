@@ -1,10 +1,10 @@
 ---
-title: uva00548 Tree
+title: UVa00548 Tree
 abbrlink: 863c
 date: 2020-09-18 16:15:29
-category: uva
+category: UVa
 tags:
-- uva
+- UVa
 - Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---

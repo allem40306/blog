@@ -1,5 +1,5 @@
 ---
-title: uva10718 Bit Mask
+title: UVa10718 Bit Mask
 abbrlink: b7c3
 date: 2020-08-09 20:41:38
 category: UVa

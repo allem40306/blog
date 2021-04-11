@@ -1,5 +1,5 @@
 ---
-title: uva12298 Super Poker II
+title: UVa12298 Super Poker II
 abbrlink: a455
 date: 2020-02-22 09:57:26
 category: UVa

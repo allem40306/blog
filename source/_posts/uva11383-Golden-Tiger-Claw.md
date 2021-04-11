@@ -1,5 +1,5 @@
 ---
-title: uva11383 Golden Tiger Claw
+title: UVa11383 Golden Tiger Claw
 abbrlink: '39e0'
 date: 2020-07-30 11:14:29
 category: UVa

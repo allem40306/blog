@@ -1,5 +1,5 @@
 ---
-title: uvaLive2519 Radar Installation
+title: UvaLive2519 Radar Installation
 abbrlink: 828a
 date: 2020-07-31 12:15:29
 category: UVaLive

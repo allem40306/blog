@@ -1,5 +1,5 @@
 ---
-title: uva01362 Exploring Pyramids
+title: UVa01362 Exploring Pyramids
 abbrlink: 7f79
 date: 2020-07-28 23:22:01
 category: UVa

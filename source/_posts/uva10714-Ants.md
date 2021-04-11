@@ -1,5 +1,5 @@
 ---
-title: uva10714 Ants
+title: UVa10714 Ants
 abbrlink: 2f1
 date: 2020-08-09 20:40:05
 category: UVa

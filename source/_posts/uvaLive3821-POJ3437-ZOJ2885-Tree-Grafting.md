@@ -1,16 +1,16 @@
 ---
-title: uvaLive3821 POJ3437 ZOJ2885 Tree Grafting
+title: UvaLive3821 POJ3437 ZOJ2885 Tree Grafting
 abbrlink: 50f1
 date: 2020-09-18 16:16:55
-category: uvaLive
+category: UvaLive
 tags:
-- uvaLive
+- UVaLive
 - POJ
 - ZOJ
 - Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1822)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1822)
 [題目連結 POJ](http://poj.org/problem?id=3437)
 [題目連結 ZOJ](https://zoj.pintia.cn/problem-sets/91827364500/problems/91827366383)
 * 題意：給定一棵樹，對於每個節點，將其第 $2$ 個子樹變成第 $1$ 個子樹的右子樹，第 $3$ 個子樹變成第 $2$ 個子樹的右子樹...，以此類推，問原樹和改變之後的樹分別為多少。

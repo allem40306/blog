@@ -1,5 +1,5 @@
 ---
-title: POJ2568
+title: POJ2568 Decode the Tree
 abbrlink: 30cf
 date: 2020-10-22 21:00:37
 category: POJ

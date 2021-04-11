@@ -1,16 +1,16 @@
 ---
-title: uvaLive6711 HDU4821 String
+title: UvaLive6711 HDU4821 String
 abbrlink: '4932'
 date: 2020-08-17 16:56:24
-category: uvaLive
+category: UvaLive
 tags:
-- uvaLive
+- UvaLive
 - HDU
 - Hash
 - Silding Window
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4723)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4723)
 [題目連結 HDU](http://acm.hdu.edu.cn/showproblem.php?pid=4821)
 * 題意：給定一字串 $S$ 和兩整數 $M,L$，對於任意一個長度為 $ML$ 的子字串，將其切成 $M$ 段長度 $L$ 的小字串，如果這 $M$ 段小字串相異，則我們說這個子字串為 "recoverable"，求 "recoverable" 字串數。
 <!-- more -->

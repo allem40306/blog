@@ -1,5 +1,5 @@
 ---
-title: uvaLive2926 POJ3067 ZOJ3129 Japan
+title: UvaLive2926 POJ3067 ZOJ3129 Japan
 abbrlink: f60a
 date: 2020-08-21 17:04:16
 category: UVaLive
@@ -10,7 +10,7 @@ tags:
 - Bit Index Tree
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=927)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=927)
 [題目連結 POJ](http://poj.org/problem?id=3067)
 [題目連結 ZOJ](https://zoj.pintia.cn/problem-sets/91827364500/problems/91827367544)
 * 題意：在東西兩岸各有 $N,M$ 座城市，和 $K$ 條橫跨東西岸的高速公路，城市編號由北至南遞增，問這些高速公路共交錯了幾次。

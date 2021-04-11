@@ -1,5 +1,5 @@
 ---
-title: uva10366 Faucet Flow
+title: UVa10366 Faucet Flow
 abbrlink: 85c4
 date: 2020-08-06 22:30:32
 category: UVa

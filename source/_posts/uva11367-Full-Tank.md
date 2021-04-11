@@ -1,5 +1,5 @@
 ---
-title: uva11367 Full Tank?
+title: UVa11367 Full Tank?
 abbrlink: 8a61
 date: 2020-07-23 23:17:55
 category: UVa

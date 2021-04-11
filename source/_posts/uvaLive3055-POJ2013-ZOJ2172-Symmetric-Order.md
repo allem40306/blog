@@ -1,5 +1,5 @@
 ---
-title: uvaLive3055 POJ2013 ZOJ2172 Symmetric Order
+title: UvaLive3055 POJ2013 ZOJ2172 Symmetric Order
 abbrlink: fd34
 date: 2020-08-15 16:11:45
 category: UVaLive

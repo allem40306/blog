@@ -1,8 +1,8 @@
 ---
-title: uva12538 Version Controlled IDE
+title: UVa12538 Version Controlled IDE
 abbrlink: fdae
 date: 2020-10-22 21:03:19
-category: uva
+category: UVa
 tags:
 - UVa
 - Treap

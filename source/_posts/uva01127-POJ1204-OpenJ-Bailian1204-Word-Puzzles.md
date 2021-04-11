@@ -1,5 +1,5 @@
 ---
-title: uva01127 POJ1204 OpenJ_Bailian1204 Word Puzzles
+title: UVa01127 POJ1204 OpenJ_Bailian1204 Word Puzzles
 abbrlink: '4456'
 date: 2020-08-25 22:11:16
 category: UVa
@@ -10,13 +10,13 @@ tags:
 - AC 自動機
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3568)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3568)
 [題目連結 POJ](http://poj.org/problem?id=1204)
 [題目連結 OpenJ_Bailian](http://bailian.openjudge.cn/practice/1204?lang=en_US)
 * 題意：給定 $L\times C$ 的 word puzzles，要在裡面找出給定的 $W$ 字串所在位置和方向。
 <!-- more -->
 * 題解：先建 $W$ 個字串的 AC 自動機，接著以 word puzzle 的四週為起點，依序向八個方向進行匹配。
-* 心得：uva 是 T 行版，同樣 Code 放到 uvaLine 不知道為什麼 PE。
+* 心得：UVa 是 T 行版，同樣 Code 放到 UVaLive 不知道為什麼 PE。
 ```cpp=
 #pragma GCC optimize(2)
 #include <algorithm>

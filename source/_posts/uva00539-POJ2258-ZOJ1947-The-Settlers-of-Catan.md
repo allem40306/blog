@@ -1,5 +1,5 @@
 ---
-title: uva00539 POJ2258 ZOJ1947 The Settlers of Catan
+title: UVa00539 POJ2258 ZOJ1947 The Settlers of Catan
 abbrlink: 3e8c
 date: 2020-08-15 16:30:17
 category: UVa
@@ -10,7 +10,7 @@ tags:
 - DFS
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=480)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=480)
 [題目連結 POJ](http://poj.org/problem?id=2258)
 [題目連結 ZOJ](https://zoj.pintia.cn/problem-sets/91827364500/problems/91827365446)
 * 題意：給定一張 $N$ 個點 $M$ 條邊的圖，問圖上最長不重複的路徑。

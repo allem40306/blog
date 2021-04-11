@@ -1,8 +1,8 @@
 ---
-title: uva00679 Dropping Balls
+title: UVa00679 Dropping Balls
 abbrlink: 369a
 date: 2020-09-18 16:11:59
-category: uva
+category: UVa
 tags:
 - Uva
 - Tree

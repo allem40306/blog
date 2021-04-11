@@ -1,5 +1,5 @@
 ---
-title: POJ1785
+title: POJ1785 Binary Search Heap Construction
 abbrlink: 11ab
 date: 2020-10-22 20:59:29
 category: POJ

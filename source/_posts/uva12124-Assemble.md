@@ -1,5 +1,5 @@
 ---
-title: uva12124 Assemble
+title: UVa12124 Assemble
 abbrlink: '1e46'
 date: 2020-07-24 15:00:40
 category: UVa

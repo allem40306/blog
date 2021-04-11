@@ -1,5 +1,5 @@
 ---
-title: uva11157 Dynamic Frog
+title: UVa11157 Dynamic Frog
 abbrlink: 7de0
 date: 2020-08-10 10:59:19
 category: UVa

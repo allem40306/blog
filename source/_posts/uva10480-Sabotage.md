@@ -1,5 +1,5 @@
 ---
-title: uva10480 Sabotage
+title: UVa10480 Sabotage
 abbrlink: a5f4
 date: 2020-02-16 15:04:53
 category: UVa

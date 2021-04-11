@@ -1,5 +1,5 @@
 ---
-title: uva01623 Enter The Dragon
+title: UVa01623 Enter The Dragon
 abbrlink: 99c4
 date: 2020-08-06 21:47:54
 category: UVa

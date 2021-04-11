@@ -1,5 +1,5 @@
 ---
-title: uva11865 Stream My Contest
+title: UVa11865 Stream My Contest
 abbrlink: 69cd
 date: 2020-07-31 11:57:25
 category: UVa

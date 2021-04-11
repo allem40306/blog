@@ -1,5 +1,5 @@
 ---
-title: uva00301 uvaLive5516 POJ1040 HDU1456 SCU1031 OpenJ_Bailian1040 Transportation
+title: UVa00301 UvaLive5516 POJ1040 HDU1456 SCU1031 OpenJ_Bailian1040 Transportation
 abbrlink: 9e4e
 date: 2020-08-15 16:31:41
 category: UVa
@@ -14,10 +14,10 @@ tags:
 - 剪枝
 - ICPC 亞洲訓練聯盟暑訓 2020
 ---
-[題目連結 uva](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=237)
+[題目連結 UVa](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=237)
 [題目連結 POJ](http://poj.org/problem?id=1040)
 [題目連結 HDU](http://acm.hdu.edu.cn/showproblem.php?pid=1456)
-[題目連結 uvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3517)
+[題目連結 UvaLive](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3517)
 [題目連結 SCU](http://acm.scu.edu.cn/soj/problem.action?id=1031)
 [題目連結 OpenJ_Bailian1040](http://bailian.openjudge.cn/practice/1040?lang=en_US)
 * 題意：有一列火車從 $A$($0$ 號車站) 開到 $B$($m$ 號車站)，路上經過車站依序編號為 $0$ 到 $m$，現在有 $t$ 筆訂單，每筆訂單有人數，起點和終點，如果接受這筆訂單，就可以獲得人數 $\times$ 經過站數(終點-起點)，火車最多可以載 $n$ 位客人，求最高獲益。

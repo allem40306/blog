@@ -1,5 +1,5 @@
 ---
-title: uva10990 Another New Function
+title: UVa10990 Another New Function
 abbrlink: 6e6c
 date: 2020-02-04 16:24:24
 category: UVa

@@ -1,5 +1,5 @@
 ---
-title: uva11264 Coin Collector
+title: UVa11264 Coin Collector
 abbrlink: bde8
 date: 2020-08-10 12:10:35
 category: UVa

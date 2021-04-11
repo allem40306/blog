@@ -1,5 +1,5 @@
 ---
-title: uva01335 Beijing Guards
+title: UVa01335 Beijing Guards
 abbrlink: f324
 date: 2020-07-21 19:52:50
 category: UVa
