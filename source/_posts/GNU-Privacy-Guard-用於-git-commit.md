@@ -29,7 +29,8 @@ git config --global user.signingkey <KEY_ID>
 
 ![](https://i.imgur.com/Qc6zUQF.png)
 
-參考與延伸閱讀：
+參考與延伸閱讀
+：
 https://medium.com/starbugs/how-to-fake-the-author-of-git-commit-f44453b70afc
 http://pre.tir.tw/008/blog/output/gnupg-gpg-jin-yao-guan-li.html
 https://blog.miniasp.com/post/2020/05/04/How-to-use-GPG-sign-git-commit-and-tag-object
