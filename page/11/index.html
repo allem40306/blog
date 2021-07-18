@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>傑克的程式區</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="傑克的程式區">
+<meta property="og:url" content="http://allem40306.github.io/blog/page/11/index.html">
+<meta property="og:site_name" content="傑克的程式區">
+<meta property="og:locale" content="zh-tw">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="傑克的程式區">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="傑克的程式區" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allem40306.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首頁</a>
+        
+          <a class="main-nav-link" href="/blog/archives">文章列表</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">傑克的程式區</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-uva10298-POJ2406-FZU1011-ZOJ1905-SCU1838-OpenJ-Bailian2406-Kattis-powerstrings-EOlymp1078-LibreOJ10035-Power-String" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/300f/" class="article-date">
+  <time datetime="2020-08-17T16:50:00.000Z" itemprop="datePublished">2020-08-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/UVa/">UVa</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/300f/">UVa10298 POJ2406 FZU1011 ZOJ1905 SCU1838 OpenJ_Bailian2406 Kattis-powerstrings 1078 LibreOJ10035 Power String</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1239" target="_blank" rel="noopener">題目連結 UVa</a><br><a href="http://poj.org/problem?id=2406" target="_blank" rel="noopener">題目連結 POJ</a><br><a href="http://acm.fzu.edu.cn/problem.php?pid=1011" target="_blank" rel="noopener">題目連結 FZU</a><br><a href="https://zoj.pintia.cn/problem-sets/91827364500/problems/91827365404" target="_blank" rel="noopener">題目連結 ZOJ</a><br><a href="http://acm.scu.edu.cn/soj/problem.action?id=1838" target="_blank" rel="noopener">題目連結 SCU</a><br><a href="http://bailian.openjudge.cn/practice/2406?lang=en_US" target="_blank" rel="noopener">題目連結 OpenJ_Bailian</a><br><a href="https://open.kattis.com/problems/powerstrings" target="_blank" rel="noopener">題目連結 Kattis</a><br><a href="https://www.e-olymp.com/en/problems/1078" target="_blank" rel="noopener">題目連結 EOlymp</a><br><a href="https://loj.ac/problem/10035" target="_blank" rel="noopener">題目連結 LibreOJ</a></p>
+<ul>
+<li><p>題意：給定兩個字串 $a,b$，令 $a<em>b$ 為兩個字串的連接，例如 $a=”123”,b=”456”,a</em>b=”123456”$，現在令 $a^0=””,a^{n+1}=a*a^{n}$。給定一字串 $s$，求最大的 $n$ 使得 $a^n=s$。</p>
+</li>
+<li><p>注意：Kattis 字串最長 $2*10^6$，EOlymp 是 EOF 輸入，與其他 Judge 不同。</p>
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/300f/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/300f/" data-id="ckr9cep9l00wnboshnlu5ooah" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/300f/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/EOlymp/">EOlymp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FZU/">FZU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Hash/">Hash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/KMP/">KMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Kattis/">Kattis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/LibreOJ/">LibreOJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OpenJ-Bailian/">OpenJ_Bailian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/POJ/">POJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SCU/">SCU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVa/">UVa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ZOJ/">ZOJ</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-HDU3613-Best-Reward" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/eeae/" class="article-date">
+  <time datetime="2020-08-17T16:47:57.000Z" itemprop="datePublished">2020-08-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/HDU/">HDU</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/eeae/">HDU3613 Best Reward</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3613" target="_blank" rel="noopener">題目連結</a></p>
+<ul>
+<li>題意：給定 26 個英文字母的價值和一個字串，現在要把自傳切成兩個子字串，如果子字串是回文字串，就可以獲得字串上所有字母價值和，求最大獲益。
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/eeae/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/eeae/" data-id="ckr9cep1i00bdboshmh3qp2qq" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/eeae/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/HDU/">HDU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ManaCher/">ManaCher</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-POJ3974-Palindrome" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/855f/" class="article-date">
+  <time datetime="2020-08-17T16:44:58.000Z" itemprop="datePublished">2020-08-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/POJ/">POJ</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/855f/">POJ3974 Palindrome</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://poj.org/problem?id=3974" target="_blank" rel="noopener">題目連結</a></p>
+<ul>
+<li>題意：給定字串，求最長回文字串。
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/855f/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/855f/" data-id="ckr9cep3d00gxboshaca2ipcf" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/855f/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ManaCher/">ManaCher</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/POJ/">POJ</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-uva00750-uvaLive5358-8-Queens-Chess-Problem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/614c/" class="article-date">
+  <time datetime="2020-08-15T16:36:27.000Z" itemprop="datePublished">2020-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/UVa/">UVa</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/614c/">UVa00750 UvaLive5358 8 Queens Chess Problem</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=691" target="_blank" rel="noopener">題目連結 UVa</a><br><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3359" target="_blank" rel="noopener">題目連結 UvaLive</a></p>
+<ul>
+<li>題意：給定八皇后問題其中一顆棋子，求所有可能的八皇后問題解。
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/614c/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/614c/" data-id="ckr9cep8w00vlbosh8usvn5b5" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/614c/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Pruning-剪枝/">Pruning 剪枝</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Recursive-遞迴/">Recursive 遞迴</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVa/">UVa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVaLive/">UVaLive</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-uva00639-uvaLive5325-POJ1315-OpenJ-Bailian1315-Don-t-Get-Rooked" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/483a/" class="article-date">
+  <time datetime="2020-08-15T16:33:09.000Z" itemprop="datePublished">2020-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/UVa/">UVa</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/483a/">UVa00639 UvaLive5325 POJ1315 OpenJ_Bailian1315 Don&#39;t Get Rooked</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=580" target="_blank" rel="noopener">題目連結 UVa</a><br><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3326" target="_blank" rel="noopener">題目連結 UvaLive</a><br><a href="http://poj.org/problem?id=1315" target="_blank" rel="noopener">題目連結 POJ</a></p>
+<ul>
+<li>題意：給定 $4\times 4$ 的棋盤，上面有一些格子有障礙物，求最多可以放多少顆西洋棋裡的城堡彼此不衝突，衝突定義為兩顆城堡在同一直行或橫列，且中間沒有阻隔。<br><a href>題目連結</a>
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/483a/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/483a/" data-id="ckr9cep8q00v5boshj3ueeba4" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/483a/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OpenJ-Bailian/">OpenJ_Bailian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/POJ/">POJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Pruning-剪枝/">Pruning 剪枝</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Recursive-遞迴/">Recursive 遞迴</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVa/">UVa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVaLive/">UVaLive</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-uva00301-uvaLive5516-POJ1040-HDU1456-SCU1031-OpenJ-Bailian1040-Transportation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/9e4e/" class="article-date">
+  <time datetime="2020-08-15T16:31:41.000Z" itemprop="datePublished">2020-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/UVa/">UVa</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/9e4e/">UVa00301 UvaLive5516 POJ1040 HDU1456 SCU1031 OpenJ_Bailian1040 Transportation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=237" target="_blank" rel="noopener">題目連結 UVa</a><br><a href="http://poj.org/problem?id=1040" target="_blank" rel="noopener">題目連結 POJ</a><br><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1456" target="_blank" rel="noopener">題目連結 HDU</a><br><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3517" target="_blank" rel="noopener">題目連結 UvaLive</a><br><a href="http://acm.scu.edu.cn/soj/problem.action?id=1031" target="_blank" rel="noopener">題目連結 SCU</a><br><a href="http://bailian.openjudge.cn/practice/1040?lang=en_US" target="_blank" rel="noopener">題目連結 OpenJ_Bailian1040</a></p>
+<ul>
+<li>題意：有一列火車從 $A$($0$ 號車站) 開到 $B$($m$ 號車站)，路上經過車站依序編號為 $0$ 到 $m$，現在有 $t$ 筆訂單，每筆訂單有人數，起點和終點，如果接受這筆訂單，就可以獲得人數 $\times$ 經過站數(終點-起點)，火車最多可以載 $n$ 位客人，求最高獲益。
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/9e4e/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/9e4e/" data-id="ckr9cep8e00umboshcz8wyfy4" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/9e4e/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/HDU/">HDU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OpenJ-Bailian/">OpenJ_Bailian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/POJ/">POJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Pruning-剪枝/">Pruning 剪枝</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Recursive-遞迴/">Recursive 遞迴</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SCU/">SCU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVa/">UVa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVaLive/">UVaLive</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-uva00539-POJ2258-ZOJ1947-The-Settlers-of-Catan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/3e8c/" class="article-date">
+  <time datetime="2020-08-15T16:30:17.000Z" itemprop="datePublished">2020-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/UVa/">UVa</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/3e8c/">UVa00539 POJ2258 ZOJ1947 The Settlers of Catan</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=480" target="_blank" rel="noopener">題目連結 UVa</a><br><a href="http://poj.org/problem?id=2258" target="_blank" rel="noopener">題目連結 POJ</a><br><a href="https://zoj.pintia.cn/problem-sets/91827364500/problems/91827365446" target="_blank" rel="noopener">題目連結 ZOJ</a></p>
+<ul>
+<li>題意：給定一張 $N$ 個點 $M$ 條邊的圖，問圖上最長不重複的路徑。
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/3e8c/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/3e8c/" data-id="ckr9cep8i00uwboshrmd28bm4" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/3e8c/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DFS/">DFS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/POJ/">POJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVa/">UVa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ZOJ/">ZOJ</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-uva00167-uvaLive5277-SCU1033-The-Sultan-s-Successors" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/7020/" class="article-date">
+  <time datetime="2020-08-15T16:27:41.000Z" itemprop="datePublished">2020-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/UVa/">UVa</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/7020/">UVa00167 UvaLive5277 SCU1033 The Sultan&#39;s Successors</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=103" target="_blank" rel="noopener">題目連結 UVa</a><br><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3228" target="_blank" rel="noopener">題目連結 UvaLive</a><br><a href="http://acm.scu.edu.cn/soj/problem.action?id=1033" target="_blank" rel="noopener">題目連結 SCU</a></p>
+<ul>
+<li>題意：給定 $8\times 8$ 棋盤，每一格上面都有數字，要放 8 隻皇后，在彼此不衝突的情況下，每隻皇后所在位置的數字和最大為多少。
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/7020/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/7020/" data-id="ckr9cep8c00uibosh7iukd1q3" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/7020/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Pruning-剪枝/">Pruning 剪枝</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Recursive-遞迴/">Recursive 遞迴</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SCU/">SCU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVa/">UVa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVaLive/">UVaLive</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-POJ1979-HDU1312-ZOJ2165-NBUT1081-SCU1914-OpenJ-Bailian1979-3866-AIZU1130-Red-and-Black" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/342e/" class="article-date">
+  <time datetime="2020-08-15T16:25:32.000Z" itemprop="datePublished">2020-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/POJ/">POJ</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/342e/">POJ1979 HDU1312 ZOJ2165 NBUT1081 SCU1914 OpenJ_Bailian1979(3866) AIZU1130 Red and Black</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://poj.org/problem?id=1979" target="_blank" rel="noopener">題目連結 POJ</a><br><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1312" target="_blank" rel="noopener">題目連結 HDU</a><br><a href="https://zoj.pintia.cn/problem-sets/91827364500/problems/91827365664" target="_blank" rel="noopener">題目連結 ZOJ</a><br><a href="https://ac.2333.moe/Problem/view.xhtml?id=1081" target="_blank" rel="noopener">題目連結 NBUT</a><br><a href="http://acm.scu.edu.cn/soj/problem.action?id=1914" target="_blank" rel="noopener">題目連結 SCU</a><br><a href="http://bailian.openjudge.cn/practice/1979?lang=en_US" target="_blank" rel="noopener">題目連結 OpenJ_Bailian 1979</a><br><a href="http://bailian.openjudge.cn/practice/3866?lang=en_US" target="_blank" rel="noopener">題目連結 OpenJ_Bailian 3866</a><br><a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1130" target="_blank" rel="noopener">題目連結 AIZU</a></p>
+<ul>
+<li>題意：一個房間地板有紅瓦和黑瓦，一個人站在黑瓦，他可以上下左右移動，但不能走到紅瓦，問他可以走到多少黑瓦中。
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/342e/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/342e/" data-id="ckr9cep2w00feboshmlv4bnuy" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/342e/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/AIZU/">AIZU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/HDU/">HDU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/NBUT/">NBUT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OpenJ-Bailian/">OpenJ_Bailian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/POJ/">POJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Recursive-遞迴/">Recursive 遞迴</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SCU/">SCU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ZOJ/">ZOJ</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-POJ2083-ZOJ2423-OpenJ-Bailian2083-FZU1306-Fractal" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/7525/" class="article-date">
+  <time datetime="2020-08-15T16:22:38.000Z" itemprop="datePublished">2020-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/POJ/">POJ</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/posts/7525/">POJ2083 ZOJ2423 OpenJ_Bailian2083 FZU1306 Fractal</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://poj.org/problem?id=2083" target="_blank" rel="noopener">題目連結 POJ</a><br><a href="https://zoj.pintia.cn/problem-sets/91827364500/problems/91827365922" target="_blank" rel="noopener">題目連結 ZOJ</a><br><a href="http://bailian.openjudge.cn/practice/2083?lang=en_US" target="_blank" rel="noopener">題目連結 OpenJ_Bailian</a><br><a href="http://acm.fzu.edu.cn/problem.php?pid=1306" target="_blank" rel="noopener">題目連結 FZU1306</a></p>
+<ul>
+<li>題意：令 $B(1)=X$，$B(n)=$<img src="https://i.imgur.com/sP5uXtK.png" alt>，求 $B(n),(1\leq n\leq 7)$
+        
+          <p class="article-more-link">
+            <a href="/blog/posts/7525/#more">繼續閱讀全文 »</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/7525/" data-id="ckr9cep3100frboshfvhl2nhh" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/7525/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FZU/">FZU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OpenJ-Bailian/">OpenJ_Bailian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/POJ/">POJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Recursive-遞迴/">Recursive 遞迴</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ZOJ/">ZOJ</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/blog/page/10/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/9/">9</a><a class="page-number" href="/blog/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/blog/page/12/">12</a><a class="page-number" href="/blog/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/33/">33</a><a class="extend next" rel="next" href="/blog/page/12/">Next&raquo;</a>
+  </nav>
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/posts/57fe/">npx 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/c414/">nvm 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/dc6c/">[2021 Week 28] 暑期 Training</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/56ba/">[2021 Week 27] 助教批改作業</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/e620/">[2021 Week 26] 書面報告</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2021 allem40306&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;http://allem40306.github.io/blog
+    </div>
+  </div>
+</footer>
+ <script src="/blog/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">文章列表</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+<script>
+  var disqus_shortname = 'allem40306';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/blog/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+<script src="/blog/js/elevator.js"></script>
+  </div>
+</body>
+</html>

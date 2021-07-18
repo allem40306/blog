@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>Codeforces 1307 Round 621 Div.1+2 | 傑克的程式區</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="這場我打了前五題，第六題看了很久，都不了解，發現自己功力不夠就止住了。">
+<meta name="keywords" content="DP,BFS,Math,Greedy,Shortest Path,Graph,Combinatorics 排列組合,差值排序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces 1307 Round 621 Div.1+2">
+<meta property="og:url" content="http://allem40306.github.io/blog/posts/5a0c/index.html">
+<meta property="og:site_name" content="傑克的程式區">
+<meta property="og:description" content="這場我打了前五題，第六題看了很久，都不了解，發現自己功力不夠就止住了。">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2021-07-18T15:17:02.873Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Codeforces 1307 Round 621 Div.1+2">
+<meta name="twitter:description" content="這場我打了前五題，第六題看了很久，都不了解，發現自己功力不夠就止住了。">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="傑克的程式區" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allem40306.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首頁</a>
+        
+          <a class="main-nav-link" href="/blog/archives">文章列表</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">傑克的程式區</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Codeforces-1307-Round-621-Div-1-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/5a0c/" class="article-date">
+  <time datetime="2020-04-05T17:01:36.000Z" itemprop="datePublished">2020-04-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Codeforces/">Codeforces</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Codeforces 1307 Round 621 Div.1+2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>這場我打了前五題，第六題看了很久，都不了解，發現自己功力不夠就止住了。</p>
+<a id="more"></a>
+<ul>
+<li><a href="https://codeforces.com/contest/1307/problem/A" target="_blank" rel="noopener">A. Cow and Haybales</a><br>題意：有 $N$ 個稻草堆，第 $i$ 個稻草堆有 $A_i$ 捆，每天可以選一捆稻草移從第 $i$ 堆移到第 $i-1$ 堆，問 $D$ 天後第 $1$ 堆最多會有幾個。<br>題解：貪心策略，從第 $2$ 堆的稻草開始移，如果移完再移第 $3$ 堆的，依此類推。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for (int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for (int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS                                                                    \</span></span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);                                                          \</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);                                                         \</span><br><span class="line">    ios_base::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> n, d;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; d;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(n)</span></span>;</span><br><span class="line">        FOR(i, <span class="number">0</span>, n) &#123; <span class="built_in">cin</span> &gt;&gt; v[i]; &#125;</span><br><span class="line">        FOR(i, <span class="number">1</span>, n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (v[i] == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> tmp = min(d / i, v[i]);</span><br><span class="line">            v[<span class="number">0</span>] += tmp;</span><br><span class="line">            d -= tmp * i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; v[<span class="number">0</span>] &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://codeforces.com/contest/1307/problem/B" target="_blank" rel="noopener">B. Cow and Friend</a><br>題意：現在在二維空間要從 $(0,0)$ 走到 $(x,0)$，有 $N$ 種不同距離的步伐可以走，問最少要走幾步。<br>題解：一樣是貪心策略，利用最大的步伐走(至少兩步)，但如果有距離為 $x$ 的走法，就只要一步。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for (int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for (int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS                                                                    \</span></span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);                                                          \</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);                                                         \</span><br><span class="line">    ios_base::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> n, x;</span><br><span class="line">        <span class="keyword">bool</span> hasEqual = <span class="literal">false</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; x;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">v</span><span class="params">(n)</span></span>;</span><br><span class="line">        FOR(i, <span class="number">0</span>, n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; v[i];</span><br><span class="line">            <span class="keyword">if</span> (v[i] == x)</span><br><span class="line">            &#123;</span><br><span class="line">                hasEqual = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> mx = *max_element(v.begin(), v.end());</span><br><span class="line">        <span class="keyword">if</span> (hasEqual)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="number">1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; max((x / mx) + <span class="number">1</span> * (x % mx != <span class="number">0</span>), <span class="number">2</span>) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://codeforces.com/contest/1307/problem/C" target="_blank" rel="noopener">C. Cow and Message</a><br>題意：給定一個字串 $S$，要求出現最多次的 subsequence 的次數。<br>題解：一定有答案長度為 $1$ 和 $2$，因為如果有超過 $2$ 的答案，必有相對長度為 $\leq 2$ 的答案。利用 <code>dp</code> 計算長度為 $1$ 和 $2$ 出現的次數。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">using</span> VI = <span class="built_in">vector</span>&lt;LL&gt;;</span><br><span class="line"><span class="keyword">using</span> VVI = <span class="built_in">vector</span>&lt;VI&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for (int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for (int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS                                                                    \</span></span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);                                                          \</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);                                                         \</span><br><span class="line">    ios_base::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">int</span> n = (<span class="keyword">int</span>)s.size();</span><br><span class="line">    <span class="function">VI <span class="title">dp</span><span class="params">(<span class="number">30</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="function">VVI <span class="title">dp2</span><span class="params">(<span class="number">30</span>, VI(<span class="number">30</span>, <span class="number">0</span>))</span></span>;</span><br><span class="line">    FOR(i, <span class="number">0</span>, n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> no = (<span class="keyword">int</span>)(s[i] - <span class="string">'a'</span>);</span><br><span class="line">        FOR(j, <span class="number">0</span>, <span class="number">30</span>) &#123; dp2[j][no] += dp[j]; &#125;</span><br><span class="line">        ++dp[no];</span><br><span class="line">    &#125;</span><br><span class="line">    LL ans = <span class="number">0</span>;</span><br><span class="line">    FOR(i, <span class="number">0</span>, <span class="number">30</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        FOR(j, <span class="number">0</span>, <span class="number">30</span>) &#123; ans = max(ans, dp2[i][j]); &#125;</span><br><span class="line">        ans = max(ans, dp[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://codeforces.com/contest/1307/problem/D" target="_blank" rel="noopener">D. Cow and Fields</a><br>題意：給一張 $N$ 個點，$M$ 條邊的圖，在”要從 $K$ 個給定的點集 $A$ 中，選兩個點連成一條邊”的情況下，問 $1$ 到 $n$ 的最短距離最大可以是多少。<br>題解：設原圖中，$d1_{s}=d(1,s),d2_{s}=d(n,s)$，最短路有兩種可能，一種為 $d1_{n}=d2_{1}$，一種是 $d1_{x}+1+d2_{y},(x,y\in A)$，第一種可由 BFS 或最短路演算法算出，第二種需最大化 $min(d1_{x}+d2_{y}, d1_{y}+d2_{x})$，$d1_{x}+d2_{y}\leq d1_{y}+d2_{x}\to d1_{x}-d2_{x}\leq d1_{y}-d2_{y}$，我們依照 $d1_{x}-d2_{x}$ 排列，在依序迭代 $A$ 找尋最大值，最後和第一種方法取最小值。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">using</span> VI = <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> VVI = <span class="built_in">vector</span>&lt;VI&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">2e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for (int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for (int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS                                                                    \</span></span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);                                                          \</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);                                                         \</span><br><span class="line">    ios_base::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function">VVI <span class="title">G</span><span class="params">(MXV, VI(<span class="number">0</span>, <span class="number">0</span>))</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Dijkstra</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            G[i].clear();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> from, <span class="keyword">int</span> to)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        G[from].push_back(to);</span><br><span class="line">        G[to].push_back(from);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dijkstra</span><span class="params">(VI &amp;d, <span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        d[s] = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">        q.push(s);</span><br><span class="line">        <span class="keyword">while</span> (!q.empty())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> u = q.front();</span><br><span class="line">            q.pop();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> v : G[u])</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (d[v] != <span class="number">-1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                d[v] = d[u] + <span class="number">1</span>;</span><br><span class="line">                q.push(v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">VI d1(MXV, -1), d2(MXV, -1);</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123; <span class="keyword">return</span> d1[x] - d2[x] &lt; d1[y] - d2[y]; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> n, m, k;</span><br><span class="line">    Dijkstra dijkstra;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m &gt;&gt; k;</span><br><span class="line">    dijkstra.init(n);</span><br><span class="line">    <span class="function">VI <span class="title">p</span><span class="params">(k)</span></span>;</span><br><span class="line">    FOR(i, <span class="number">0</span>, k) &#123; <span class="built_in">cin</span> &gt;&gt; p[i]; &#125;</span><br><span class="line">    FOR(i, <span class="number">0</span>, m)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> x, y;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        dijkstra.addEdge(x, y);</span><br><span class="line">    &#125;</span><br><span class="line">    dijkstra.dijkstra(d1, <span class="number">1</span>);</span><br><span class="line">    dijkstra.dijkstra(d2, n);</span><br><span class="line">    <span class="comment">// FOR(i, 1, n + 1) &#123; cout &lt;&lt; d1[i] &lt;&lt; ' ' &lt;&lt; d2[i] &lt;&lt; '\n'; &#125;</span></span><br><span class="line">    sort(p.begin(), p.end(), cmp);</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>, tmp = <span class="number">-1e9</span>;</span><br><span class="line">    FOR(i, <span class="number">0</span>, k)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> v = p[i];</span><br><span class="line">        ans = max(ans, tmp + d2[v] + <span class="number">1</span>);</span><br><span class="line">        tmp = max(tmp, d1[v]);</span><br><span class="line">    &#125;</span><br><span class="line">    ans = min(ans, d1[n]);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://codeforces.com/contest/1307/problem/E" target="_blank" rel="noopener">E. Cow and Treats</a><br>題意：現在有 $N$ 塊草地，有各自的口味 $S_i$，有 $M$ 隻羊，第 $i$ 隻羊要吃 $h_i$ 塊口味為 $f_i$ 的草地，羊從兩邊出發，遇到自己喜歡的口味就吃，在不能碰到彼此的狀況，最多可以讓幾隻羊滿足及該結果方法數有幾種。<br>題解：首先，吃同口味的羊一邊只能有一隻，如果兩隻肯定會遇到。我們可以枚舉兩群羊的邊界來計算答案，細節的我還沒搞清楚，就先貼上<a href="https://blog.csdn.net/weixin_44282912/article/details/104738446" target="_blank" rel="noopener">參考連結</a>。</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">using</span> VI = <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> VLL = <span class="built_in">vector</span>&lt;LL&gt;;</span><br><span class="line"><span class="keyword">using</span> VVI = <span class="built_in">vector</span>&lt;VI&gt;;</span><br><span class="line"><span class="keyword">using</span> VVLL = <span class="built_in">vector</span>&lt;VLL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">5005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> LL MOD = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for (int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for (int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS                                                                    \</span></span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);                                                          \</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);                                                         \</span><br><span class="line">    ios_base::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> n, m;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="function">VI <span class="title">s</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">    <span class="comment">// lsum[x]: each j&lt;=i and c[j]=x</span></span><br><span class="line">    <span class="comment">// rsum[x]: each j&gt;i and c[j]=x</span></span><br><span class="line">    VLL lsum(n + 1, 0), rsum(n + 1, 0);</span><br><span class="line">    <span class="function">VVLL <span class="title">num</span><span class="params">(n + <span class="number">1</span>, VLL(n + <span class="number">1</span>, <span class="number">0</span>))</span></span>;</span><br><span class="line">    FOR(i, <span class="number">1</span>, n + <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; s[i];</span><br><span class="line">        ++rsum[s[i]];</span><br><span class="line">    &#125;</span><br><span class="line">    FOR(i, <span class="number">1</span>, m + <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> f, h;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; f &gt;&gt; h;</span><br><span class="line">        FOR(j, h, n + <span class="number">1</span>) &#123; ++num[f][j]; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    PLL ans = MP(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    FOR(i, <span class="number">0</span>, n + <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> x = s[i];</span><br><span class="line">        <span class="keyword">if</span> (i)</span><br><span class="line">        &#123;</span><br><span class="line">            ++lsum[x];</span><br><span class="line">            --rsum[x];</span><br><span class="line">        &#125;</span><br><span class="line">        LL ls = lsum[x], rs = rsum[x];</span><br><span class="line">        PLL tmp = MP(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (i)</span><br><span class="line">        &#123;</span><br><span class="line">            LL cnt1 = num[x][ls] - num[x][ls - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span> (cnt1 == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            LL cnt2 = num[x][rs] - (ls &lt;= rs);</span><br><span class="line">            ++tmp.F;</span><br><span class="line">            tmp.S = (tmp.S * cnt1) % MOD;</span><br><span class="line">            <span class="keyword">if</span> (cnt2)</span><br><span class="line">            &#123;</span><br><span class="line">                ++tmp.F;</span><br><span class="line">                tmp.S = (tmp.S * cnt2) % MOD;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        FOR(x2, <span class="number">1</span>, n + <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (x == x2)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            LL cnt1 = num[x2][lsum[x2]];</span><br><span class="line">            LL cnt2 = num[x2][rsum[x2]];</span><br><span class="line">            <span class="keyword">if</span> (cnt1 &gt; cnt2)</span><br><span class="line">            &#123;</span><br><span class="line">                swap(cnt1, cnt2);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (cnt2)</span><br><span class="line">            &#123;</span><br><span class="line">                ++tmp.F;</span><br><span class="line">                <span class="keyword">if</span> (cnt1 == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    tmp.S = tmp.S * cnt2 % MOD;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (cnt2 == <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    tmp.S = tmp.S * <span class="number">2L</span>L % MOD;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    ++tmp.F;</span><br><span class="line">                    tmp.S = (tmp.S * cnt1) % MOD * (cnt2 - <span class="number">1</span>) % MOD;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ans.F &lt; tmp.F)</span><br><span class="line">        &#123;</span><br><span class="line">            ans = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (tmp.F == ans.F)</span><br><span class="line">        &#123;</span><br><span class="line">            ans.S = (ans.S + tmp.S) % MOD;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans.F &lt;&lt; <span class="string">' '</span> &lt;&lt; ans.S &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <div>
+          <hr>
+          <p style="margin-bottom: 0;">如果你覺得這篇文章很棒，請你不吝點讚 (ﾟ∀ﾟ)</p>
+          <iframe width="100%" height="230px" scrolling="no" frameborder="0" id="player" src="https://button.like.co/in/embed/allem40306/button/?referrer=http://allem40306.github.io/blog/posts/5a0c/" allowfullscreen="true"></iframe>
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/5a0c/" data-id="ckr9cep7u00tjboshcpw65avj" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/5a0c/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/BFS/">BFS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Combinatorics-排列組合/">Combinatorics 排列組合</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DP/">DP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Graph/">Graph</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Greedy/">Greedy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Math/">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Shortest-Path/">Shortest Path</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/差值排序/">差值排序</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/blog/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>Recommended Posts</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/posts/3b01/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          [2020 Week 14] 增強時間管理的春假
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/posts/17d4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">AtCoder Beginner Contest 159 心得</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+      </section>
+      
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/posts/57fe/">npx 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/c414/">nvm 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/dc6c/">[2021 Week 28] 暑期 Training</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/56ba/">[2021 Week 27] 助教批改作業</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/e620/">[2021 Week 26] 書面報告</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2021 allem40306&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;http://allem40306.github.io/blog
+    </div>
+  </div>
+</footer>
+ <script src="/blog/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">文章列表</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+<script>
+  var disqus_shortname = 'allem40306';
+  
+  var disqus_url = 'http://allem40306.github.io/blog/posts/5a0c/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/blog/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+<script src="/blog/js/elevator.js"></script>
+  </div>
+</body>
+</html>

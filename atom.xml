@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>傑克的程式區</title>
+  
+  
+  <link href="http://allem40306.github.io/blog/atom.xml" rel="self"/>
+  
+  <link href="http://allem40306.github.io/blog/"/>
+  <updated>2021-07-18T15:17:02.877Z</updated>
+  <id>http://allem40306.github.io/blog/</id>
+  
+  <author>
+    <name>allem40306</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npx 介紹</title>
+    <link href="http://allem40306.github.io/blog/posts/57fe/"/>
+    <id>http://allem40306.github.io/blog/posts/57fe/</id>
+    <published>2021-07-18T23:15:34.000Z</published>
+    <updated>2021-07-18T15:17:02.877Z</updated>
+    
+    <content type="html"><![CDATA[<p>npx 是 npm 在版本 5.2.0 之後的指令，最主要的功用在於 package 可以在不安裝在本地的情況下被執行，這樣避免了本地環境被汙染。例如我們要建立一個 react 的 app：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx npx create-react-app my-app</span><br></pre></td></tr></table></figure><p>npx 可以指定 package 的版本，也可以執行 github 的 gist 或 repo。</p><p>參考：</p><ul><li><a href="https://medium.com/itsems-frontend/whats-npx-e83400efe7f8" target="_blank" rel="noopener">https://medium.com/itsems-frontend/whats-npx-e83400efe7f8</a></li><li><a href="https://www.ruanyifeng.com/blog/2019/02/npx.html" target="_blank" rel="noopener">https://www.ruanyifeng.com/blog/2019/02/npx.html</a></li><li><a href="https://medium.com/@elijahmanor/learn-about-the-npx-package-runner-769f6e0bc404" target="_blank" rel="noopener">https://medium.com/@elijahmanor/learn-about-the-npx-package-runner-769f6e0bc404</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;npx 是 npm 在版本 5.2.0 之後的指令，最主要的功用在於 package 可以在不安裝在本地的情況下被執行，這樣避免了本地環境被汙染。例如我們要建立一個 react 的 app：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl</summary>
+      
+    
+    
+    
+    <category term="隨筆" scheme="http://allem40306.github.io/blog/categories/隨筆/"/>
+    
+    
+    <category term="Nodejs" scheme="http://allem40306.github.io/blog/tags/Nodejs/"/>
+    
+    <category term="Npx" scheme="http://allem40306.github.io/blog/tags/Npx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nvm 介紹</title>
+    <link href="http://allem40306.github.io/blog/posts/c414/"/>
+    <id>http://allem40306.github.io/blog/posts/c414/</id>
+    <published>2021-07-18T23:13:55.000Z</published>
+    <updated>2021-07-18T15:17:02.877Z</updated>
+    
+    <content type="html"><![CDATA[<p>我在一台 server 上安裝 nodejs,為了避免和其他人安裝的版本衝突，我改安裝 nvm，安裝指令如下：</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash</span><br></pre></td></tr></table></figure><p>或</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash</span><br></pre></td></tr></table></figure><p>安裝完成，本機的 profile 會增加以下字句：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$([ -z &quot;$&#123;XDG_CONFIG_HOME-&#125;&quot; ] &amp;&amp; printf %s &quot;$&#123;HOME&#125;/.nvm&quot; || printf %s &quot;$&#123;XDG_CONFIG_HOME&#125;/nvm&quot;)&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm</span><br></pre></td></tr></table></figure><p>輸入 <code>command -v nvm</code> 判斷是否安裝完成。</p><p>以下為基本指令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nvm install &lt;version&gt; # 安裝特定版本</span><br><span class="line">nvm uninstall &lt;version&gt; # 解除安裝特定版本</span><br><span class="line">nvm use &lt;version&gt; # 使用特定版本</span><br><span class="line">nvm ls # 列出畚箕已安裝的版本</span><br><span class="line">nvm ls-remote # 列出遠端所有可用的版本</span><br><span class="line">nvm --version # 查看 nvm 版本</span><br><span class="line">nvm alias &lt;name&gt; &lt;version&gt; # 將版本取別名</span><br><span class="line">nvm which &lt;version&gt; # 查看版本安裝路徑</span><br></pre></td></tr></table></figure><p>參考：</p><ul><li><a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">https://github.com/nvm-sh/nvm</a></li><li><a href="https://pjchender.dev/nodejs/nvm/" target="_blank" rel="noopener">https://pjchender.dev/nodejs/nvm/</a></li><li><a href="https://titangene.github.io/article/nvm.html" target="_blank" rel="noopener">https://titangene.github.io/article/nvm.html</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;我在一台 server 上安裝 nodejs,為了避免和其他人安裝的版本衝突，我改安裝 nvm，安裝指令如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="隨筆" scheme="http://allem40306.github.io/blog/categories/隨筆/"/>
+    
+    
+    <category term="Nodejs" scheme="http://allem40306.github.io/blog/tags/Nodejs/"/>
+    
+    <category term="Nvm" scheme="http://allem40306.github.io/blog/tags/Nvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 28] 暑期 Training</title>
+    <link href="http://allem40306.github.io/blog/posts/dc6c/"/>
+    <id>http://allem40306.github.io/blog/posts/dc6c/</id>
+    <published>2021-07-18T00:02:58.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>暑假到了，Training 不能停，這週我從數論開啟講起，效果還算不錯。</p><a id="more"></a><p>還有要建立 Judge，這個計畫被提過好幾次，只是都沒有成功，這次應該能順利完成。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;暑假到了，Training 不能停，這週我從數論開啟講起，效果還算不錯。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 27] 助教批改作業</title>
+    <link href="http://allem40306.github.io/blog/posts/56ba/"/>
+    <id>http://allem40306.github.io/blog/posts/56ba/</id>
+    <published>2021-07-10T23:29:24.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這週我自己的作業都做完，要改助教課程的程式碼，雖然量很多，但比起寫書面報告，負擔減輕許多。</p><a id="more"></a><p>再來這週自辦賽好像出太難了，二題以上只有十個左右，有一次快速冪不小心被 python 解出 QQ，之後不出裸的快速冪了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這週我自己的作業都做完，要改助教課程的程式碼，雖然量很多，但比起寫書面報告，負擔減輕許多。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 26] 書面報告</title>
+    <link href="http://allem40306.github.io/blog/posts/e620/"/>
+    <id>http://allem40306.github.io/blog/posts/e620/</id>
+    <published>2021-07-10T23:18:35.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>週一是最後一次有老師講課的課，很巧的是跟大一第一堂課老師一樣，也是同個時段XD。</p><a id="more"></a><p>這週除了第三次線上自辦賽外，還有兩份書面報告要交，我用盡我的詞彙順利地把兩份作業趕完。</p><p>自辦賽這次很順利，除了把主機提高到八核心，也有了幫我出題目、檢查測資，大大降低我的工作量，賽後還有時間題解。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;週一是最後一次有老師講課的課，很巧的是跟大一第一堂課老師一樣，也是同個時段XD。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 25] 第二次線上自辦賽</title>
+    <link href="http://allem40306.github.io/blog/posts/59b0/"/>
+    <id>http://allem40306.github.io/blog/posts/59b0/</id>
+    <published>2021-07-10T22:56:26.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>第二次的自辦賽是一場災難，第一個 Judge 在比賽中炸開，我要人工 rejudge，再來，測資漏洞百出，我要人工 rejudge，結論就是累爆。賽後有作一些改良，以防止再發生。</p><a id="more"></a><p>為了處理自辦賽，課業也沒能好好顧著，有一科作業在截止日才想起來要做，快速地做完。</p><p>這週花了很多時間在心得報告上，也都有順利地在期限內做完。</p><p>禮拜日看了獅王時光機， 2009 年三連霸封王戰，跟同學聊一下天，2009 年到現在，還在打的球員不多了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;第二次的自辦賽是一場災難，第一個 Judge 在比賽中炸開，我要人工 rejudge，再來，測資漏洞百出，我要人工 rejudge，結論就是累爆。賽後有作一些改良，以防止再發生。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 24] 第一次線上自辦賽</title>
+    <link href="http://allem40306.github.io/blog/posts/6824/"/>
+    <id>http://allem40306.github.io/blog/posts/6824/</id>
+    <published>2021-06-19T00:02:30.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這禮拜是第一次線上自辦賽，狀況超多，原本不開放縮時攝影，結果一堆人容量爆了QQ。</p><a id="more"></a><p>再來就是一堆報告，幸好這個禮拜把 4 個報告中的 2 個報告處理完，瞬間輕鬆了一半。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這禮拜是第一次線上自辦賽，狀況超多，原本不開放縮時攝影，結果一堆人容量爆了QQ。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 23] PPT 聯想活動</title>
+    <link href="http://allem40306.github.io/blog/posts/387f/"/>
+    <id>http://allem40306.github.io/blog/posts/387f/</id>
+    <published>2021-06-18T23:59:52.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>週一最後一次 CPC 社課，結果大家忘記時間，差點要取消。</p><a id="more"></a><p>週日我參加了 PPT 的聯想活動，和地球日的主題有關，差一點拿到 P 幣。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;週一最後一次 CPC 社課，結果大家忘記時間，差點要取消。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 22] NCPU 模擬賽 2</title>
+    <link href="http://allem40306.github.io/blog/posts/d90a/"/>
+    <id>http://allem40306.github.io/blog/posts/d90a/</id>
+    <published>2021-05-31T23:53:00.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這個禮拜的模擬賽題目太難，因此沒能解出任何一道題目，這次遠端打比賽，為了能有一個線上的環境，已是 Docker 中毒玩家的我，決定利用 docker + code-server 建立環境，很好用，但如果不小心弄爆就要重開。</p><a id="more"></a><p>週五的 Training 也是在線上，我講的主題是 DP，經過上完課之後，我發現更好時做的背包 DP，之後檢討 NCPU 一模的時候，發現有奇怪的演算法，可以好好研究。</p><p>週日看了火神的眼淚，覺得滿寫實的，希望台灣官員可以好好重視消防環境。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這個禮拜的模擬賽題目太難，因此沒能解出任何一道題目，這次遠端打比賽，為了能有一個線上的環境，已是 Docker 中毒玩家的我，決定利用 docker + code-server 建立環境，很好用，但如果不小心弄爆就要重開。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 21] 遠距到期末</title>
+    <link href="http://allem40306.github.io/blog/posts/53b/"/>
+    <id>http://allem40306.github.io/blog/posts/53b/</id>
+    <published>2021-05-29T23:10:56.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這個禮拜開始我都乖乖地待在家裡，原本想過兩個禮拜就可以回學校，結果學校宣布直接遠距到期末，這下都不能見到同學了QQ。不過有一科期末考直接不見了XD。</p><a id="more"></a><p>這禮拜都在用數位影像處理的期中報告，經過老師指導知道要怎麼用了。</p><p>Domjudge 7.x 還沒提供可以給 Team 直接看程式碼的功能，我手動下載程式碼，再做整理。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這個禮拜開始我都乖乖地待在家裡，原本想過兩個禮拜就可以回學校，結果學校宣布直接遠距到期末，這下都不能見到同學了QQ。不過有一科期末考直接不見了XD。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 20] 遠距教學</title>
+    <link href="http://allem40306.github.io/blog/posts/2112/"/>
+    <id>http://allem40306.github.io/blog/posts/2112/</id>
+    <published>2021-05-17T17:49:52.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這禮拜疫情變的很嚴峻，學校到週五發布要遠距教學兩週，依我看兩週還算是樂觀，但希望兩週後可以恢復實體上課，不然都沒辦法和同學相處 QQ。</p><a id="more"></a><p>這週我在做數位影像處裡的 proposal，我真的想不太到要如何寫，關於研究所方面的經驗還是不太夠。</p><p>這週大部分時間都在用 OJ 開發，我對 DevOps 很感興趣，因此在錄製前後端的開發環境，錄製後最大的心得是 <code>docker compose</code> 超好用，比 <code>docker CLI</code> 還方便。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這禮拜疫情變的很嚴峻，學校到週五發布要遠距教學兩週，依我看兩週還算是樂觀，但希望兩週後可以恢復實體上課，不然都沒辦法和同學相處 QQ。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>gdown.gl</title>
+    <link href="http://allem40306.github.io/blog/posts/a0c9/"/>
+    <id>http://allem40306.github.io/blog/posts/a0c9/</id>
+    <published>2021-05-17T17:44:24.000Z</published>
+    <updated>2021-07-18T15:17:02.877Z</updated>
+    
+    <content type="html"><![CDATA[<p>用來下載 google 雲端檔案</p><a id="more"></a><ul><li><p>下載軟體</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/circulosmeos/gdown.pl</span><br></pre></td></tr></table></figure></li><li><p>指令</p><ul><li><code>gdrive file url</code> 範例：<code>https://drive.google.com/file/d/161wK7kXrkkMjIbfSi5nzWDmSk6GyG4qf/view</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./gdown.pl &apos;gdrive file url&apos; [&apos;desired file name&apos;]</span><br></pre></td></tr></table></figure></li></ul></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;用來下載 google 雲端檔案&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="隨筆" scheme="http://allem40306.github.io/blog/categories/隨筆/"/>
+    
+    
+    <category term="Useful Tool" scheme="http://allem40306.github.io/blog/tags/Useful-Tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>關於推甄的提醒</title>
+    <link href="http://allem40306.github.io/blog/posts/1b81/"/>
+    <id>http://allem40306.github.io/blog/posts/1b81/</id>
+    <published>2021-05-12T19:16:02.000Z</published>
+    <updated>2021-07-18T15:17:02.877Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前一直想寫一篇，都忘記了，一直拖到現在。</p><a id="more"></a><ul><li>選系所：研究所的單位不是科系、而是系所，一個大學科系在研究所會有對應多間系所，資工相關科系可以參考之前的文章，除了資工系外，許多理工相關科系也有資訊相關系所。</li><li>準備自傳及相關資料：<ul><li>個人照：據說教授們會注重有沒有放照片，我在履歷、Github、Linkedin 都有放照片。</li><li>自傳：我用履歷取代自傳，履歷為條列式，對於我這種不善言辭的人很容易寫好。</li><li>主要要準備得有：得過的獎項(獎狀)、做過的專題(不用全部都寫，寫有把過的)。獎狀可以先掃描起來，專題要寫他的作用和你負責的部分。</li><li>其他：各系所有其他文件，歷年來應是大同小異，可以先找往年的資料。我印象比較深刻的有，交大有競賽及專題證明，清大要求用英文寫讀書計畫(+人工智慧相關選修)。</li></ul></li><li>簡章規定和系所網頁公告：要特別注意，不然可能會莫名失去資格，包含<ul><li>資料繳交日期</li><li>放榜後是否有第二階端口試(有可能簡章不會寫)</li><li>錄取後要報到方式(線上、書面、現場)</li></ul></li><li>選教授：如果有錄取多間系所，可以都去找教授問問看，不一定要一開始就選定系所，限制了選擇。</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;之前一直想寫一篇，都忘記了，一直拖到現在。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 19] NCPU 模擬賽</title>
+    <link href="http://allem40306.github.io/blog/posts/6743/"/>
+    <id>http://allem40306.github.io/blog/posts/6743/</id>
+    <published>2021-05-11T23:25:59.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這禮拜第一次 NCPU 模擬賽，我負責用題目和 Domjudge，現在學會了匯入隊伍名單，下次目標應該是要製作隊伍的帳密文件。</p><a id="more"></a><p>話說週六等公車遇到一個外國人來借錢，當下有猶豫是不是詐騙，但最後還是有借他，不過後來想是詐騙才對。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這禮拜第一次 NCPU 模擬賽，我負責用題目和 Domjudge，現在學會了匯入隊伍名單，下次目標應該是要製作隊伍的帳密文件。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>手動安裝 latex package</title>
+    <link href="http://allem40306.github.io/blog/posts/8fdd/"/>
+    <id>http://allem40306.github.io/blog/posts/8fdd/</id>
+    <published>2021-05-09T23:03:51.000Z</published>
+    <updated>2021-07-18T15:17:02.877Z</updated>
+    
+    <content type="html"><![CDATA[<p>有時候，latex 無法奔我們自動安裝 package，我們可以自行手動安裝。</p><a id="more"></a><p>先到 <a href="https://ctan.org" target="_blank" rel="noopener">https://ctan.org</a> 下載壓縮檔。</p><p>解壓縮後，到資料夾裡面執行指令 <code>latex &lt;packagename&gt;.ins</code>，會生成 <code>&lt;packagename&gt;.sty</code>。</p><p>接著把整個資料夾搬移到存放 package 的資料夾下，<code>linux</code> 和 <code>windows</code> 系統操作上有些不同，可以參考下列文章：</p><p><a href="https://tex.stackexchange.com/questions/2063/how-can-i-manually-install-a-package-on-miktex-windows" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/2063/how-can-i-manually-install-a-package-on-miktex-windows</a><br><a href="https://jvgomez.github.io/pages/manually-install-latex-packages-in-ubuntu.html" target="_blank" rel="noopener">https://jvgomez.github.io/pages/manually-install-latex-packages-in-ubuntu.html</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;有時候，latex 無法奔我們自動安裝 package，我們可以自行手動安裝。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="隨筆" scheme="http://allem40306.github.io/blog/categories/隨筆/"/>
+    
+    
+    <category term="Latex" scheme="http://allem40306.github.io/blog/tags/Latex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 18] 柯南 M24</title>
+    <link href="http://allem40306.github.io/blog/posts/1b3a/"/>
+    <id>http://allem40306.github.io/blog/posts/1b3a/</id>
+    <published>2021-05-03T11:28:02.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這禮拜去看柯南 M24，原本要和同學去看，結果被忘記了 QQ，後來跟我媽去看，很不錯，當他推理劇就好。</p><a id="more"></a><p>有三份作業都在下週三要交，周末都在趕工中。</p><p>現在我開始用 Gitpod 開 blog 的專案寫日記，覺得超方便，但是時區跑掉了，要改一下。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這禮拜去看柯南 M24，原本要和同學去看，結果被忘記了 QQ，後來跟我媽去看，很不錯，當他推理劇就好。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GNU Privacy Guard 用於 git commit</title>
+    <link href="http://allem40306.github.io/blog/posts/711e/"/>
+    <id>http://allem40306.github.io/blog/posts/711e/</id>
+    <published>2021-05-01T07:23:38.000Z</published>
+    <updated>2021-07-18T15:17:02.873Z</updated>
+    
+    <content type="html"><![CDATA[<p>Commit 一邊來說會設定 username 和 email 用來辨識貢獻者，但是只要知道任何人的 Commit 是可以偽造的。</p><a id="more"></a><p>GNU Privacy Guard 可用來做數位簽章，首先要安裝。Windows 要到官網下載安裝後設定路徑，類 Unix 的則利用套件安裝，安裝完成後，輸入 <code>gpg --version</code>，如果跑出版本資訊就代表成功了。</p><p><img src="https://i.imgur.com/fJXijLv.png" alt></p><p>輸入 <code>gpg --generate-key</code> 會要求輸入 username 和 email，不一定要和 Github 一樣(我本人覺得還是一樣會比較好)，接著的步驟就一直按 <code>Enter</code> 就好了。</p><p>輸入 <code>gpg --list-keys</code> 查詢自己的 <code>key ID</code> (B67..CC0)。</p><p><img src="https://i.imgur.com/ffRcVRb.png" alt></p><p>輸入 <code>gpg --armor --export &lt;KEY_ID&gt;</code> 得出公鑰。將公鑰放到 <code>Github &gt; Personal Setting &gt; SHH and RPG keys</code> 裡。</p><p>設定本地端 git。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global commit.gpgsign true</span><br><span class="line">git config --global user.signingkey &lt;KEY_ID&gt;</span><br></pre></td></tr></table></figure><p>這樣就大功告成，之後 Github 的 commit 紀錄都會顯示 <code>Verified</code> 的狀態。</p><p><img src="https://i.imgur.com/Qc6zUQF.png" alt></p><p>參考與延伸閱讀<br>：<br><a href="https://medium.com/starbugs/how-to-fake-the-author-of-git-commit-f44453b70afc" target="_blank" rel="noopener">https://medium.com/starbugs/how-to-fake-the-author-of-git-commit-f44453b70afc</a><br><a href="http://pre.tir.tw/008/blog/output/gnupg-gpg-jin-yao-guan-li.html" target="_blank" rel="noopener">http://pre.tir.tw/008/blog/output/gnupg-gpg-jin-yao-guan-li.html</a><br><a href="https://blog.miniasp.com/post/2020/05/04/How-to-use-GPG-sign-git-commit-and-tag-object" target="_blank" rel="noopener">https://blog.miniasp.com/post/2020/05/04/How-to-use-GPG-sign-git-commit-and-tag-object</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Commit 一邊來說會設定 username 和 email 用來辨識貢獻者，但是只要知道任何人的 Commit 是可以偽造的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="隨筆" scheme="http://allem40306.github.io/blog/categories/隨筆/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Online Signature Creator</title>
+    <link href="http://allem40306.github.io/blog/posts/ddd0/"/>
+    <id>http://allem40306.github.io/blog/posts/ddd0/</id>
+    <published>2021-05-01T07:11:13.000Z</published>
+    <updated>2021-07-18T15:17:02.873Z</updated>
+    
+    <content type="html"><![CDATA[<p>有時候會遇到需要簽名的電子文件，但印下來卻很浪費紙張，這時可以用 Online Signature Creator 的服務。</p><a id="more"></a><p>只要搜尋 “Online Signature Creator”，就能找到相關服務，寫好簽名後下載圖片，需要簽名時只要複製圖片就好了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;有時候會遇到需要簽名的電子文件，但印下來卻很浪費紙張，這時可以用 Online Signature Creator 的服務。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="隨筆" scheme="http://allem40306.github.io/blog/categories/隨筆/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 17] DNS 設定</title>
+    <link href="http://allem40306.github.io/blog/posts/d4dc/"/>
+    <id>http://allem40306.github.io/blog/posts/d4dc/</id>
+    <published>2021-04-25T23:25:14.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這個禮拜在架 DNS Server，一直沒辦法成功 QQ，希望下禮拜可以弄好。</p><a id="more"></a><p>這禮拜入坑一款新遊戲 「Golf Blitz」，比誰最快把球打入洞，很刺激。</p><p>期中考考完了，接下來都是在準備報告，主要會找有關影像辨識的部分。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這個禮拜在架 DNS Server，一直沒辦法成功 QQ，希望下禮拜可以弄好。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[2021 Week 16] 自辦賽</title>
+    <link href="http://allem40306.github.io/blog/posts/f86b/"/>
+    <id>http://allem40306.github.io/blog/posts/f86b/</id>
+    <published>2021-04-22T23:20:44.000Z</published>
+    <updated>2021-07-18T15:17:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>這禮拜三有自辦賽，我記錯禮拜，差點開天窗。</p><a id="more"></a><p>週一去吃迴轉壽司，好久沒去吃，樂趣一樣沒變，但是自己點會比較好，能吃到自己想吃的。</p><p>這禮拜開始又要弄 OJ，前面幾次都沒弄好，這次希望可以成功。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這禮拜三有自辦賽，我記錯禮拜，差點開天窗。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="週記" scheme="http://allem40306.github.io/blog/categories/週記/"/>
+    
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>HDU5880 计蒜客A1858 Family View | 傑克的程式區</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="題目連結 HDU題目連結 计蒜客  題意：給定 $P$ 個字串和一個文本 $S$，當文本 $S$ 出現 $P$ 個字串任何一個單字，就要進行加密。">
+<meta name="keywords" content="HDU,AC 自動機,ICPC 亞洲訓練聯盟暑訓 2020,计蒜客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HDU5880 计蒜客A1858 Family View">
+<meta property="og:url" content="http://allem40306.github.io/blog/posts/8f10/index.html">
+<meta property="og:site_name" content="傑克的程式區">
+<meta property="og:description" content="題目連結 HDU題目連結 计蒜客  題意：給定 $P$ 個字串和一個文本 $S$，當文本 $S$ 出現 $P$ 個字串任何一個單字，就要進行加密。">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2021-07-18T15:17:02.873Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HDU5880 计蒜客A1858 Family View">
+<meta name="twitter:description" content="題目連結 HDU題目連結 计蒜客  題意：給定 $P$ 個字串和一個文本 $S$，當文本 $S$ 出現 $P$ 個字串任何一個單字，就要進行加密。">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="傑克的程式區" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allem40306.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首頁</a>
+        
+          <a class="main-nav-link" href="/blog/archives">文章列表</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">傑克的程式區</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-HDU5880-计蒜客A1858-Family-View" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/8f10/" class="article-date">
+  <time datetime="2020-08-25T22:13:02.000Z" itemprop="datePublished">2020-08-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/HDU/">HDU</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HDU5880 计蒜客A1858 Family View
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5880" target="_blank" rel="noopener">題目連結 HDU</a><br><a href="https://nanti.jisuanke.com/t/A1858" target="_blank" rel="noopener">題目連結 计蒜客</a></p>
+<ul>
+<li>題意：給定 $P$ 個字串和一個文本 $S$，當文本 $S$ 出現 $P$ 個字串任何一個單字，就要進行加密。<a id="more"></a></li>
+<li>題解：先對 $P$ 個字串建立出 AC 自動機，接著在匹配 $S$ 時，每當匹配到字串，就在該字串開始位置紀錄 $hideEnd[x]$，為從 $S[x]$ 開始，要加密多少字元數，因為有可能同時出現 <code>ab</code> <code>abc</code> 都要加密的例子(一個字串是另一字串的前綴)，所以 $hineEnd$ 要取 $max$。算好 $hideEnd$ 後，遍歷字串，用一個變數 $tmp$ 維護目前需要加密多少字元數，當 $tmp&gt;0$ 時須加密。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; PII;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">3e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXS = <span class="number">1e6</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXW = <span class="number">26</span>;</span><br><span class="line"><span class="keyword">const</span> LL MOD = <span class="number">10009</span>;</span><br><span class="line"><span class="keyword">const</span> LL seed = <span class="number">31</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for (int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for (int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS                                                                    \</span></span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">NULL</span>);                                                             \</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">NULL</span>);                                                            \</span><br><span class="line">    ios_base::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> nodei;</span><br><span class="line">    <span class="keyword">char</span> ch[MXS];</span><br><span class="line">    <span class="keyword">int</span> sz[MXS];</span><br><span class="line">    <span class="keyword">int</span> trie[MXS][MXW];</span><br><span class="line">    <span class="keyword">int</span> fail[MXS];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123; nodei = <span class="number">-1</span>; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">newNode</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ++nodei;</span><br><span class="line">        fail[nodei] = <span class="number">-1</span>;</span><br><span class="line">        sz[nodei] = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">memset</span>(trie[nodei], <span class="number">-1</span>, <span class="keyword">sizeof</span>(trie[nodei]));</span><br><span class="line">        <span class="keyword">return</span> nodei;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// Node() &#123; init(); &#125;</span></span><br><span class="line">&#125; node;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> root, <span class="keyword">char</span> *s, <span class="keyword">int</span> id)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sz = <span class="built_in">strlen</span>(s);</span><br><span class="line">    FOR(i, <span class="number">0</span>, sz)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> v = s[i] - <span class="string">'a'</span>;</span><br><span class="line">        <span class="keyword">if</span> (node.trie[root][v] == <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            node.trie[root][v] = node.newNode();</span><br><span class="line">        &#125;</span><br><span class="line">        root = node.trie[root][v];</span><br><span class="line">        node.ch[root] = s[i];</span><br><span class="line">    &#125;</span><br><span class="line">    node.sz[root] = <span class="built_in">strlen</span>(s);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bulidAC</span><span class="params">(<span class="keyword">int</span> root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> k, tmp;</span><br><span class="line">    FOR(i, <span class="number">0</span>, MXW)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (node.trie[root][i] != <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            node.fail[node.trie[root][i]] = root;</span><br><span class="line">            q.push(node.trie[root][i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (!q.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        k = q.front();</span><br><span class="line">        q.pop();</span><br><span class="line">        node.sz[k] = max(node.sz[k], node.sz[node.fail[k]]);</span><br><span class="line">        FOR(i, <span class="number">0</span>, MXW) <span class="keyword">if</span> (node.trie[k][i] != <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            tmp = node.fail[k];</span><br><span class="line">            <span class="keyword">while</span> (tmp != <span class="number">-1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (node.trie[tmp][i] != <span class="number">-1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    node.fail[node.trie[k][i]] = node.trie[tmp][i];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                tmp = node.fail[tmp];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (tmp == <span class="number">-1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                node.fail[node.trie[k][i]] = root;</span><br><span class="line">            &#125;</span><br><span class="line">            q.push(node.trie[k][i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> len[MXS], hideEnd[MXS];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">acAutomation</span><span class="params">(<span class="keyword">int</span> root, <span class="keyword">char</span> *s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> p = root;</span><br><span class="line">    <span class="built_in">memset</span>(hideEnd, <span class="number">-1</span>, <span class="keyword">sizeof</span>(hideEnd));</span><br><span class="line">    <span class="keyword">int</span> sz = <span class="built_in">strlen</span>(s);</span><br><span class="line">    FOR(i, <span class="number">0</span>, sz)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isalpha</span>(s[i]))</span><br><span class="line">        &#123;</span><br><span class="line">            p = root;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> v = <span class="built_in">tolower</span>(s[i]) - <span class="string">'a'</span>;</span><br><span class="line">        <span class="keyword">while</span> (node.trie[p][v] == <span class="number">-1</span> &amp;&amp; p != root)</span><br><span class="line">        &#123;</span><br><span class="line">            p = node.fail[p];</span><br><span class="line">        &#125;</span><br><span class="line">        p = node.trie[p][v];</span><br><span class="line">        <span class="keyword">if</span> (p == <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            p = root;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> k = p;</span><br><span class="line">        <span class="keyword">while</span> (k != root)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (node.sz[k] &gt; <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                hideEnd[i - node.sz[k] + <span class="number">1</span>] = i;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            k = node.fail[k];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> tmp = <span class="number">-1</span>;</span><br><span class="line">    FOR(i, <span class="number">0</span>, sz)</span><br><span class="line">    &#123;</span><br><span class="line">        tmp = max(tmp, hideEnd[i]);</span><br><span class="line">        <span class="keyword">if</span> (i&lt;=tmp)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%c"</span>, s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[MXS];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</span><br><span class="line">    <span class="keyword">while</span> (t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> n;</span><br><span class="line">        node.init();</span><br><span class="line">        <span class="keyword">int</span> root = node.newNode();</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">        FOR(i, <span class="number">0</span>, n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%s"</span>, s);</span><br><span class="line">            len[i] = <span class="built_in">strlen</span>(s);</span><br><span class="line">            insert(root, s, i);</span><br><span class="line">        &#125;</span><br><span class="line">        bulidAC(root);</span><br><span class="line">        <span class="keyword">char</span> ch;</span><br><span class="line">        <span class="keyword">while</span> ((ch = getchar()) != <span class="string">'\n'</span>)</span><br><span class="line">            ;</span><br><span class="line">        gets(s);</span><br><span class="line">        acAutomation(root, s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        <div>
+          <hr>
+          <p style="margin-bottom: 0;">如果你覺得這篇文章很棒，請你不吝點讚 (ﾟ∀ﾟ)</p>
+          <iframe width="100%" height="230px" scrolling="no" frameborder="0" id="player" src="https://button.like.co/in/embed/allem40306/button/?referrer=http://allem40306.github.io/blog/posts/8f10/" allowfullscreen="true"></iframe>
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/8f10/" data-id="ckr9cep1o00bwbosh8ci7z4h9" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/8f10/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/AC-自動機/">AC 自動機</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/HDU/">HDU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/计蒜客/">计蒜客</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/blog/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>Recommended Posts</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/posts/a60d/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          UvaLive7244 HDU5515 计蒜客31079 Game of Flying Circus
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/posts/4456/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">UVa01127 POJ1204 OpenJ_Bailian1204 Word Puzzles</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+      </section>
+      
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/posts/57fe/">npx 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/c414/">nvm 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/dc6c/">[2021 Week 28] 暑期 Training</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/56ba/">[2021 Week 27] 助教批改作業</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/e620/">[2021 Week 26] 書面報告</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2021 allem40306&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;http://allem40306.github.io/blog
+    </div>
+  </div>
+</footer>
+ <script src="/blog/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">文章列表</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+<script>
+  var disqus_shortname = 'allem40306';
+  
+  var disqus_url = 'http://allem40306.github.io/blog/posts/8f10/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/blog/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+<script src="/blog/js/elevator.js"></script>
+  </div>
+</body>
+</html>

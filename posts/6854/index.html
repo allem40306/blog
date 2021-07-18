@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>AtCoder Beginner Contest 153 心得 | 傑克的程式區</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="這次都是怪物系列XD。我用 virtual 比賽，前五題賽中過，最後一題賽後過">
+<meta name="keywords" content="DP,AtCoder,背包 DP,差分,Binary Search">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AtCoder Beginner Contest 153 心得">
+<meta property="og:url" content="http://allem40306.github.io/blog/posts/6854/index.html">
+<meta property="og:site_name" content="傑克的程式區">
+<meta property="og:description" content="這次都是怪物系列XD。我用 virtual 比賽，前五題賽中過，最後一題賽後過">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2021-07-18T15:17:02.873Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AtCoder Beginner Contest 153 心得">
+<meta name="twitter:description" content="這次都是怪物系列XD。我用 virtual 比賽，前五題賽中過，最後一題賽後過">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="傑克的程式區" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allem40306.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首頁</a>
+        
+          <a class="main-nav-link" href="/blog/archives">文章列表</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">傑克的程式區</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-AtCoder-Beginner-Contest-153-心得" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/6854/" class="article-date">
+  <time datetime="2020-02-08T20:17:40.000Z" itemprop="datePublished">2020-02-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/AtCoder/">AtCoder</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AtCoder Beginner Contest 153 心得
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>這次都是怪物系列XD。我用 virtual 比賽，前五題賽中過，最後一題賽後過</p>
+<a id="more"></a>
+<ul>
+<li><a href="https://atcoder.jp/contests/abc153/tasks/abc153_a" target="_blank" rel="noopener">A. Serval vs Monster</a><br>題意：給你怪獸的血量 $H$ 和一次攻擊殺傷力 $A$，問需攻擊幾下才能擊倒怪物<br>解法：直接相除，如果沒整除要加 $1$</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP  make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for(int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for(int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS cin.tie(nullptr); cout.tie(nullptr); ios_base::sync_with_stdio(false);</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> n, m;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; n / m + (n % m != <span class="number">0</span>) * <span class="number">1</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://atcoder.jp/contests/abc153/tasks/abc153_b" target="_blank" rel="noopener">B. Common Raccoon vs Monster</a><br>題意：給你怪獸的血量 $H$ 和 $N$ 種不同的攻擊殺傷力 $A_i$，問是否能在這 $N$ 次擊倒怪物<br>解法：直接相減</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP  make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for(int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for(int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS cin.tie(nullptr); cout.tie(nullptr); ios_base::sync_with_stdio(false);</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> n, m;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>, x; i &lt; m; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">        n -= x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ((n &lt;= <span class="number">0</span>) ? <span class="string">"Yes\n"</span> : <span class="string">"No\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://atcoder.jp/contests/abc153/tasks/abc153_c" target="_blank" rel="noopener">C. Fennec vs Monster</a><br>題意：有 $N$ 隻怪獸血量為 $H_i$，你有無限制一般攻擊使得一隻怪物血量 $-1$，以及 $K$ 次特殊攻擊使得一隻怪物血量歸 $0$，問最少要使出幾次一般攻擊<br>解法：將特殊攻擊拿去對付血量前 $K$ 高的怪物，剩下怪物血量即為答案</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP  make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for(int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for(int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS cin.tie(nullptr); cout.tie(nullptr); ios_base::sync_with_stdio(false);</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> n, k;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;LL&gt; <span class="title">v</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; v[i];</span><br><span class="line">    &#125;</span><br><span class="line">    sort(v.begin(), v.end());</span><br><span class="line">    LL ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - k; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        ans += v[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://atcoder.jp/contests/abc153/tasks/abc153_d" target="_blank" rel="noopener">D. Caracal vs Monster</a><br>題意：攻擊一隻血量為 $H$ 的怪獸，會變成兩隻 $\frac{H}{2}$ (整數除法)的怪獸，問要攻擊幾次才能消滅怪物<br>解法：遞迴解，消滅一隻血量為 $i$ 的怪物所需次數，等於消滅兩隻 $\frac{H}{2}$ 的怪獸再加 $1$(攻擊血量為 $i$ 的怪物的那下)</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP  make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for(int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for(int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS cin.tie(nullptr); cout.tie(nullptr); ios_base::sync_with_stdio(false);</span></span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">sol</span><span class="params">(LL x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span> * sol(x / <span class="number">2</span>) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    LL h;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; h;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; sol(h) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://atcoder.jp/contests/abc153/tasks/abc153_e" target="_blank" rel="noopener">E. Crested Ibis vs Monster</a><br>題意：給怪物血量 $H$，和 $N$ 種可重複使用招數之殺傷力 $A_i$ 和花費 $B_i$，為最低需要多少花費才能消滅怪物<br>解法：這題可以用無限背包解出，但要注意最低花費介於 $dp[n]$ 至 $dp[2n-1]$ 之間</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">20005</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP  make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for(int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for(int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS cin.tie(nullptr); cout.tie(nullptr); ios_base::sync_with_stdio(false);</span></span><br><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(MXN, INF)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sol</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = a; i &lt; MXN; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        dp[i] = min(dp[i], dp[i - a] + b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> h, n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; h &gt;&gt; n;</span><br><span class="line">    dp[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, a, b; i &lt; n; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        sol(a, b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; *min_element(dp.begin() + h, dp.begin() + MXN) &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://atcoder.jp/contests/abc153/tasks/abc153_f" target="_blank" rel="noopener">F. Silver Fox vs Monster</a><br>題意：有 $N$ 隻怪獸在位置 $X_i$ (接相異)、血量為 $H_i$，有炸彈可以對某位置正負 $D$ 範圍內的怪獸造成 $A$ 的攻擊力，問至少要幾顆炸彈<br>解法：假設炸彈最左端為 $x$，那麼最右端會在 $x+2\times D$，所以一顆炸彈可對 $[x,x+2D]$ 扣 $A$，我們要利用差分的技巧模擬。設一個陣列 $sum$，每次到 $sum[i]$ 都要加上 $sum[i-1]$，並對怪物依照位置由小到大排序，當要對 $[x,x+2D]$ 扣 $A$ 時，就在 $sum[i]$ 扣 $t$，$sum[i+2D+1]$ 加回 $t$，要找最靠近 $i+2D+1$ 的怪物，需要用到二分搜。這題讓我學到差分這個技巧，算個大收穫吧!</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for (int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for (int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS                                                                    \</span></span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);                                                          \</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);                                                         \</span><br><span class="line">    ios_base::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">LL n, d, a;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; sum;</span><br><span class="line"><span class="built_in">vector</span>&lt;PLL&gt; monsters; <span class="comment">// (x, h)</span></span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">sol</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LL ans = <span class="number">0</span>;</span><br><span class="line">    FOR(i, <span class="number">0</span>, n)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (i)</span><br><span class="line">        &#123;</span><br><span class="line">            sum[i] += sum[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        monsters[i].S += sum[i];</span><br><span class="line">        <span class="keyword">if</span> (monsters[i].S &lt;= <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> L = i, R = n, R2 = i, M;</span><br><span class="line">        <span class="keyword">while</span> (L &lt;= R)</span><br><span class="line">        &#123;</span><br><span class="line">            M = (L + R) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (monsters[i].F + <span class="number">2</span> * d &gt;= monsters[M].F)</span><br><span class="line">            &#123;</span><br><span class="line">                R2 = M;</span><br><span class="line">                L = M + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                R = M - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        LL tmp = (monsters[i].S / a);</span><br><span class="line">        <span class="keyword">if</span> (monsters[i].S % a &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ++tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        ans += tmp;</span><br><span class="line">        sum[i] -= tmp * a;</span><br><span class="line">        sum[R2 + <span class="number">1</span>] += tmp * a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// IOS;</span></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; d &gt;&gt; a;</span><br><span class="line">    monsters.resize(n);</span><br><span class="line">    sum.resize(n + <span class="number">5</span>, <span class="number">0</span>);</span><br><span class="line">    FOR(i, <span class="number">0</span>, n) &#123; <span class="built_in">cin</span> &gt;&gt; monsters[i].F &gt;&gt; monsters[i].S; &#125;</span><br><span class="line">    sort(monsters.begin(), monsters.end());</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; sol() &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <div>
+          <hr>
+          <p style="margin-bottom: 0;">如果你覺得這篇文章很棒，請你不吝點讚 (ﾟ∀ﾟ)</p>
+          <iframe width="100%" height="230px" scrolling="no" frameborder="0" id="player" src="https://button.like.co/in/embed/allem40306/button/?referrer=http://allem40306.github.io/blog/posts/6854/" allowfullscreen="true"></iframe>
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/6854/" data-id="ckr9cep07008obosht8dxmtur" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/6854/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/AtCoder/">AtCoder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Binary-Search/">Binary Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/DP/">DP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/差分/">差分</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/背包-DP/">背包 DP</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/blog/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>Recommended Posts</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/posts/58a4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          uva10806 Dijkstra, Dijkstra
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/posts/bbd3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">FJU Winter 2020 系列1 延期前</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+      </section>
+      
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/posts/57fe/">npx 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/c414/">nvm 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/dc6c/">[2021 Week 28] 暑期 Training</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/56ba/">[2021 Week 27] 助教批改作業</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/e620/">[2021 Week 26] 書面報告</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2021 allem40306&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;http://allem40306.github.io/blog
+    </div>
+  </div>
+</footer>
+ <script src="/blog/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">文章列表</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+<script>
+  var disqus_shortname = 'allem40306';
+  
+  var disqus_url = 'http://allem40306.github.io/blog/posts/6854/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/blog/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+<script src="/blog/js/elevator.js"></script>
+  </div>
+</body>
+</html>

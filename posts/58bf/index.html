@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>FJU GSS WEB 系列4 MVC加上Kendo | 傑克的程式區</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="經過第三堂課的摧殘(X)磨練(O)之後，最後我們將MVC原本的@(例如htmlhelper或viewbag)改成Kendo，並加上一些功能，就等同於將前面的課做個整合，一開始不知道怎麼改，後來知道是知道關鍵是”JSON”，後端算出的資料用JSON回傳到前端，前端再去就分析JSON檔，了解了之後，在AJAX又吃到幾個bug：">
+<meta name="keywords" content="FJU GSS Web,Frontend,Kendo,MVC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FJU GSS WEB 系列4 MVC加上Kendo">
+<meta property="og:url" content="http://allem40306.github.io/blog/posts/58bf/index.html">
+<meta property="og:site_name" content="傑克的程式區">
+<meta property="og:description" content="經過第三堂課的摧殘(X)磨練(O)之後，最後我們將MVC原本的@(例如htmlhelper或viewbag)改成Kendo，並加上一些功能，就等同於將前面的課做個整合，一開始不知道怎麼改，後來知道是知道關鍵是”JSON”，後端算出的資料用JSON回傳到前端，前端再去就分析JSON檔，了解了之後，在AJAX又吃到幾個bug：">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2021-07-18T15:17:02.873Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="FJU GSS WEB 系列4 MVC加上Kendo">
+<meta name="twitter:description" content="經過第三堂課的摧殘(X)磨練(O)之後，最後我們將MVC原本的@(例如htmlhelper或viewbag)改成Kendo，並加上一些功能，就等同於將前面的課做個整合，一開始不知道怎麼改，後來知道是知道關鍵是”JSON”，後端算出的資料用JSON回傳到前端，前端再去就分析JSON檔，了解了之後，在AJAX又吃到幾個bug：">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="傑克的程式區" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allem40306.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首頁</a>
+        
+          <a class="main-nav-link" href="/blog/archives">文章列表</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">傑克的程式區</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-FJU-GSS-WEB-系列4-MVC加上Kendo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/58bf/" class="article-date">
+  <time datetime="2019-07-22T14:45:33.000Z" itemprop="datePublished">2019-07-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Web/">Web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      FJU GSS WEB 系列4 MVC加上Kendo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>經過第三堂課的摧殘(X)磨練(O)之後，最後我們將MVC原本的<code>@</code>(例如htmlhelper或viewbag)改成Kendo，並加上一些功能，就等同於將前面的課做個整合，一開始不知道怎麼改，後來知道是知道關鍵是”JSON”，後端算出的資料用JSON回傳到前端，前端再去就分析JSON檔，了解了之後，在AJAX又吃到幾個bug：</p>
+<a id="more"></a>
+<ul>
+<li>第一個是發現ajax沒有進到應該進入的函式，經過一番研究之後，發現是傳入SQL的參數有<code>&lt;br&gt;</code>的字串，這個問題不是AJAX所引起的，但是有用到AJAX，debug會比較困難</li>
+<li>第二個是使用AJAX後，發現有些資料沒讀到AJAX更新後的資料，這個問題是關於AJAX的特性了，因為AJAX會跟之後的程式碼”同時”執行，所以如果要讀取更新後的資料，就要放在AJAX的<code>success</code>之後</li>
+</ul>
+<p>處理完AJAX大概就能把Code Review要呈現的部分弄好了，剩下排版部分，也因為開始忙去台南比賽的事，要沒什麼動了。<br>(關於台南的事情，請關注下一系列文章!!!)<br>從台南回來很晚了，所以周五就晚點去WEB營隊，去的時侯也準備也吃午餐，所以也沒捨麼再改程式，就準備簡報和做別的事了。這次的Code Review是由營隊主要負責人Kenny親自來，好幾個重點我都懂，但實際寫Code就會踩到這個地雷：</p>
+<ul>
+<li>要把判斷寫在後端，在前端就會被駭</li>
+<li>有些都是是類似的程式碼，可以寫成一個function</li>
+<li>用Kendo的東西就用kendo取值</li>
+<li>sql用like比較慢</li>
+</ul>
+<p>Code Review完，每個人還要報告一份AAR(After Action Report)，這就留給下一篇講</p>
+
+        <div>
+          <hr>
+          <p style="margin-bottom: 0;">如果你覺得這篇文章很棒，請你不吝點讚 (ﾟ∀ﾟ)</p>
+          <iframe width="100%" height="230px" scrolling="no" frameborder="0" id="player" src="https://button.like.co/in/embed/allem40306/button/?referrer=http://allem40306.github.io/blog/posts/58bf/" allowfullscreen="true"></iframe>
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/58bf/" data-id="ckr9cep0j009nboshumnhv4ls" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/58bf/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FJU-GSS-Web/">FJU GSS Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Frontend/">Frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Kendo/">Kendo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/MVC/">MVC</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/blog/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>Recommended Posts</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/posts/b554/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          FJU GSS WEB 系列5 總結
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/posts/8607/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">FJU GSS WEB 系列3 MVC</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+      </section>
+      
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/posts/57fe/">npx 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/c414/">nvm 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/dc6c/">[2021 Week 28] 暑期 Training</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/56ba/">[2021 Week 27] 助教批改作業</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/e620/">[2021 Week 26] 書面報告</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2021 allem40306&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;http://allem40306.github.io/blog
+    </div>
+  </div>
+</footer>
+ <script src="/blog/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">文章列表</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+<script>
+  var disqus_shortname = 'allem40306';
+  
+  var disqus_url = 'http://allem40306.github.io/blog/posts/58bf/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/blog/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+<script src="/blog/js/elevator.js"></script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>UVa00301 UvaLive5516 POJ1040 HDU1456 SCU1031 OpenJ_Bailian1040 Transportation | 傑克的程式區</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="題目連結 UVa題目連結 POJ題目連結 HDU題目連結 UvaLive題目連結 SCU題目連結 OpenJ_Bailian1040  題意：有一列火車從 $A$($0$ 號車站) 開到 $B$($m$ 號車站)，路上經過車站依序編號為 $0$ 到 $m$，現在有 $t$ 筆訂單，每筆訂單有人數，起點和終點，如果接受這筆訂單，就可以獲得人數 $\times$ 經過站數(終點-起點)，火車最多可以載">
+<meta name="keywords" content="HDU,ICPC 亞洲訓練聯盟暑訓 2020,POJ,OpenJ_Bailian,Recursive 遞迴,SCU,UVa,UVaLive,Pruning 剪枝">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UVa00301 UvaLive5516 POJ1040 HDU1456 SCU1031 OpenJ_Bailian1040 Transportation">
+<meta property="og:url" content="http://allem40306.github.io/blog/posts/9e4e/index.html">
+<meta property="og:site_name" content="傑克的程式區">
+<meta property="og:description" content="題目連結 UVa題目連結 POJ題目連結 HDU題目連結 UvaLive題目連結 SCU題目連結 OpenJ_Bailian1040  題意：有一列火車從 $A$($0$ 號車站) 開到 $B$($m$ 號車站)，路上經過車站依序編號為 $0$ 到 $m$，現在有 $t$ 筆訂單，每筆訂單有人數，起點和終點，如果接受這筆訂單，就可以獲得人數 $\times$ 經過站數(終點-起點)，火車最多可以載">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2021-07-18T15:17:02.877Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UVa00301 UvaLive5516 POJ1040 HDU1456 SCU1031 OpenJ_Bailian1040 Transportation">
+<meta name="twitter:description" content="題目連結 UVa題目連結 POJ題目連結 HDU題目連結 UvaLive題目連結 SCU題目連結 OpenJ_Bailian1040  題意：有一列火車從 $A$($0$ 號車站) 開到 $B$($m$ 號車站)，路上經過車站依序編號為 $0$ 到 $m$，現在有 $t$ 筆訂單，每筆訂單有人數，起點和終點，如果接受這筆訂單，就可以獲得人數 $\times$ 經過站數(終點-起點)，火車最多可以載">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="傑克的程式區" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allem40306.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首頁</a>
+        
+          <a class="main-nav-link" href="/blog/archives">文章列表</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">傑克的程式區</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-uva00301-uvaLive5516-POJ1040-HDU1456-SCU1031-OpenJ-Bailian1040-Transportation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/9e4e/" class="article-date">
+  <time datetime="2020-08-15T16:31:41.000Z" itemprop="datePublished">2020-08-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/UVa/">UVa</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      UVa00301 UvaLive5516 POJ1040 HDU1456 SCU1031 OpenJ_Bailian1040 Transportation
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=237" target="_blank" rel="noopener">題目連結 UVa</a><br><a href="http://poj.org/problem?id=1040" target="_blank" rel="noopener">題目連結 POJ</a><br><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1456" target="_blank" rel="noopener">題目連結 HDU</a><br><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3517" target="_blank" rel="noopener">題目連結 UvaLive</a><br><a href="http://acm.scu.edu.cn/soj/problem.action?id=1031" target="_blank" rel="noopener">題目連結 SCU</a><br><a href="http://bailian.openjudge.cn/practice/1040?lang=en_US" target="_blank" rel="noopener">題目連結 OpenJ_Bailian1040</a></p>
+<ul>
+<li>題意：有一列火車從 $A$($0$ 號車站) 開到 $B$($m$ 號車站)，路上經過車站依序編號為 $0$ 到 $m$，現在有 $t$ 筆訂單，每筆訂單有人數，起點和終點，如果接受這筆訂單，就可以獲得人數 $\times$ 經過站數(終點-起點)，火車最多可以載 $n$ 位客人，求最高獲益。<a id="more"></a></li>
+<li>題解：遞迴爆搜，利用前綴和和差分檢查如果加入當前訂單，車上的容量是否足夠。另外需要剪枝，當前的已接受的訂單 + 還沒確定是否要接受的訂單，所有獲益無法成為最佳解即停止搜索。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Data</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> s, t, n, cost;</span><br><span class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> Data &amp;rhs) <span class="keyword">const</span> &#123; <span class="keyword">return</span> cost &lt; rhs.cost; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">int</span> n, b, t;</span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line">vector&lt;int&gt; costSum(25), sum(10);</span><br><span class="line"><span class="built_in">vector</span>&lt;Data&gt; v;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">doit</span><span class="params">(<span class="keyword">int</span> d, <span class="keyword">int</span> dir)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    sum[v[d].s] += dir * v[d].n;</span><br><span class="line">    sum[v[d].t] -= dir * v[d].n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">ok</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> total = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= b; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        total += sum[i];</span><br><span class="line">        <span class="keyword">if</span> (total &gt; n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> d, <span class="keyword">int</span> cur)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// cout &lt;&lt; d &lt;&lt; ' ' &lt;&lt; cur &lt;&lt; '\n';</span></span><br><span class="line">    ans = max(ans, cur);</span><br><span class="line">    <span class="keyword">if</span> (d == t)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(cur + costSum[d] &lt;= ans)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    doit(d, <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span> (ok())</span><br><span class="line">    &#123;</span><br><span class="line">        dfs(d + <span class="number">1</span>, cur + (v[d].t - v[d].s) * v[d].n);</span><br><span class="line">    &#125;</span><br><span class="line">    doit(d, <span class="number">-1</span>);</span><br><span class="line">    dfs(d + <span class="number">1</span>, cur);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; b &gt;&gt; t, n || b || t)</span><br><span class="line">    &#123;</span><br><span class="line">        v.resize(t);</span><br><span class="line">        fill(sum.begin(), sum.end(), <span class="number">0</span>);</span><br><span class="line">        fill(costSum.begin(), costSum.end(), <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; t; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; v[i].s &gt;&gt; v[i].t &gt;&gt; v[i].n;</span><br><span class="line">            v[i].cost = v[i].n * (v[i].t - v[i].s);</span><br><span class="line">        &#125;</span><br><span class="line">        sort(v.begin(), v.end());</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = t - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">        &#123;</span><br><span class="line">            costSum[i] = costSum[i + <span class="number">1</span>] + v[i].cost;</span><br><span class="line">        &#125;</span><br><span class="line">        ans = <span class="number">0</span>;</span><br><span class="line">        dfs(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        <div>
+          <hr>
+          <p style="margin-bottom: 0;">如果你覺得這篇文章很棒，請你不吝點讚 (ﾟ∀ﾟ)</p>
+          <iframe width="100%" height="230px" scrolling="no" frameborder="0" id="player" src="https://button.like.co/in/embed/allem40306/button/?referrer=http://allem40306.github.io/blog/posts/9e4e/" allowfullscreen="true"></iframe>
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/9e4e/" data-id="ckr9cep8e00umboshcz8wyfy4" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/9e4e/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/HDU/">HDU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ICPC-亞洲訓練聯盟暑訓-2020/">ICPC 亞洲訓練聯盟暑訓 2020</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/OpenJ-Bailian/">OpenJ_Bailian</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/POJ/">POJ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Pruning-剪枝/">Pruning 剪枝</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Recursive-遞迴/">Recursive 遞迴</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SCU/">SCU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVa/">UVa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVaLive/">UVaLive</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/blog/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>Recommended Posts</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/posts/483a/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          UVa00639 UvaLive5325 POJ1315 OpenJ_Bailian1315 Don&#39;t Get Rooked
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/posts/3e8c/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">UVa00539 POJ2258 ZOJ1947 The Settlers of Catan</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+      </section>
+      
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/posts/57fe/">npx 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/c414/">nvm 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/dc6c/">[2021 Week 28] 暑期 Training</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/56ba/">[2021 Week 27] 助教批改作業</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/e620/">[2021 Week 26] 書面報告</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2021 allem40306&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;http://allem40306.github.io/blog
+    </div>
+  </div>
+</footer>
+ <script src="/blog/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">文章列表</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+<script>
+  var disqus_shortname = 'allem40306';
+  
+  var disqus_url = 'http://allem40306.github.io/blog/posts/9e4e/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/blog/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+<script src="/blog/js/elevator.js"></script>
+  </div>
+</body>
+</html>

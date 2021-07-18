@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>UVa12298 Super Poker II | 傑克的程式區</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;category=0&amp;amp;problem=3719&amp;amp;mosmsg=Submission+received+with+ID+24597305題意：有四種花色的牌，數字為合數(2,4,6,8">
+<meta name="keywords" content="UVa,FFT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UVa12298 Super Poker II">
+<meta property="og:url" content="http://allem40306.github.io/blog/posts/a455/index.html">
+<meta property="og:site_name" content="傑克的程式區">
+<meta property="og:description" content="題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;category=0&amp;amp;problem=3719&amp;amp;mosmsg=Submission+received+with+ID+24597305題意：有四種花色的牌，數字為合數(2,4,6,8">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2021-07-18T15:17:02.877Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UVa12298 Super Poker II">
+<meta name="twitter:description" content="題目連結：https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;category=0&amp;amp;problem=3719&amp;amp;mosmsg=Submission+received+with+ID+24597305題意：有四種花色的牌，數字為合數(2,4,6,8">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="傑克的程式區" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://allem40306.github.io/blog"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">首頁</a>
+        
+          <a class="main-nav-link" href="/blog/archives">文章列表</a>
+        
+      </nav>
+      
+    </div>
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">傑克的程式區</a>
+      </h1>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-uva12298-Super-Poker-II" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/posts/a455/" class="article-date">
+  <time datetime="2020-02-22T09:57:26.000Z" itemprop="datePublished">2020-02-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/UVa/">UVa</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      UVa12298 Super Poker II
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>題目連結：<a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=0&amp;problem=3719&amp;mosmsg=Submission+received+with+ID+24597305" target="_blank" rel="noopener">https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=0&amp;problem=3719&amp;mosmsg=Submission+received+with+ID+24597305</a><br>題意：有四種花色的牌，數字為合數(2,4,6,8,9,10,12,14,15,16…)，現在少了 $c$ 張牌，求四種花色拿一張，數字總和介於 $a$ 到 $b$ 的各有幾種。</p>
+<a id="more"></a>
+<p>解法：把四種顏色現有的牌寫成多項式($x^2+x^4+x^6…$)，把多項式相乘就能的出答案，用 FFT 做多項式乘法，四個多項式乘法可以得出點值式一起相乘後，再轉回係數式。我這題因為在做 FFT 時都讓整個陣列下去做，一直吃 TLE，後來發現才變成 AC。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC optimize(2)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> LL = <span class="keyword">long</span> <span class="keyword">long</span>;</span><br><span class="line"><span class="keyword">using</span> LD = <span class="keyword">long</span> <span class="keyword">double</span>;</span><br><span class="line"><span class="keyword">using</span> PII = pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;;</span><br><span class="line"><span class="keyword">using</span> PLL = pair&lt;LL, LL&gt;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXN = <span class="number">1</span> &lt;&lt; <span class="number">20</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MXV = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">const</span> LD PI = <span class="built_in">acos</span>(<span class="number">-1.0</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> F first</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> S second</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FOR(i, L, R) for (int i = L; i != (int)R; ++i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FORD(i, L, R) for (int i = L; i != (int)R; --i)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IOS                                                                    \</span></span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="literal">nullptr</span>);                                                          \</span><br><span class="line">    <span class="built_in">cout</span>.tie(<span class="literal">nullptr</span>);                                                         \</span><br><span class="line">    ios_base::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">bitset</span>&lt;MXN&gt; is_notp;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; p;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">primeTable</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    is_notp.reset();</span><br><span class="line">    is_notp[<span class="number">0</span>] = is_notp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; MXN; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!is_notp[i])</span><br><span class="line">        &#123;</span><br><span class="line">            p.push_back(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; (<span class="keyword">int</span>)p.size() &amp;&amp; i * p[j] &lt; MXN; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            is_notp[i * p[j]] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (i % p[j] == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Complex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    LD r, i;</span><br><span class="line">    Complex(LD _r = <span class="number">0.0</span>, LD _i = <span class="number">0.0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        r = _r;</span><br><span class="line">        i = _i;</span><br><span class="line">    &#125;</span><br><span class="line">    Complex <span class="keyword">operator</span>+(Complex rhs) &#123; <span class="keyword">return</span> Complex(r + rhs.r, i + rhs.i); &#125;</span><br><span class="line">    Complex <span class="keyword">operator</span>-(Complex rhs) &#123; <span class="keyword">return</span> Complex(r - rhs.r, i - rhs.i); &#125;</span><br><span class="line">    Complex <span class="keyword">operator</span>*(Complex rhs)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Complex(r * rhs.r - i * rhs.i, r * rhs.i + i * rhs.r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="class"><span class="keyword">struct</span> <span class="title">FFT</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fft</span><span class="params">(<span class="built_in">vector</span>&lt;Complex&gt; &amp;a, <span class="keyword">int</span> n, <span class="keyword">int</span> inv)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = (n &gt;&gt; <span class="number">1</span>); (j ^= k) &lt; k; k &gt;&gt;= <span class="number">1</span>)</span><br><span class="line">                ;</span><br><span class="line">            <span class="keyword">if</span> (i &gt; j)</span><br><span class="line">            &#123;</span><br><span class="line">                swap(a[i], a[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> m = <span class="number">2</span>; m &lt;= n; m &lt;&lt;= <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="function">Complex <span class="title">wm</span><span class="params">(<span class="built_in">cos</span>(<span class="number">2</span> * PI * inv / m), <span class="built_in">sin</span>(<span class="number">2</span> * PI * inv / m))</span></span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; n; k += m)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="function">Complex <span class="title">w</span><span class="params">(<span class="number">1.0</span>, <span class="number">0.0</span>)</span></span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; (m &gt;&gt; <span class="number">1</span>); ++j, w = w * wm)</span><br><span class="line">                &#123;</span><br><span class="line">                    Complex u = a[k + j], t = w * a[k + j + (m &gt;&gt; <span class="number">1</span>)];</span><br><span class="line">                    a[k + j] = u + t;</span><br><span class="line">                    a[k + j + (m &gt;&gt; <span class="number">1</span>)] = u - t;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (inv == <span class="number">-1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            FOR(i, <span class="number">0</span>, n)</span><br><span class="line">            &#123;</span><br><span class="line">                a[i].r /= n;</span><br><span class="line">                a[i].i /= n;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">convolution</span><span class="params">(<span class="built_in">vector</span>&lt;Complex&gt; &amp;A, <span class="built_in">vector</span>&lt;Complex&gt; &amp;B, <span class="built_in">vector</span>&lt;Complex&gt; &amp;C,</span></span></span><br><span class="line"><span class="function"><span class="params">                     <span class="built_in">vector</span>&lt;Complex&gt; &amp;D, <span class="keyword">int</span> n, <span class="built_in">vector</span>&lt;Complex&gt; &amp;ans)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        fft(A, n, <span class="number">1</span>);</span><br><span class="line">        fft(B, n, <span class="number">1</span>);</span><br><span class="line">        fft(C, n, <span class="number">1</span>);</span><br><span class="line">        fft(D, n, <span class="number">1</span>);</span><br><span class="line">        FOR(i, <span class="number">0</span>, n) &#123; ans[i] = A[i] * B[i] * C[i] * D[i]; &#125;</span><br><span class="line">        fft(ans, n, <span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IOS;</span><br><span class="line">    <span class="keyword">int</span> a, b, c;</span><br><span class="line">    FFT&lt;LD&gt; fft;</span><br><span class="line">    vector&lt;Complex&gt; A(MXN), B(MXN), C(MXN), D(MXN), ans(MXN);</span><br><span class="line">    primeTable();</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; c, a || b || c)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> sz = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (sz &lt; (b &lt;&lt; <span class="number">1</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            sz &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        sz &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">        FOR(i, <span class="number">0</span>, sz) </span><br><span class="line">        &#123; </span><br><span class="line">            A[i].r = B[i].r = C[i].r = D[i].r = <span class="number">0.0</span>;</span><br><span class="line">            A[i].i = B[i].i = C[i].i = D[i].i = <span class="number">0.0</span>; </span><br><span class="line">        &#125;</span><br><span class="line">        FOR(i, <span class="number">2</span>, b + <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (is_notp[i])</span><br><span class="line">            &#123;</span><br><span class="line">                A[i].r = B[i].r = C[i].r = D[i].r = <span class="number">1.0</span>;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> val;</span><br><span class="line">        <span class="built_in">string</span> s;</span><br><span class="line">        FOR(i, <span class="number">0</span>, c)</span><br><span class="line">        &#123;</span><br><span class="line">            val = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">            FOR(i, <span class="number">0</span>, s.size() - <span class="number">1</span>) &#123; val = val * <span class="number">10</span> + (s[i] - <span class="string">'0'</span>); &#125;</span><br><span class="line">            <span class="keyword">switch</span> (s[s.size() - <span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'S'</span>:</span><br><span class="line">                A[val].r = <span class="number">0.0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'H'</span>:</span><br><span class="line">                B[val].r = <span class="number">0.0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'C'</span>:</span><br><span class="line">                C[val].r = <span class="number">0.0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'D'</span>:</span><br><span class="line">                D[val].r = <span class="number">0.0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        fft.convolution(A, B, C, D, sz, ans);</span><br><span class="line">        FOR(i, a, b + <span class="number">1</span>) &#123; <span class="built_in">cout</span> &lt;&lt; LL(ans[i].r + <span class="number">0.5</span>) &lt;&lt; <span class="string">'\n'</span>; &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <div>
+          <hr>
+          <p style="margin-bottom: 0;">如果你覺得這篇文章很棒，請你不吝點讚 (ﾟ∀ﾟ)</p>
+          <iframe width="100%" height="230px" scrolling="no" frameborder="0" id="player" src="https://button.like.co/in/embed/allem40306/button/?referrer=http://allem40306.github.io/blog/posts/a455/" allowfullscreen="true"></iframe>
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://allem40306.github.io/blog/posts/a455/" data-id="ckr9cepaq00zcboshpn2jhp4w" class="article-share-link">Share</a>
+      
+      
+        <a href="http://allem40306.github.io/blog/posts/a455/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/FFT/">FFT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/UVa/">UVa</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+ <script src="/blog/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>Recommended Posts</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+    <a href="/blog/posts/42d4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          AtCoder Beginner Contest 155 心得
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/posts/af18/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">UVa11506 Angry Programmer</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+    <section id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+      </section>
+      
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
+  
+
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/posts/57fe/">npx 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/c414/">nvm 介紹</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/dc6c/">[2021 Week 28] 暑期 Training</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/56ba/">[2021 Week 27] 助教批改作業</a>
+          </li>
+        
+          <li>
+            <a href="/blog/posts/e620/">[2021 Week 26] 書面報告</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2021 allem40306&nbsp;|&nbsp;
+      Theme by <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      Contact&nbsp;|&nbsp;http://allem40306.github.io/blog
+    </div>
+  </div>
+</footer>
+ <script src="/blog/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">文章列表</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+      
+
+<script>
+  var disqus_shortname = 'allem40306';
+  
+  var disqus_url = 'http://allem40306.github.io/blog/posts/a455/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      })
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+ <script src="/blog/js/is.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+<script src="/blog/js/elevator.js"></script>
+  </div>
+</body>
+</html>
